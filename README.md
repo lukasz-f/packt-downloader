@@ -20,4 +20,9 @@
 * Python Data Science Essentials - Third Edition (9781787125933)
 * Python Data Analysis - Second Edition (9781787127487)
 * Learning Data Mining with Python - Second Edition (9781787126787)
-* Beginning Data Science with Python and Jupyter
+* Beginning Data Science with Python and Jupyter (9781789532029)
+### Improving Your Python Data Science Skills
+* Python Web Scraping Cookbook (9781787285217)
+* Python Machine Learning - Second Edition (9781787125933)
+* Python Deep Learning (9781786464453)
+* Natural Language Processing with Python Cookbook (9781787289321)
