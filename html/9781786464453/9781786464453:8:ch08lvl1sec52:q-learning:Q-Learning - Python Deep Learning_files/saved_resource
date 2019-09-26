@@ -1,0 +1,1 @@
+/* Timeout. The request has exceeded the maximum allowed time */ try{mmcore.timeout()}catch(e){}
