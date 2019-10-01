@@ -1,4 +1,4 @@
-# Learning Python Programming Cheat Sheet
+# Learn Python Programming Cheat Sheet
 ### Chapter1
 * python programming: imperative (procedural, object oriented), functional
 * python object features: id (unique), type, value
