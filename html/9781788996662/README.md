@@ -1,5 +1,5 @@
 # Learning Python Programming Cheat Sheet
-## Chapter1
+### Chapter1
 * python programming: imperative (procedural, object oriented), functional
 * python object features: id (unique), type, value
 * python portability: as much as used libraries (isn’t really any more portable than C is)
@@ -24,7 +24,7 @@
 "{0} {1} {0}".format('!!!', 'Python')
 "Hello %s!" % 'world'
 * pi=3.14; f'PI={pi}'
-## Chapter2
+### Chapter2
 * immutable sequences: string, tuple, byte, frozenset
 * mutable sequences: list, bytearray, set
 * immutable types are hashable and can be set member or dictionary key
@@ -37,7 +37,7 @@
 * from python3.6 dictionary is ordered
 * collections module: namedtuple, defaultdict, ChainMap, Counter, OrderedDict, UserDict, UserList, UserString, deque
 * enums: from enum import Enum
-## Chapter3
+### Chapter3
 * ternary operator: discount = 25 if order_total > 100 else 0
 * iterating over multiple sequences: for person, age in zip(people, ages): print(person, age)
 * special else clause: 
@@ -50,7 +50,7 @@ else:
 * count(start, [step]): count(10, 2) --> 10 12 14 ...
 * compress(data, selectors): compress('ABCDEF', [1,0,1,0,1,1]) --> A C E F
 * permutations(p[, r]): permutations('ABC') --> ('A','B','C'),('A','C','B'),('B','A','C'),('B','C','A'),('C','A','B'),('C','B','A')
-## Chapter4
+### Chapter4
 * function output: If the function has no return statement or no value is given to the return statement, the function returns None
 * why use functions: reduce code duplication; help in splitting a complex task; hide the implementation details; improve traceability;  improve readability
 * global and nonlocal: nonlocal identifier refer to previously bound variable in the nearest enclosing scope excluding globals
@@ -67,4 +67,5 @@ additional(*(1, 2, 3), *[4, 5], **dict(option1=10, option2=20), **{'option3': 30
 * built-in functions: dir(__builtins__)
 * python documentation generator: Sphinx
 * importing objects: from mymodule import myfunc as better_named_func; from datetime import datetime, timezone; from unittest.mock import patch; import pytest; from module import *; from .mymodule import myfunc
-## Chapter5
+### Chapter5
+* todo
