@@ -8,16 +8,16 @@
 * interactive python: python shell vs idle vs ipython
 * python scopes: local, enclosing, global, built-in LEGB
 * pythonic: doing things the way they are supposed to be done in Python
-* int(1.1), int(1.9), round(1.1), round(0.9), 7//4, 7//5  # 1
-* int(-1.1), int(-1.9), round(-1.1), round(-0.9)  # -1
-* -7//4, -7//5  # -2
+* int(1.1), int(1.9), round(1.1), round(0.9), 7//4, 7//5  --> 1
+* int(-1.1), int(-1.9), round(-1.1), round(-0.9)  --> -1
+* -7//4, -7//5  --> -2
 * floating point numbers info: sys.float_info
-* double precision numbers approximation issue: 0.3 - 0.1 * 3  # -5.551115123125783e-17
+* double precision numbers approximation issue: 0.3 - 0.1 * 3  --> -5.551115123125783e-17
 * complex numbers: 3.14 + 2.73j
-* from fractions import Fraction; Fraction(3,10) - Fraction(1,10) * 3  # Fraction(0,1); 3/10 - 1/10 * 3 = 0/1
-* decimal from float: from decimal import Decimal; Decimal(0.1) * Decimal(3) - Decimal(0.3)  # Decimal('2.775557561565156540423631668E-17')
-* decimal from string: Decimal('0.1') * Decimal(3) - Decimal('0.3')  # Decimal('0.0')
-* Decimal('0.3').as_integer_ratio()  # (3, 10); 3/10=0.3
+* from fractions import Fraction; Fraction(3,10) - Fraction(1,10) * 3  --> Fraction(0,1); 3/10 - 1/10 * 3 = 0/1
+* decimal from float: from decimal import Decimal; Decimal(0.1) * Decimal(3) - Decimal(0.3)  --> Decimal('2.775557561565156540423631668E-17')
+* decimal from string: Decimal('0.1') * Decimal(3) - Decimal('0.3')  --> Decimal('0.0')
+* Decimal('0.3').as_integer_ratio()  --> (3, 10); 3/10=0.3
 * string formatting:
 "{what} {where}!".format(what='Hello', where='world')
 "{} {}!".format('Hello', 'world')
