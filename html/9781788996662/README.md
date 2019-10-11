@@ -77,4 +77,61 @@ additional(*(1, 2, 3), *[4, 5], **dict(option1=10, option2=20), **{'option3': 30
 * python documentation generator: Sphinx
 * importing objects: `from mymodule import myfunc as better_named_func; from datetime import datetime, timezone; from unittest.mock import patch; import pytest; from module import *; from .mymodule import myfunc`
 ### Chapter5
+* map(function, iterable, ...) applies function to every item of iterable: 
+```
+list(map(lambda a: a*a, range(3)))  --> [0, 1, 4]
+list(map(lambda *a: a, range(3), 'abc'))  --> [(0, 'a'), (1, 'b'), (2, 'c')]
+list(map(lambda n: max(*n), zip([1, 2], [2, 1], [0, 3])))  --> [2, 3]
+list(map(lambda n: n ** 2, filter(lambda n: not n % 2, range(10))))  --> [0, 4, 16, 36, 64]
+```
+* list comprehension: 
+```
+[n*n for n in range(3)]
+[n*n for n in range(10) if not n % 2]
+items = 'ABCD'; [(items[a], items[b]) for a in range(len(items)) for b in range(a, len(items))]
+```
+* dictionary comprehension: `{c: c.swapcase() for c in 'Hello'}; dict((c, c.swapcase()) for c in 'Hello')`
+* set comprehension: `{c for c in 'Hello'}; set(c for c in 'Hello')`
+* generator expression: `(n*n for n in range(3))`
+* generator function: 
+```
+def get_squares_gen(n):
+    for x in range(n):
+        if result < 10:
+            yield x ** 2
+        else:
+            return
+next(get_squares_gen(4))
+```
+* yield from expression:
+```
+def get_squares_gen(start, end):
+    yield from (n ** 2 for n in range(start, end))
+```
+* map vs list comprehension: map may be faster (without lambda function); listcomp is more readable (most but not always)
+* list comprehension vs generator expression: genexp is time and memory efficient; genexp allow one iteration; use genexp for large or infinite range; list allow lists methods (slicing, adding)
+* function vs generator function: use function to return list or tuple; use genfun for large or infinite range; genfun allow one iteration
+* time: map, list comprehensions and generator expressions have similar performance, for loops are slower
+* space: generator function and generator expression save a lot of space compared to list and tuple
+* don't overdo comprehensions and generators: Use comprehensions and generator expressions as much as you can, but if the code starts to be complicated to modify or to read, you may want to refactor it into something more readable. Your colleagues will thank you.
+* name localization: for loop create and modify global variable; list/set/dict comprehension don't
+```
+A = 100
+[A for A in range(5)]
+print(A)  --> prints: 100
+for A in range(5):
+    pass
+print(A)  --> prints: 4
+```
+* python3 generation behavior built-ins: map, zip, filter, range, enumerate, keys, values, items, open
+* fibonacci with generator:
+```
+def fibonacci(N):
+    a, b = 0, 1
+    while a <= N:
+        yield a
+        a, b = b, a + b
+```
+* one line recursive fibonacci: `fibonacci = lambda n: n if n < 2 else fib(n-1) + fib(n-2)`
+### Chapter6
 * todo
