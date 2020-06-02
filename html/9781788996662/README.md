@@ -27,7 +27,7 @@ int(-1.1), int(-1.9), round(-1.1), round(-0.9)  --> -1
 "{} {}!".format('Hello', 'world')
 "{0} {1} {0}".format('!!!', 'Python')
 "Hello %s!" % 'world'
-pi=3.14; f'PI={pi}'
+pi=3.14; f'PI={pi}'  # >= Python 3.6
 ```
 ### Chapter2
 * immutable sequences: string, tuple, byte, frozenset
