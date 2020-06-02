@@ -1,5 +1,5 @@
 # Learn Python Programming Cheat Sheet
-### Chapter1
+### Chapter1 A Gentle Introduction to Python
 * python programming: imperative (procedural, object oriented), functional
 * python object features: id (unique), type, value
 * python portability: as much as used libraries (isn’t really any more portable than C is)
@@ -29,7 +29,7 @@ int(-1.1), int(-1.9), round(-1.1), round(-0.9)  --> -1
 "Hello %s!" % 'world'
 pi=3.14; f'PI={pi}'  # >= Python 3.6
 ```
-### Chapter2
+### Chapter2 Built-in Data Types
 * immutable sequences: string, tuple, byte, frozenset
 * mutable sequences: list, bytearray, set
 * immutable types are hashable and can be set member or dictionary key
@@ -42,7 +42,7 @@ pi=3.14; f'PI={pi}'  # >= Python 3.6
 * from python3.6 dictionary is ordered
 * collections module: namedtuple, defaultdict, ChainMap, Counter, OrderedDict, UserDict, UserList, UserString, deque
 * enums: from enum import Enum
-### Chapter3
+### Chapter3 Iterating and Making Decisions
 * ternary operator: `discount = 25 if order_total > 100 else 0`
 * iterating over multiple sequences: `for person, age in zip(people, ages): print(person, age)`
 * special else clause: 
@@ -57,7 +57,7 @@ else:
 * count(start, [step]): `count(10, 2)` --> 10 12 14 ...
 * compress(data, selectors): `compress('ABCDEF', [1,0,1,0,1,1])` --> A C E F
 * permutations(p[, r]): `permutations('ABC')` --> ('A','B','C'),('A','C','B'),('B','A','C'),('B','C','A'),('C','A','B'),('C','B','A')
-### Chapter4
+### Chapter4 Functions, the Building Blocks of Code
 * function output: If the function has no return statement or no value is given to the return statement, the function returns None
 * why use functions: reduce code duplication; help in splitting a complex task; hide the implementation details; improve traceability;  improve readability
 * global and nonlocal: nonlocal identifier refer to previously bound variable in the nearest enclosing scope excluding globals
@@ -76,7 +76,7 @@ additional(*(1, 2, 3), *[4, 5], **dict(option1=10, option2=20), **{'option3': 30
 * built-in functions: `dir(__builtins__)`
 * python documentation generator: Sphinx
 * importing objects: `from mymodule import myfunc as better_named_func; from datetime import datetime, timezone; from unittest.mock import patch; import pytest; from module import *; from .mymodule import myfunc`
-### Chapter5
+### Chapter5 Saving Time and Memory
 * map(function, iterable, ...) applies function to every item of iterable: 
 ```
 list(map(lambda a: a*a, range(3)))  --> [0, 1, 4]
@@ -133,5 +133,5 @@ def fibonacci(N):
         a, b = b, a + b
 ```
 * one line recursive fibonacci: `fibonacci = lambda n: n if n < 2 else fib(n-1) + fib(n-2)`
-### Chapter6
+### Chapter6 OOP, Decorators, and Iterators
 * todo
