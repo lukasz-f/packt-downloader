@@ -134,4 +134,85 @@ def fibonacci(N):
 ```
 * one line recursive fibonacci: `fibonacci = lambda n: n if n < 2 else fib(n-1) + fib(n-2)`
 ### Chapter6 OOP, Decorators, and Iterators
-* todo
+* Simple decorator
+```
+from time import sleep, time
+from functools import wraps
+def measure(func):
+    def wrapper(*args, **kwargs):
+        t = time()
+        func(*args, **kwargs)
+        print(func.__name__, 'took:', time() - t)
+    return wrapper
+
+def f(sleep_time=0.1):
+    """I'm a cat. I love to sleep! """
+    sleep(sleep_time)
+
+f = measure(f)
+f()  # f took: 0.10523104667663574
+f(0.2)  # f took: 0.20150113105773926
+f(sleep_time=0.3)  # f took: 0.30017828941345215
+print(f.__name__, ':', f.__doc__)  # wrapper : None
+```
+* Beter decorator
+```
+def measure(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        t = time()
+        result = func(*args, **kwargs)
+        print(func.__name__, 'took:', time() - t)
+        return result
+    return wrapper
+
+@measure
+def f(sleep_time=0.1):
+    """I'm a cat. I love to sleep! """
+    sleep(sleep_time)
+
+f()  # f took: 0.10523104667663574
+f(0.2)  # f took: 0.20150113105773926
+f(sleep_time=0.3)  # f took: 0.30017828941345215
+print(f.__name__, ':', f.__doc__)  # f : I'm a cat. I love to sleep!
+```
+* Two decorators
+```
+def max_result(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if result > 100:
+            print('Result is too big ({0}). Max allowed is 100.'.format(result))
+        return result
+    return wrapper
+
+@max_result
+@measure
+def cube(n):
+    return n ** 3
+
+# cube = max_result(measure(cube))  # is equivalent to double annotations
+print(cube(2))  # cube took: 6.9141387939453125e-06 \n 8
+print(cube(5))  # cube took: 3.0994415283203125e-06 \n Result is too big (125). Max allowed is 100. \n 125
+```
+* Decorator factory
+```
+def max_result(threshold):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            if result > threshold:
+                print('Result is too big ({0}). Max allowed is {1}.'.format(result, threshold))
+            return result
+        return wrapper
+    return decorator
+
+@max_result(75)
+def cube(n):
+    return n ** 3
+
+# cube = max_result(75)(cube)  # is equivalent to annotation with param
+print(cube(5))  # Result is too big (125). Max allowed is 75. \n 125
+```
