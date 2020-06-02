@@ -155,7 +155,7 @@ f(0.2)  # f took: 0.20150113105773926
 f(sleep_time=0.3)  # f took: 0.30017828941345215
 print(f.__name__, ':', f.__doc__)  # wrapper : None
 ```
-* Beter decorator
+* Better decorator
 ```
 def measure(func):
     @wraps(func)
