@@ -216,3 +216,206 @@ def cube(n):
 # cube = max_result(75)(cube)  # is equivalent to annotation with param
 print(cube(5))  # Result is too big (125). Max allowed is 75. \n 125
 ```
+* OOP
+```
+class Person():
+    species = 'Human'
+
+print(type(Person))  # <class 'type'>
+print(type(Person()))  # <class '__main__.Person'>
+print(isinstance(Person(), Person))  # True
+print(issubclass(Person, object))  # True
+print(Person.species)  # Human
+Person.alive = True  # class attribute
+print(Person.alive)  # True
+man = Person()
+print(man.species)  # Human (inherited)
+print(man.alive)  # True (inherited)
+Person.alive = False
+print(man.alive)  # False (inherited)
+man.name = 'Darth'  # instance attribute
+man.surname = 'Vader'
+print(man.name, man.surname)  # Darth Vader
+```
+* Attribute shadowing
+```
+class Square:
+    side = 8
+    def area(self):  # self is a reference to an instance
+        return self.side ** 2
+
+sq = Square()
+print(sq.area())  # 64 (side is found on the class)
+print(Square.area(sq))  # 64 (equivalent to sq.area())
+sq.side = 10
+print(sq.area())  # 100 (side is found on the instance)
+del sq.side  # we delete instance attribute
+print(sq.area())  # 64 (now search has to go again to find class attr)
+sq.side_b = 3  # let's make it a rectangle
+print(sq.sibe_b)  # 3
+print(Square.side_b)  # AttributeError: type object 'Square' has no attribute 'side_b'
+```
+* Initializing an instance
+```
+class Rectangle:
+    def __init__(self, side_a, side_b):
+        self.side_a = side_a
+        self.side_b = side_b
+    def area(self):
+        return self.side_a * self.side_b
+
+r1 = Rectangle(10, 4)
+print(r1.side_a, r1.side_b, r1.area())  # 10 4 40
+```
+* Inheritance means that two objects are related by means of an Is-A type of relationship
+* Composition means that two objects are related by means of a Has-A type of relationship
+```
+class Book:
+    def __init__(self, title, publisher, pages):
+        self.title = title
+        self.publisher = publisher
+        self.pages = pages
+
+class Ebook(Book):
+    def __init__(self, title, publisher, pages, format_):
+        super().__init__(title, publisher, pages)
+        # super(Ebook, self).__init__(title, publisher, pages)  # Another way to do the same thing
+        # Book.__init__(self, title, publisher, pages)
+        self.format_ = format_
+```
+* Multiple inheritance
+```
+class A:
+    label = 'a'
+
+class B(A):
+    pass
+
+class C(A):
+    label = 'c'
+
+class D(B, C):
+    pass
+
+d = D()
+print(d.label)  # 'c'
+print(d.__class__.mro())  # notice another way to get the MRO
+```
+* Method Resolution Order (MRO) - the order in which classes are searched on attribute lookup
+```
+square.__class__.__mro__
+Square.__mro__
+Square.mro()
+```
+* Static methods
+```
+class StringUtil:
+    @staticmethod
+    def get_unique_words(sentence):
+        return set(sentence.split())
+
+StringUtil.get_unique_words('I really really love them!')
+```
+* Class methods
+```
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    @classmethod
+    def from_tuple(cls, coords):  # cls is Point
+        return cls(*coords)
+    @classmethod
+    def from_point(cls, point):  # cls is Point
+        return cls(point.x, point.y)
+
+p = Point.from_tuple((3, 7))
+print(p.x, p.y)  # 3 7
+q = Point.from_point(p)
+print(q.x, q.y)  # 3 7
+```
+```
+class StringUtil:
+    @classmethod
+    def get_unique_words(cls, sentence):
+        s = cls._split_sentence(sentence)  # better than StringUtil._split_sentence()
+        return set(s)
+    @staticmethod
+    def _split_sentence(sentence):
+        return sentence.split()
+
+StringUtil.get_unique_words('I really really love them!')
+```
+* If an attribute's name has no leading underscores, it is considered public
+* When the name has one leading underscore, the attribute is considered private
+* Attribute name that has at least two leading underscores and at most one trailing underscore is replaced with a name that includes an underscore and the class name before the actual name
+```
+class A:
+    def __init__(self, protected, private):
+        self._protected = protected
+        self.__private = private
+    def op1(self):
+        print('Op1 with protected {} & private {}'.format(self._protected, self.__private))
+
+class B(A):
+    def op2(self, protected, private):
+        self._protected = protected
+        self.__private = private
+        print('Op2 with protected {} & private {}'.format(self._protected, self.__private))
+
+obj = B(1, 100)
+obj.op1()        # Op1 with protected 1 & private 100
+obj.op2(2, 200)  # Op2 with protected 2 & private 200
+obj.op1()        # Op1 with protected 2 & private 100
+print(obj.__dict__.keys())  # dict_keys(['_protected', '_A__private', '_B__private'])
+```
+* The property decorator
+```
+class PersonPythonic:
+    def __init__(self, age):
+        self._age = age
+    @property
+    def age(self):
+        return self._age
+    @age.setter
+    def age(self, age):
+        if 18 <= age <= 99:
+            self._age = age
+        else:
+            raise ValueError('Age must be within [18, 99]')
+```
+* Operator overloading
+```
+class Weird:
+    def __init__(self, s):
+        self._s = s
+    def __len__(self):
+        return len(self._s)
+    def __bool__(self):
+        return '42' in self._s
+    def __getitem__(self, k):
+        return self._s[k]
+
+weird = Weird('Hello! I am 42 years old!')
+print(len(weird))  # 25
+print(bool(weird))  # True
+print(weird[5])  # !
+```
+* Data classes
+```
+from dataclasses import dataclass  # >= Python 3.7
+
+@dataclass
+class Body:
+    name: str
+    mass: float = 0.  # Kg
+    speed: float = 1.  # m/s
+    def kinetic_energy(self) -> float:
+        return (self.mass * self.speed ** 2) / 2
+
+body = Body('Ball', 19, 3.1415)
+print(body.kinetic_energy())  # 93.755711375 Joule
+print(body)  # Body(name='Ball', mass=19, speed=3.1415)
+```
+* Iterable returning its members one at a time. Lists, tuples, strings, and dictionaries are all iterables. Custom objects that define either of the `__iter__` or `__getitem__` methods are also iterable
+* Iterator represents a stream of data. A custom iterator is required to provide an implementation for `__iter__` and `__next__`
