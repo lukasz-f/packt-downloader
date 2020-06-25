@@ -1,13 +1,13 @@
 # Learning Paths
 ## Programming
 ### Getting Started with Python
-* Learn Python Programming - Second Edition (9781788996662)
-* Python 3 Object-Oriented Programming - Third Edition (9781789615852, pdf)
-* Hands-On Data Structures and Algorithms with Python - Second Edition (9781788995573)
+* [Learn Python Programming - Second Edition](html/9781788996662)
+* [Python 3 Object-Oriented Programming - Third Edition](html/9781789615852) (pdf)
+* [Hands-On Data Structures and Algorithms with Python - Second Edition](html/9781788995573)
 ### Improving Your Python Skills
-* Functional Python Programming - Second Edition (9781788627061)
-* Modular Programming with Python (9781785884481, pdf)
-* Python Automation Cookbook (9781789133806)
+* [Functional Python Programming - Second Edition](html/9781788627061)
+* [Modular Programming with Python](html/9781785884481) (pdf)
+* [Python Automation Cookbook](html/9781789133806)
 * Modern Python Cookbook (pdf)
 ### Mastering Python
 * Python High Performance - Second Edition (pdf)
