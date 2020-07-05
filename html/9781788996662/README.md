@@ -79,19 +79,19 @@ additional(*(1, 2, 3), *[4, 5], **dict(option1=10, option2=20), **{'option3': 30
 ### Chapter5 Saving Time and Memory
 * map(function, iterable, ...) applies function to every item of iterable: 
 ```
-list(map(lambda a: a*a, range(3)))  --> [0, 1, 4]
-list(map(lambda *a: a, range(3), 'abc'))  --> [(0, 'a'), (1, 'b'), (2, 'c')]
-list(map(lambda n: max(*n), zip([1, 2], [2, 1], [0, 3])))  --> [2, 3]
-list(map(lambda n: n ** 2, filter(lambda n: not n % 2, range(10))))  --> [0, 4, 16, 36, 64]
+list(map(lambda a: a*a, range(3)))  # [0, 1, 4]
+list(map(lambda *a: a, range(3), 'abc'))  # [(0, 'a'), (1, 'b'), (2, 'c')]
+list(map(lambda n: max(*n), zip([1, 2], [2, 1], [0, 3])))  # [2, 3]
+list(map(lambda n: n ** 2, filter(lambda n: not n % 2, range(10))))  # [0, 4, 16, 36, 64]
 ```
 * list comprehension: 
 ```
-[n*n for n in range(3)]
-[n*n for n in range(10) if not n % 2]
-items = 'ABCD'; [(items[a], items[b]) for a in range(len(items)) for b in range(a, len(items))]
+[n*n for n in range(3)]  # [0, 1, 4]
+[n*n for n in range(10) if not n % 2]  # [0, 4, 16, 36, 64]
+items = 'ABC'; [(items[a], items[b]) for a in range(len(items)) for b in range(a, len(items))]  # [('A','A'),('A','B'),('A','C'),('B','B'),('B','C'),('C','C')]
 ```
-* dictionary comprehension: `{c: c.swapcase() for c in 'Hello'}; dict((c, c.swapcase()) for c in 'Hello')`
-* set comprehension: `{c for c in 'Hello'}; set(c for c in 'Hello')`
+* dictionary comprehension: `{c: c.swapcase() for c in 'Hello'}; dict((c, c.swapcase()) for c in 'Hello')  # {'H':'h','e':'E','l':'L','o':'O'}`
+* set comprehension: `{c for c in 'Hello'}; set(c for c in 'Hello')  # {'o', 'l', 'H', 'e'}`
 * generator expression: `(n*n for n in range(3))`
 * generator function: 
 ```
