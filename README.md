@@ -32,6 +32,11 @@
 * Django 2 by Example
 * Flask By Example
 * Django RESTful Web Services
+### Others
+* Hands-On Docker for Microservices with Python (9781838823818)
+## Application Development
+### Others
+* Clean Code in Python (9781788835831)
 ## Data
 ### Getting Started with Python Data Science
 * Python Data Science Essentials - Third Edition (9781787125933)
@@ -65,5 +70,3 @@
 ### Getting Started with Python for Finance
 * Python for Finance - Second Edition
 * Hands-On Machine Learning for Algorithmic Trading
-# Others
-* Clean Code in Python (9781788835831)
