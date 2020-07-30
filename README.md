@@ -34,6 +34,7 @@
 * Django RESTful Web Services
 ### Others
 * Hands-On Docker for Microservices with Python (9781838823818)
+* Python API Development Fundamentals (9781838983994)
 ## Application Development
 ### Others
 * Clean Code in Python (9781788835831)
