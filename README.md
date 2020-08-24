@@ -38,6 +38,7 @@
 ## Application Development
 ### Others
 * Clean Code in Python (9781788835831)
+* Machine Learning for Algorithmic Trading Bots with Python Video (9781789951165)
 ## Data
 ### Getting Started with Python Data Science
 * Python Data Science Essentials - Third Edition (9781787125933)
