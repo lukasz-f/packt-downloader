@@ -416,6 +416,160 @@ class Body:
 body = Body('Ball', 19, 3.1415)
 print(body.kinetic_energy())  # 93.755711375 Joule
 print(body)  # Body(name='Ball', mass=19, speed=3.1415)
+Body()  # TypeError: __init__() missing 1 required positional argument: 'name'
 ```
 * Iterable returning its members one at a time. Lists, tuples, strings, and dictionaries are all iterables. Custom objects that define either of the `__iter__` or `__getitem__` methods are also iterable
 * Iterator represents a stream of data. A custom iterator is required to provide an implementation for `__iter__` and `__next__`
+### Chapter7 Files and Data Persistence
+* Reading and writing to a file
+```
+with open('fear.txt') as stream:
+    lines = [line.rstrip() for line in stream]
+
+with open('raef.txt', 'w') as stream:
+    stream.write('\n'.join(line[::-1] for line in lines))
+```
+* Reading and writing in binary mode
+```
+with open('example.bin', 'wb') as fw:
+    fw.write(b'This is binary data...')
+
+with open('example.bin', 'rb') as f:
+    print(f.read())
+```
+* Protecting against overriding an existing file
+```
+with open('write_x.txt', 'x') as fw:
+    fw.write('Writing line 1')  # this succeeds
+
+with open('write_x.txt', 'x') as fw:
+    fw.write('Writing line 2')  # this fails
+```
+* Checking for file and directory existence
+```
+import os
+
+filename = 'fear.txt'
+file_absolute_path = os.path.abspath(filename)
+folder_absolute_path = os.path.dirname(file_absolute_path)
+print(os.path.isfile(filename))  # True
+print(os.path.isfile(file_absolute_path))  # True
+print(os.path.isdir(folder_absolute_path))  # True
+print(file_absolute_path)  # /Users/fab/srv/lpp/ch7/files/fear.txt
+print(folder_absolute_path)  # /Users/fab/srv/lpp/ch7/files
+print(os.path.basename(file_absolute_path))  # fear.txt
+print(os.path.splitext(filename))  # ('fear', '.txt')
+print(os.path.splitext(file_absolute_path))  # ('/Users/fab/srv/lpp/ch7/files/fear', '.txt')
+print(os.path.split(file_absolute_path))  # ('/Users/fab/srv/lpp/ch7/files', 'fear.txt')
+readme_path = os.path.join(folder_absolute_path, '..', '..', 'README.rst')
+print(readme_path)  # /Users/fab/srv/lpp/ch7/files/../../README.rst
+print(os.path.normpath(readme_path))  # /Users/fab/srv/lpp/README.rst
+```
+* Manipulating files and directories
+```
+import os, shutil
+
+os.mkdir('ops_example')  # create directory
+os.makedirs('ops_example/A/B')  # create directory recursively
+shutil.move('ops_example', 'example')  # rename folder
+shutil.move('example/a.txt', 'example/b.txt')  # rename file
+```
+* Temporary files and directories
+```
+import os
+from tempfile import NamedTemporaryFile, TemporaryDirectory
+
+with TemporaryDirectory(dir='.') as td:
+    print('Temp directory:', td)
+    with NamedTemporaryFile(dir=td) as t:
+        print('Temp file:', t.name)
+```
+* Directory content
+```
+import os
+
+with os.scandir('.') as it:
+    for entry in it:
+        print(entry.name, entry.path, 'File' if entry.is_file() else 'Folder')
+```
+```
+import os
+
+for root, dirs, files in os.walk('.'):
+    print(os.path.abspath(root))
+    if dirs:
+        print('Directories:')
+        for dir_ in dirs:
+            print(dir_)
+        print()
+    if files:
+        print('Files:')
+        for filename in files:
+            print(filename)
+        print()
+```
+* File and directory compression
+```
+from zipfile import ZipFile
+
+with ZipFile('example.zip', 'w') as zp:
+    zp.write('content1.txt')  # add file to zip file
+    zp.write('content2.txt')
+    zp.write('subfolder/content3.txt')  # add file from subfolder
+    zp.write('subfolder/content4.txt')
+
+with ZipFile('example.zip') as zp:
+    zp.extract('content1.txt', 'extract_zip')  # extract content1.txt file to extract_zip folder
+    zp.extract('subfolder/content3.txt', 'extract_zip')
+```
+* Working with JSON
+```
+import sys, json
+
+data = {
+    'big_number': 2 ** 3141,
+    'max_float': sys.float_info.max,
+    'a_list': [2, 3, 5, 7],
+}
+
+json_data = json.dumps(data)  # convert Python object into a JSON formatted string
+data_out = json.loads(json_data)  # reconstructs the data into Python object from a JSON formatted string
+print(json.dumps(data, indent=2, sort_keys=True))
+```
+* Custom encoding with JSON
+```
+import json
+from datetime import datetime, timedelta, timezone
+
+class DatetimeEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime):
+            try:
+                off = obj.utcoffset().seconds
+            except AttributeError:
+                off = None
+            return {
+                '_meta': '_datetime',
+                'data': obj.timetuple()[:6] + (obj.microsecond, ),
+                'utcoffset': off,
+            }
+        return json.JSONEncoder.default(self, obj)
+
+data = {'a_datetime_tz': datetime.now(tz=timezone(timedelta(hours=1)))}
+json_data = json.dumps(data, cls=DatetimeEncoder)
+```
+* Custom decoding with JSON
+```
+def object_hook(obj):
+    try:
+        if obj['_meta'] == '_datetime':
+            if obj['utcoffset'] is None:
+                tz = None
+            else:
+                tz = timezone(timedelta(seconds=obj['utcoffset']))
+            return datetime(*obj['data'], tzinfo=tz)
+    except (KeyError, TypeError):
+        return obj
+
+data_out = json.loads(json_data, object_hook=object_hook)
+```
