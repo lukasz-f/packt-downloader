@@ -72,3 +72,5 @@
 ### Getting Started with Python for Finance
 * Python for Finance - Second Edition
 * Hands-On Machine Learning for Algorithmic Trading
+### Others
+* Hands-On Machine Learning with Microsoft Excel 2019 (9781789345377)
