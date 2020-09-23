@@ -373,9 +373,11 @@ print(obj.__dict__.keys())  # dict_keys(['_protected', '_A__private', '_B__priva
 ```
 class PersonPythonic:
     def __init__(self, age):
-        self._age = age
+        self.age = age
+        # self._age = age  # not using setter
     @property
     def age(self):
+        print('age getter')
         return self._age
     @age.setter
     def age(self, age):
@@ -383,6 +385,42 @@ class PersonPythonic:
             self._age = age
         else:
             raise ValueError('Age must be within [18, 99]')
+    @age.deleter
+    def age(self):
+        print('age deleter')
+        del self._age
+
+pp = PersonPythonic(5)  # ValueError: Age must be within [18, 99]
+pp = PersonPythonic(18)
+print(pp.age)  # print age getter 18
+pp.age = 5  # ValueError: Age must be within [18, 99]
+del pp.age  # print age deleter
+```
+```
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+    @property
+    def gotmarks(self):
+        return self.name + ' obtained ' + self.marks + ' marks'
+    @gotmarks.setter
+    def gotmarks(self, sentence):
+        name, rand, marks = sentence.split(' ')
+        self.name = name
+        self.marks = marks
+        
+st = Student("Jaki", "25")
+print(st.name, st.marks)  # Jaki 25
+print(st.gotmarks)  # Jaki obtained 25 marks
+
+st.name = "Anusha"
+print(st.name, st.marks)  # Anusha 25
+print(st.gotmarks)  # Anusha obtained 25 marks
+
+st.gotmarks = 'Golam obtained 36'
+print(st.name, st.marks)  # Golam 36
+print(st.gotmarks)  # Golam obtained 36 marks
 ```
 * Operator overloading
 ```
