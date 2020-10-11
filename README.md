@@ -11,7 +11,7 @@
 * Modern Python Cookbook (pdf)
 ### Mastering Python
 * Python High Performance - Second Edition (pdf)
-* Python Microservices Development (9781785881114)
+* Python Microservices Development (pdf)
 * Building Serverless Applications with Python (9781787288676)
 * Python Data Science Essentials - Third Edition (9781789537864)
 * Python Machine Learning - Second Edition (9781787125933)
