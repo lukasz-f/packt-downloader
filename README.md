@@ -74,3 +74,4 @@
 * Hands-On Machine Learning for Algorithmic Trading
 ### Others
 * Hands-On Machine Learning with Microsoft Excel 2019 (9781789345377)
+* Hands-On Web Scraping with Python (9781789533392)
