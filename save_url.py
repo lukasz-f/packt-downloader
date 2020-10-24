@@ -1,8 +1,8 @@
 from selenium import webdriver
 import time
 
-url = 'https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781786464453/1'
-driver = webdriver.Chrome('./chromedriver-83')
+url = 'https://subscription.packtpub.com/book/cloud_and_networking/9781838828042/1'
+driver = webdriver.Chrome('./chromedriver/chromedriver-85')
 time.sleep(5)
 
 with open('save_url.txt', 'a') as f:
