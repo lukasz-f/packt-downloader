@@ -2,9 +2,9 @@ import os
 import re
 import shutil
 
-book_id = '9781788996662'
-file_regex = r'9781788996662.*(:[^:]*).htm'
-folder_regex = r'9781788996662.*(:[^:]*)_files'
+book_id = '9781838557744'
+file_regex = fr'{book_id}.*(:[^:]*).htm'
+folder_regex = fr'{book_id}.*(:[^:]*)_files'
 
 dir = f'html/{book_id}/'
 
@@ -17,7 +17,7 @@ for file in os.listdir(dir):
 
             # remove book title from file name
             old_file_name = file
-            new_file_name = file.replace(to_remove, '')
+            new_file_name = file[::-1].replace(to_remove[::-1], '', 1)[::-1]  # replace last occurence
 
             # remove ':' from file name
             new_file_name = new_file_name.replace(':', '_')
@@ -34,7 +34,7 @@ for file in os.listdir(dir):
             
             # remove book title from folder name
             old_file_name = file
-            new_file_name = file.replace(to_remove, '')
+            new_file_name = file[::-1].replace(to_remove[::-1], '', 1)[::-1]  # replace last occurence
 
             # remove ':' from file name
             new_file_name = new_file_name.replace(':', '_')
