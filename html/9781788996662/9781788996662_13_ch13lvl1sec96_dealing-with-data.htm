@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Dealing with data - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/13/ch13lvl1sec96/dealing-with-data" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/13/ch13lvl1sec96/dealing-with-data" rel="canonical"/>
+<meta content="Typically, when you deal with data, this is the path you go through: you fetch it, you clean and manipulate it, and then you inspect it, and present results as" name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Dealing with data - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="Typically, when you deal with data, this is the path you go through: you fetch it, you clean and manipulate it, and then you inspect it, and present results as" property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/13/ch13lvl1sec96/dealing-with-data" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Dealing with data - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="Typically, when you deal with data, this is the path you go through: you fetch it, you clean and manipulate it, and then you inspect it, and present results as" name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/script.js"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/profitwell.js"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/inferredEvents.js"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/445429252334850"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/fbevents.js"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/gtm.js"></script><script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/f(1).txt"></script><script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Dealing with data - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "Typically, when you deal with data, this is the path you go through: you fetch it, you clean and manipulate it, and then you inspect it, and present results as",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch13lvl1sec96"></a>Dealing with data</h2></div></div><hr/></div><p>Typically, when you <span>deal</span><a class="indexterm" id="id325888049"></a> with data, this is the path you go through: you fetch it, you clean and manipulate it, and then you inspect it, and present results as values, spreadsheets, graphs, and so on. I want you to be in charge of all three steps of the process without having any external dependency on a data provider, so we're going to do the following:</p><div class="orderedlist"><ol class="orderedlist arabic" type="1"><li>We're going to create the data, simulating the fact that it comes in a format that is not perfect or ready to be worked on</li><li>We're going to clean it and feed it to the main tool we'll use in the project such as <code class="literal">DataFrame</code> from the <code class="literal">pandas</code> library</li><li>We're going to manipulate the data in <code class="literal">DataFrame</code></li><li>We're going to save <code class="literal">DataFrame</code> to a file in different formats</li><li>We're going to inspect the data and get some results out of it</li></ol></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec156"></a>Setting up the Notebook</h3></div></div></div><p>First things first, let's <span>produce</span><a class="indexterm" id="id325699123"></a> the data. We start from the <code class="literal"><span>ch13-dataprep</span></code> Notebook:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0">#1
+import json
+import random
+from datetime import date, timedelta
+import faker</code></pre></div><p>Cell <code class="literal">#1</code> takes care of the imports. We have already encountered them, apart from <code class="literal">faker</code>. You can use this module to prepare fake data. It's very useful in tests, when you prepare your fixtures, to get all sorts of things such as names, email addresses, phone numbers, and credit card details. It is all fake, of course.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec157"></a>Preparing the data</h3></div></div></div><p>We want to achieve the <span>following</span><a class="indexterm" id="id325671124"></a> data structure: we're going to have a list of user objects. Each user object will be linked to a number of campaign objects. In Python, everything is an object, so I'm using this term in a generic way. The user object may be a string, a dictionary, or something else.</p><p>A <span class="strong"><strong>campaign</strong></span> in the <span>social</span><a class="indexterm" id="id325671100"></a> media world is a promotional campaign that a media agency runs on social media networks on behalf of a client. Remember that we're going to prepare this data so that it's not in perfect shape (but it won't be that bad either...):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1">#2
+fake = faker.Faker() </code></pre></div><p>Firstly, we instantiate the <code class="literal">Faker</code> that we'll use to create the data:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2">#3
+usernames = set()
+usernames_no = 1000
+
+# populate the set with 1000 unique usernames
+while len(usernames) &lt; usernames_no:
+    usernames.add(fake.user_name())</code></pre></div><p>Then we need usernames. I want 1,000 unique usernames, so I loop over the length of the <code class="literal">usernames</code> set until it has 1,000 elements. A <code class="literal">set</code> method doesn't allow duplicated elements, therefore uniqueness is guaranteed:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3">#4
+def get_random_name_and_gender():
+    skew = .6  # 60% of users will be female
+    male = random.random() &gt; skew
+    if male:
+        return fake.name_male(), 'M'
+    else:
+        return fake.name_female(), 'F'
+
+def get_users(usernames):
+    users = []
+    for username in usernames:
+        name, gender = get_random_name_and_gender()
+        user = {
+            'username': username,
+            'name': name,
+            'gender': gender,
+            'email': fake.email(),
+            'age': fake.random_int(min=18, max=90),
+            'address': fake.address(),
+        }
+        users.append(json.dumps(user))
+    return users
+
+users = get_users(usernames)
+users[:3]</code></pre></div><p>Here, we create a list of <code class="literal">users</code>. Each <code class="literal">username</code> has now been augmented to a full-blown <code class="literal">user</code> dictionary, with other details such as <code class="literal">name</code>, <code class="literal">gender</code>, and <code class="literal">email</code>. Each <code class="literal">user</code> dictionary is then <span>dumped</span><a class="indexterm" id="id325973278"></a> to JSON and added to the list. This data structure is not optimal, of course, but we're simulating a scenario where users come to us like that.</p><p>Note the skewed use of <code class="literal">random.random()</code> to make 60% of users female. The rest of the logic should be very easy for you to understand.</p><p>Note also the last line. Each cell automatically prints what's on the last line; therefore, the output of <code class="literal">#4</code> is a list with the first three <code class="literal">users</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"><span class="strong"><strong>['{"username": "samuel62", "name": "Tonya Lucas", "gender": "F", "email": "anthonyrobinson@robbins.biz", "age": 27, "address": "PSC 8934, Box 4049\\nAPO AA 43073"}',</strong></span>
+<span class="strong"><strong> '{"username": "eallen", "name": "Charles Harmon", "gender": "M", "email": "courtneycollins@hotmail.com", "age": 28, "address": "38661 Clark Mews Apt. 528\\nAnthonychester, ID 25919"}',</strong></span>
+<span class="strong"><strong> '{"username": "amartinez", "name": "Laura Dunn", "gender": "F", "email": "jeffrey35@yahoo.com", "age": 88, "address": "0536 Daniel Court Apt. 541\\nPort Christopher, HI 49399-3415"}']</strong></span></code></pre></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note85"></a>Note</h3><p>I hope you're following along with your own Notebook. If you are, please note that all data is generated using random functions and values; therefore, you will see different results. They will change every time you execute the Notebook.</p></div><p>In the following code <code class="literal">#5</code> is the logic to generate a campaign name:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5">#5
+# campaign name format:
+# InternalType_StartDate_EndDate_TargetAge_TargetGender_Currency
+def get_type():
+    # just some gibberish internal codes
+    types = ['AKX', 'BYU', 'GRZ', 'KTR']
+    return random.choice(types)
+
+def get_start_end_dates():
+    duration = random.randint(1, 2 * 365)
+    offset = random.randint(-365, 365)
+    start = date.today() - timedelta(days=offset)
+    end = start + timedelta(days=duration)
+
+    def _format_date(date_):
+        return date_.strftime("%Y%m%d")
+    return _format_date(start), _format_date(end)
+
+def get_age():
+    age = random.randint(20, 45)
+    age -= age % 5
+    diff = random.randint(5, 25)
+    diff -= diff % 5
+    return '{}-{}'.format(age, age + diff)
+
+def get_gender():
+    return random.choice(('M', 'F', 'B'))
+
+def get_currency():
+    return random.choice(('GBP', 'EUR', 'USD'))
+
+def get_campaign_name():
+    separator = '_'
+    type_ = get_type()
+    start, end = get_start_end_dates()
+    age = get_age()
+    gender = get_gender()
+    currency = get_currency()
+    return separator.join(
+        (type_, start, end, age, gender, currency))</code></pre></div><p>Analysts use spreadsheets all the time, and they come up with all sorts of coding techniques to compress as much information as possible into the campaign names. The format I <span>chose</span><a class="indexterm" id="id326686089"></a> is a simple example of that technique—there is a code that tells us the campaign type, then the start and end dates, then the target <code class="literal">age</code> and <code class="literal">gender</code>, and finally the currency. All values are separated by an underscore.</p><p>In the <code class="literal">get_type</code> function, I use <code class="literal">random.choice()</code> to get one value randomly out of a collection. Probably more interesting is <code class="literal">get_start_end_dates</code>. First, I get the duration for the campaign, which goes from one day to two years (randomly), then I get a random offset in time which I subtract from today's date in order to get the start date. Given that an offset is a random number between -365 and 365, would anything be different if I added it to today's date instead of subtracting it?</p><p>When I have both the start and end dates, I return a stringified version of them, joined by an underscore.</p><p>Then, we have a bit of modular trickery going on with the age calculation. I hope you remember the modulo operator (<code class="literal">%</code>) from <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/2" linkend="ch02"><span>Chapter 2</span></a>, <span class="emphasis"><em>Built-in Data Types</em></span>.</p><p>What happens here is that I want a date range that has multiples of five as extremes. So, there are many ways to do it, but what I do is to get a random number between <code class="literal">20</code> and <code class="literal">45</code> for the left extreme, and remove the remainder of the division by <code class="literal">5</code>. So, if, for example, I get <span class="emphasis"><em>28</em></span>, I will remove <span class="emphasis"><em>28 % 5 = 3</em></span> from it, getting <span class="emphasis"><em>25</em></span>. I could have just used <code class="literal">random.randrange()</code>, but it's hard to resist modular division.</p><p>The rest of the functions are just some other applications of <code class="literal">random.choice()</code> and the last one, <code class="literal">get_campaign_name</code>, is nothing more than a collector for all these puzzle pieces that returns the final campaign name:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6">#6
+# campaign data:
+# name, budget, spent, clicks, impressions
+def get_campaign_data():
+    name = get_campaign_name()
+    budget = random.randint(10**3, 10**6)
+    spent = random.randint(10**2, budget) 
+    clicks = int(random.triangular(10**2, 10**5, 0.2 * 10**5)) 
+    impressions = int(random.gauss(0.5 * 10**6, 2))
+    return {
+        'cmp_name': name,
+        'cmp_bgt': budget,
+        'cmp_spent': spent,</code></pre></div><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7">        'cmp_clicks': clicks,
+        'cmp_impr': impressions
+    }</code></pre></div><p>In <code class="literal">#6</code>, we write a function that creates a complete campaign object. I used a few different functions from the <code class="literal">random</code> module. <code class="literal">random.randint()</code> gives you an integer between two extremes. The problem with it is that it follows a uniform probability distribution, which means that any number in the interval has the same probability of coming up.</p><p>Therefore, when dealing with a lot of data, if you distribute your fixtures using a uniform distribution, the results you get will all look similar. For this reason, I chose to use <code class="literal">triangular</code> and <code class="literal">gauss</code>, for <code class="literal">clicks</code> and <code class="literal">impressions</code>. They use different probability distributions so that we'll have something more <span>interesting</span><a class="indexterm" id="id326018540"></a> to see in the end.</p><p>Just to make sure we're on the same page with the terminology: <code class="literal">clicks</code> represents the number of clicks on a campaign advertisement, <code class="literal">budget</code> is the total amount of money allocated for the campaign, <code class="literal">spent</code> is how much of that money has already been spent, and <code class="literal">impressions</code> is the number of times the campaign has been fetched, as a resource, from its source, regardless of the number of clicks that were performed on the campaign. Normally, the amount of <code class="literal">impressions</code> is greater than the number of <code class="literal">clicks</code>.</p><p>Now that we have the data, it's time to put it all together:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8">#7
+def get_data(users):
+    data = []
+    for user in users:
+        campaigns = [get_campaign_data()
+                     for _ in range(random.randint(2, 8))]
+        data.append({'user': user, 'campaigns': campaigns})
+    return data</code></pre></div><p>As you can see, each item in <code class="literal">data</code> is a dictionary with a <code class="literal">user</code> and a list of campaigns that are associated with that <code class="literal">user</code>.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec158"></a>Cleaning the data</h3></div></div></div><p>Let's start <span>cleaning</span><a class="indexterm" id="id326019415"></a> the data:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9">#8
+rough_data = get_data(users)
+rough_data[:2]  # let's take a peek</code></pre></div><p>We simulate fetching the data from a source and then inspect it. The Notebook is the perfect tool for inspecting your steps. You can vary the granularity to your needs. The first item in <code class="literal">rough_data</code> looks like this:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10"><span class="strong"><strong>{'user': '{"username": "samuel62", "name": "Tonya Lucas", "gender": "F", "email": "anthonyrobinson@robbins.biz", "age": 27, "address": "PSC 8934, Box 4049\\nAPO AA 43073"}',</strong></span>
+<span class="strong"><strong>  'campaigns': [{'cmp_name': 'GRZ_20171018_20171116_35-55_B_EUR',</strong></span>
+<span class="strong"><strong>    'cmp_bgt': 999613,</strong></span>
+<span class="strong"><strong>    'cmp_spent': 43168,</strong></span>
+<span class="strong"><strong>    'cmp_clicks': 35603,</strong></span>
+<span class="strong"><strong>    'cmp_impr': 500001},</strong></span>
+<span class="strong"><strong>    ...</strong></span>
+<span class="strong"><strong>   {'cmp_name': 'BYU_20171122_20181016_30-45_B_USD',</strong></span>
+<span class="strong"><strong>    'cmp_bgt': 561058,</strong></span>
+<span class="strong"><strong>    'cmp_spent': 472283,</strong></span>
+<span class="strong"><strong>    'cmp_clicks': 44823,</strong></span>
+<span class="strong"><strong>    'cmp_impr': 499999}]}</strong></span></code></pre></div><p>So, we now start working on it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11">#9
+data = []
+for datum in rough_data:
+    for campaign in datum['campaigns']:
+        campaign.update({'user': datum['user']})
+        data.append(campaign)
+data[:2]  # let's take another peek</code></pre></div><p>The first thing we need to do in order to be able to feed <code class="literal">DataFrame</code> with this <code class="literal">data</code> is to denormalize it. This means transforming <code class="literal">data</code> into a list whose items are campaign dictionaries, augmented with their relative <code class="literal">user</code> dictionary. Users will be duplicated in each campaign they belong to. The first item in <code class="literal">data</code> looks like this:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"><span class="strong"><strong>{'cmp_name': 'GRZ_20171018_20171116_35-55_B_EUR',</strong></span>
+<span class="strong"><strong>  'cmp_bgt': 999613,</strong></span>
+<span class="strong"><strong>  'cmp_spent': 43168,</strong></span>
+<span class="strong"><strong>  'cmp_clicks': 35603,</strong></span>
+<span class="strong"><strong>  'cmp_impr': 500001,</strong></span>
+<span class="strong"><strong>  'user': '{"username": "samuel62", "name": "Tonya Lucas", "gender": "F", "email": "anthonyrobinson@robbins.biz", "age": 27, "address": "PSC 8934, Box 4049\\nAPO AA 43073"}'}</strong></span></code></pre></div><p>You can see that the <code class="literal">user</code> object has been <span>brought</span><a class="indexterm" id="id326042722"></a> into the campaign dictionary, which was repeated for each campaign.</p><p>Now, I would like to help you and offer a deterministic second part of the chapter, so I'm going to save the data I generated here so that I (and you, too) will be able to load it from the next Notebook, and we should then have the same results:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="13">#10
+with open('data.json', 'w') as stream:
+    stream.write(json.dumps(data))</code></pre></div><p>You should find the <code class="literal">data.json</code> file in the source code for the book. Now we are done with <code class="literal">ch13-dataprep</code>, so we can close it, and open up <code class="literal">ch13</code>.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec159"></a>Creating the DataFrame</h3></div></div></div><p>First, we have <span>another</span><a class="indexterm" id="id326021696"></a> round of imports:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="14">#1
+import json
+import calendar
+import numpy as np
+from pandas import DataFrame
+import arrow
+import pandas as pd</code></pre></div><p>The <code class="literal">json</code> and <code class="literal">calendar</code> libraries come <span>from</span><a class="indexterm" id="id326021717"></a> the standard library. <code class="literal">numpy</code> is the NumPy library, the fundamental package for scientific computing with Python. NumPy stands for Numeric Python, and it is one of the most widely-used libraries in the data science environment. I'll say a few words about it later on in this chapter. <code class="literal">pandas</code> is the very core upon which the whole project is based. <span class="strong"><strong>Pandas</strong></span> stands for <span class="strong"><strong>Python Data Analysis Library</strong></span>. Among <span>many</span><a class="indexterm" id="id326042904"></a> other things, it provides <code class="literal">DataFrame</code>, a matrix-like data structure with advanced processing capabilities. It's customary to import <code class="literal">DataFrame</code> separately and then to <code class="literal">import pandas as pd</code>.</p><p><code class="literal">arrow</code> is a nice third-party library that speeds up dealing with dates dramatically. Technically, we could do it with the standard library, but I see no reason not to expand the range of the example and show you something different.</p><p>After the imports, we load the <code class="literal">data</code> as follows:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="15">#2
+with open('data.json') as stream:
+    data = json.loads(stream.read())</code></pre></div><p>And finally, it's time to create <code class="literal">DataFrame</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="16">#3
+df = DataFrame(data)
+df.head()</code></pre></div><p>We can inspect the first five rows using the <code class="literal">head</code> method of <code class="literal">DataFrame</code>. You should see something like this:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/3d8d39da-d6a0-458d-9444-2975a1120783.png"/></div><p>Jupyter renders the <span>output</span><a class="indexterm" id="id326042964"></a> of the <code class="literal">df.head()</code> call as HTML automatically. In order to <span>have</span><a class="indexterm" id="id326104007"></a> a text-based output, simply wrap <code class="literal">df.head()</code> in a <code class="literal">print</code> call.</p><p>The <code class="literal">DataFrame</code> structure is very powerful. It allows us to manipulate a lot of its contents. You can filter by rows, columns, aggregate on data, and many other operations. You can operate with rows or columns without suffering the time penalty you would have to pay if you were working on data with pure Python. This happens because, under the covers, <code class="literal">pandas</code> is harnessing the power of the NumPy library, which itself draws its incredible speed from the low-level implementation of its core.</p><p>Using <code class="literal">DataFrame</code> allows us to couple the power of NumPy with spreadsheet-like capabilities so that we'll be able to work on our data in a fashion that is similar to what an analyst could do. Only, we do it with code.</p><p>But let's go back to our project. Let's see two ways to quickly get a bird's eye view of the data:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="17">#4
+df.count()</code></pre></div><p><code class="literal">count</code> yields a count of all the non-empty cells in each column. This is good to help you understand how sparse your data can be. In our case, we have no missing values, so the output is:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="18"><span class="strong"><strong>cmp_bgt       5037
+cmp_clicks    5037
+cmp_impr      5037
+cmp_name      5037
+cmp_spent     5037
+user          5037
+dtype: int64</strong></span></code></pre></div><p>Nice! We have 5,037 rows, and the data type is integers (<code class="literal">dtype: int64</code> means long integers because they take 64 bits each). Given that we have 1,000 users and the amount of campaigns per user is a random number between 2 and 8, we're exactly in line with what I was expecting:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="19">#5
+df.describe() </code></pre></div><p>The <code class="literal">describe</code> method is a nice, quick way to introspect a bit further:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="20"><span class="strong"><strong>           cmp_bgt   cmp_clicks      cmp_impr     cmp_spent</strong></span>
+<span class="strong"><strong>count  5037.000000  5037.000000   5037.000000   5037.000000</strong></span>
+<span class="strong"><strong>mean 496930.317054 40920.962676 499999.498312 246963.542783</strong></span>
+<span class="strong"><strong>std  287126.683484 21758.505210      2.033342 217822.037701</strong></span>
+<span class="strong"><strong>min    1057.000000   341.000000 499993.000000    114.000000</strong></span>
+<span class="strong"><strong>25%  247663.000000 23340.000000 499998.000000  64853.000000</strong></span>
+<span class="strong"><strong>50%  491650.000000 37919.000000 500000.000000 183716.000000</strong></span>
+<span class="strong"><strong>75%  745093.000000 56253.000000 500001.000000 379478.000000</strong></span>
+<span class="strong"><strong>max  999577.000000 99654.000000 500008.000000 975799.000000</strong></span></code></pre></div><p>As you can see, it gives us several measures, such as <code class="literal">count</code>, <code class="literal">mean</code>, <code class="literal">std</code> (standard deviation), <code class="literal">min</code>, and <code class="literal">max</code>, and shows how data is distributed in the various quadrants. Thanks to this method, we already have a rough idea of how our data is structured.</p><p>Let's see which are the three campaigns with the highest and lowest budgets:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="21">#6
+df.sort_index(by=['cmp_bgt'], ascending=False).head(3) </code></pre></div><p>This gives the <span>following</span><a class="indexterm" id="id326113559"></a> output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="22"><span class="strong"><strong>      cmp_bgt  cmp_clicks  cmp_impr                           cmp_name
+3321   999577        8232    499997  GRZ_20180810_20190107_40-55_M_EUR   
+2361   999534       53223    499999  GRZ_20180516_20191030_25-30_B_EUR   
+2220   999096       13347    499999  KTR_20180620_20190809_40-50_F_USD</strong></span></code></pre></div><p>And a call to tail shows us the <span>ones</span><a class="indexterm" id="id326113576"></a> with the lowest budgets:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="23">#7
+df.sort_values(by=['cmp_bgt'], ascending=False).tail(3)</code></pre></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch13lvl3sec53"></a>Unpacking the campaign name</h4></div></div></div><p>Now it's time to <span>increase</span><a class="indexterm" id="id326113595"></a> the complexity. First of all, we want to get rid of that horrible campaign name (<code class="literal">cmp_name</code>). We need to explode it into parts and put each part in one dedicated column. In order to do this, we'll use the <code class="literal">apply</code> method of the <code class="literal">Series</code> object.</p><p>The <code class="literal">pandas.core.series.Series</code> class is basically a powerful wrapper around an array (think of it as a list with augmented capabilities). We can extrapolate a <code class="literal">Series</code> object from <code class="literal">DataFrame</code> by accessing it in the same way we do with a key in a dictionary, and we can call <code class="literal">apply</code> on that <code class="literal">Series</code> object, which will run a function feeding each item in the <code class="literal">Series</code> to it. We compose the result into a new <code class="literal">DataFrame</code>, and then join that <code class="literal">DataFrame</code> with <code class="literal">df</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="24">#8
+def unpack_campaign_name(name):
+    # very optimistic method, assumes data in campaign name
+    # is always in good state
+    type_, start, end, age, gender, currency = name.split('_')
+    start = arrow.get(start, 'YYYYMMDD').date()
+    end = arrow.get(end, 'YYYYMMDD').date()
+    return type_, start, end, age, gender, currency
+
+campaign_data = df['cmp_name'].apply(unpack_campaign_name)
+campaign_cols = [
+    'Type', 'Start', 'End', 'Age', 'Gender', 'Currency']
+campaign_df = DataFrame(
+    campaign_data.tolist(), columns=campaign_cols, index=df.index)
+campaign_df.head(3)</code></pre></div><p>Within <code class="literal">unpack_campaign_name</code>, we split the campaign <code class="literal">name</code> in parts. We use <code class="literal">arrow.get()</code> to get a proper <code class="literal">date</code> object out of those strings (<code class="literal">arrow</code> makes it really easy to do it, doesn't it?), and then we return the objects. A quick peek at the last line reveals:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="25"><span class="strong"><strong>  Type       Start         End    Age Gender Currency
+0  KTR  2019-03-24  2020-11-06  20-35      F      EUR
+1  GRZ  2017-05-21  2018-07-24  30-45      B      GBP
+2  KTR  2017-12-18  2018-02-08  30-40      F      GBP</strong></span></code></pre></div><p>Nice! One important thing: even if the dates appear as strings, they are just the representation of the real <code class="literal">date</code> objects that are hosted in <code class="literal">DataFrame</code>.</p><p>Another very important thing: when joining two <code class="literal">DataFrame</code> instances, it's imperative that they have the same <code class="literal">index</code>, otherwise <code class="literal">pandas</code> won't be able to know which rows go with which. Therefore, when we create <code class="literal">campaign_df</code>, we set its <code class="literal">index</code> to the one from <code class="literal">df</code>. This enables us to join them. When <span>creating</span><a class="indexterm" id="id326127190"></a> this <code class="literal">DataFrame</code>, we also pass the column's names:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="26">#9
+df = df.join(campaign_df)</code></pre></div><p>And after <code class="literal">join</code>, we take a peek, hoping to see matching data:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="27">#10
+df[['cmp_name'] + campaign_cols].head(3)</code></pre></div><p><span>The truncated output of the preceding code snippet is as follows:</span></p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="28"><span class="strong"><strong>                           cmp_name Type      Start        End</strong></span>
+<span class="strong"><strong>0 KTR_20190324_20201106_20-35_F_EUR  KTR 2019-03-24 2020-11-06</strong></span>
+<span class="strong"><strong>1 GRZ_20170521_20180724_30-45_B_GBP  GRZ 2017-05-21 2018-07-24</strong></span>
+<span class="strong"><strong>2 KTR_20171218_20180208_30-40_F_GBP  KTR 2017-12-18 2018-02-08</strong></span></code></pre></div><p>As you can see, <code class="literal">join</code> was successful; the campaign name and the separate columns expose the same data. Did you see what we did there? We're accessing <code class="literal">DataFrame</code> using the square brackets syntax, and we pass a list of column names. This will produce a brand new <code class="literal">DataFrame</code>, with those columns (in the same order), on which we then call the <code class="literal">head()</code> method.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch13lvl3sec54"></a>Unpacking the user data</h4></div></div></div><p>We now do the exact same <span>thing</span><a class="indexterm" id="id326127262"></a> for each piece of <code class="literal">user</code> JSON data. We call <code class="literal">apply</code> on the <code class="literal">user</code> series, running the <code class="literal">unpack_user_json</code> function, which takes a JSON <code class="literal">user</code> object and transforms it into a list of its fields, which we can then inject into a brand new <code class="literal">DataFrame</code>, <code class="literal">user_df</code>. After that, we'll join <code class="literal">user_df</code> back with <code class="literal">df</code>, like we did with <code class="literal">campaign_df</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="29">#11
+def unpack_user_json(user):
+    # very optimistic as well, expects user objects
+    # to have all attributes
+    user = json.loads(user.strip())
+    return [
+        user['username'],
+        user['email'],
+        user['name'],
+        user['gender'],
+        user['age'],
+        user['address'],
+    ]
+
+user_data = df['user'].apply(unpack_user_json)
+user_cols = [
+    'username', 'email', 'name', 'gender', 'age', 'address']
+user_df = DataFrame(
+    user_data.tolist(), columns=user_cols, index=df.index)</code></pre></div><p>Very similar to the previous operation, isn't it? We should also note here that, when creating <code class="literal">user_df</code>, we need to instruct <code class="literal">DataFrame</code> about the column names and the <code class="literal">index</code>. Let's join and take a quick peek:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="30"><span>#12
+df = df.join(user_df)
+
+#13
+df[['user'] + user_cols].head(2)</span></code></pre></div><p>The output shows us that everything went well. We're good, but we're not done yet. If you call <code class="literal">df.columns</code> in a cell, you'll see that we still have ugly <span>names</span><a class="indexterm" id="id326127333"></a> for our columns. Let's change that:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="31">#14
+better_columns = [
+    'Budget', 'Clicks', 'Impressions',
+    'cmp_name', 'Spent', 'user',
+    'Type', 'Start', 'End',
+    'Target Age', 'Target Gender', 'Currency',
+    'Username', 'Email', 'Name',
+    'Gender', 'Age', 'Address',
+]
+df.columns = better_columns</code></pre></div><p>Good! Now, with the exception of <code class="literal">'cmp_name'</code> and <code class="literal">'user'</code>, we only have nice names.</p><p>Completing the <code class="literal">datasetNext</code> step will be to add some extra columns. For each campaign, we have the numbers of clicks and impressions, and we have the amounts spent. This allows us to introduce three measurement ratios: <span class="strong"><strong>CTR</strong></span>, <span class="strong"><strong>CPC</strong></span>, and <span class="strong"><strong>CPI</strong></span>. They stand for <span class="strong"><strong>Click Through Rate</strong></span>, <span class="strong"><strong>Cost Per Click</strong></span>, and <span class="strong"><strong>Cost Per Impression</strong></span>, respectively.</p><p>The last two are straightforward, but CTR is not. Suffice it to say that it is the ratio between clicks and impressions. It gives you a measure of how many clicks were performed on a campaign advertisement per impression—the higher this number, the more successful the advertisement is in attracting users to click on it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="32">#15
+def calculate_extra_columns(df):
+    # Click Through Rate
+    df['CTR'] = df['Clicks'] / df['Impressions']
+    # Cost Per Click
+    df['CPC'] = df['Spent'] / df['Clicks']
+    # Cost Per Impression
+    df['CPI'] = df['Spent'] / df['Impressions']
+calculate_extra_columns(df)</code></pre></div><p>I wrote this as a function, but I could have just written the code in the cell. It's not important. What I want you to notice here is that we're adding those three columns with one line of code each, but <code class="literal">DataFrame</code> applies the operation automatically (the division, in this case) to each pair of cells from the appropriate columns. So, even if they are masked as three divisions, these are actually <span class="emphasis"><em>5037 * 3</em></span> divisions, because they are performed for each row. Pandas does a lot of work for us, and also does a very good job of hiding the complexity of it.</p><p>The function, <code class="literal">calculate_extra_columns</code>, takes <code class="literal">DataFrame</code>, and works directly on it. This mode of operation is called <span class="strong"><strong>in-place</strong></span>. Do you remember how <code class="literal">list.sort()</code> was sorting the list? It is the same deal. You could also say that this function is not pure, which means it has side effects, as it modifies the <span>mutable</span><a class="indexterm" id="id326156977"></a> object it is passed as an argument.</p><p>We can take a look at the results by filtering on the relevant columns and calling <code class="literal">head</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="33">#16
+df[['Spent', 'Clicks', 'Impressions',
+    'CTR', 'CPC', 'CPI']].head(3)</code></pre></div><p>This shows us that the calculations were performed correctly on each row:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="34"><span class="strong"><strong>    Spent  Clicks  Impressions       CTR       CPC       CPI
+0   39383   62554       499997  0.125109  0.629584  0.078766
+1  210452   36176       500001  0.072352  5.817448  0.420903
+2  342507   62299       500001  0.124598  5.497793  0.685013</strong></span></code></pre></div><p>Now, I want to verify the accuracy of the results manually for the first row:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="35">#17
+clicks = df['Clicks'][0]
+impressions = df['Impressions'][0]
+spent = df['Spent'][0]
+CTR = df['CTR'][0]
+CPC = df['CPC'][0]
+CPI = df['CPI'][0]
+print('CTR:', CTR, clicks / impressions)
+print('CPC:', CPC, spent / clicks)
+print('CPI:', CPI, spent / impressions)</code></pre></div><p>This yields the following output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="36"><span class="strong"><strong>CTR: 0.1251087506525039 0.1251087506525039
+CPC: 0.6295840393899671 0.6295840393899671
+CPI: 0.0787664725988356 0.0787664725988356</strong></span></code></pre></div><p>This is exactly what we saw in the previous output. Of course, I wouldn't normally need to do this, but I wanted to show you how can you perform calculations this way. You can access <code class="literal">Series</code> (a column) by passing its name to <code class="literal">DataFrame</code>, in square brackets, and then you access each row by its position, exactly as you would with a regular list or tuple.</p><p>We're almost done with our <code class="literal">DataFrame</code>. All we are missing now is a column that tells us the duration of the campaign and a column that tells us which <code class="literal">day</code> of the week <span>corresponds</span><a class="indexterm" id="id326201787"></a> to the start date of each campaign. This allows me to expand on how to play with <code class="literal">date</code> objects:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="37">#18
+def get_day_of_the_week(day):
+    number_to_day = dict(enumerate(calendar.day_name, 1))
+    return number_to_day[day.isoweekday()]
+
+def get_duration(row):
+    return (row['End'] - row['Start']).days
+
+df['Day of Week'] = df['Start'].apply(get_day_of_the_week)
+df['Duration'] = df.apply(get_duration, axis=1)</code></pre></div><p>We used two different techniques here but first, the code.</p><p><code class="literal">get_day_of_the_week</code> takes a <code class="literal">date</code> object. If you cannot understand what it does, please take a few moments to try to understand for yourself before reading the explanation. Use the inside-out technique like we've done a few times before.</p><p>So, as I'm sure you know by now, if you put <code class="literal">calendar.day_name</code> in a <code class="literal">list</code> call, you get <code class="literal">['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']</code>. This means that, if we enumerate <code class="literal">calendar.day_name</code> starting from <code class="literal">1</code>, we get pairs such as <code class="literal">(1, 'Monday')</code>, <code class="literal">(2, 'Tuesday')</code>, and so on. If we feed these pairs to a dictionary, we get a mapping between the days of the week as numbers (1, 2, 3, ...) and their names. When the mapping is created, in order to get the name of a day, we just need to know its number. To get it, we call <code class="literal">date.isoweekday()</code>, which tells us which day of the week that date is (as a number). You feed that into the mapping and, boom! You have the name of the day.</p><p><code class="literal">get_duration</code> is interesting as well. First, notice it takes an entire row, not just a single value. What happens in its body is that we perform a subtraction between a campaign's end and start dates. When you subtract <code class="literal">date</code> objects, the result is a <code class="literal">timedelta</code> object, which represents a given amount of time. We take the value of its <code class="literal">.days</code> property. It is as simple as that.</p><p>Now, we can introduce the fun part, the application of those two functions.</p><p>The first application is performed on a <code class="literal">Series</code> object, like we did before for <code class="literal">'user'</code> and <code class="literal">'cmp_name'</code>; there is nothing new here.</p><p>The second one is applied to the whole <code class="literal">DataFrame</code> and, in order to instruct <code class="literal">pandas</code> to perform that operation on the rows, we pass <code class="literal">axis=1</code>.</p><p>We can verify the <span>results</span><a class="indexterm" id="id326202020"></a> very easily, as shown here:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="38">#19
+df[['Start', 'End', 'Duration', 'Day of Week']].head(3)</code></pre></div><p>The preceding code yields the following output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="39"><span class="strong"><strong>        Start         End  Duration Day of Week
+0  2019-03-24  2020-11-06       593      Sunday
+1  2017-05-21  2018-07-24       429      Sunday
+2  2017-12-18  2018-02-08        52      Monday</strong></span></code></pre></div><p>So, we now know that between the 24<sup>th</sup> of March, 2019 and the 6<sup>th</sup> of November, 2020 there are 593 days, and that the 24<sup>th</sup> of March, 2019 is a Sunday.</p><p>If you're wondering what the purpose of this is, I'll provide an example. Imagine that you have a campaign that is tied to a sports event that usually takes place on a Sunday. You may want to inspect your data according to the days so that you can correlate them to the various measurements you have. We're not going to do it in this project, but it was useful to see, if only for the different way of calling <code class="literal">apply()</code> on <code class="literal">DataFrame</code>.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch13lvl3sec55"></a>Cleaning everything up</h4></div></div></div><p>Now that we have <span>everything</span><a class="indexterm" id="id326214118"></a> we want, it's time to do the final cleaning; remember we still have the <code class="literal">'cmp_name'</code> and <code class="literal">'user'</code> columns. Those are useless now, so they have to go. Also, I want to reorder the columns in <code class="literal">DataFrame</code> so that it is more relevant to the data it now contains. In order to do this, we just need to filter <code class="literal">df</code> on the column list we want. We'll get back a brand new <code class="literal">DataFrame</code> that we can reassign to <code class="literal">df</code> itself:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="40">#20
+final_columns = [
+    'Type', 'Start', 'End', 'Duration', 'Day of Week', 'Budget',
+    'Currency', 'Clicks', 'Impressions', 'Spent', 'CTR', 'CPC',
+    'CPI', 'Target Age', 'Target Gender', 'Username', 'Email',
+    'Name', 'Gender', 'Age'
+]
+df = df[final_columns]</code></pre></div><p>I have grouped the campaign information at the beginning, then the measurements, and finally the user data at the end. Now our <code class="literal">DataFrame</code> is clean and ready for us to inspect.</p><p>Before we start going crazy with graphs, what about taking a snapshot of <code class="literal">DataFrame</code> so that we can easily reconstruct it from a file, rather than having to redo all the steps we did to get here. Some analysts may want to have it in spreadsheet form, to do a different kind of analysis than the one we want to do, so let's see how to save <code class="literal">DataFrame</code> to a file. It's easier done than said.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec160"></a>Saving the DataFrame to a file</h3></div></div></div><p>We can save <code class="literal">DataFrame</code> in many <span>different</span><a class="indexterm" id="id326214380"></a> ways. You can type <code class="literal">df.to_</code> and then press <span class="emphasis"><em><span class="strong"><strong>Tab</strong></span></em></span> to make autocompletion pop up, to see all the possible options.</p><p>We're going to save <code class="literal">DataFrame</code> in three different formats, just for fun. First, CSV:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="41">#21
+df.to_csv('df.csv')</code></pre></div><p>Then JSON:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="42">#22
+df.to_json('df.json')</code></pre></div><p>And finally, in an Excel spreadsheet:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="43">#23
+df.to_excel('df.xls')</code></pre></div><p>The CSV file looks like this (output truncated):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="44"><span class="strong"><strong>,Type,Start,End,Duration,Day of Week,Budget,Currency,Clicks,Im</strong></span>
+<span class="strong"><strong>0,KTR,2019-03-24,2020-11-06,593,Sunday,847110,EUR,62554,499997</strong></span>
+<span class="strong"><strong>1,GRZ,2017-05-21,2018-07-24,429,Sunday,510835,GBP,36176,500001</strong></span>
+<span class="strong"><strong>2,KTR,2017-12-18,2018-02-08,52,Monday,720897,GBP,62299,500001,</strong></span></code></pre></div><p>And the JSON one looks like this (again, output truncated):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="45"><span class="strong"><strong>{</strong></span>
+<span class="strong"><strong>  "Age": {</strong></span>
+<span class="strong"><strong>    "0": 29,</strong></span>
+<span class="strong"><strong>    "1": 29,</strong></span>
+<span class="strong"><strong>    "10": 80,</strong></span></code></pre></div><p>So, it's extremely easy to save <code class="literal">DataFrame</code> in many <span>different</span><a class="indexterm" id="id326217272"></a> formats, and the good news is that the reverse is also true: it's very easy to load a spreadsheet into <code class="literal">DataFrame</code>. The programmers behind <code class="literal">pandas</code> went a long way to ease our tasks, something to be grateful for.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch13lvl2sec161"></a>Visualizing the results</h3></div></div></div><p>Finally, the juicy bits. In this section, we're going to visualize some results. From a data science perspective, I'm not very interested in going deep into analysis, especially because the <span>data</span><a class="indexterm" id="id326268802"></a> is completely random, but still, this code will get you started with graphs and other features.</p><p>Something I learned in my life, and this may come as a surprise to you, is that—<span class="emphasis"><em>looks also count</em></span>, so it's very important that when you present your results, you do your best to <span class="emphasis"><em>make them pretty</em></span>.</p><p>First, we tell <code class="literal">pandas</code> to render graphs in the cell output frame, which is convenient. We do it with the following:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="46">#24
+%matplotlib inline</code></pre></div><p>Then, we proceed with some styling:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="47">#25
+import matplotlib.pyplot as plt
+plt.style.use(['classic', 'ggplot'])
+import pylab
+pylab.rcParams.update({'font.family' : 'serif'})</code></pre></div><p>Its purpose is to make the graphs we will look at in this section a little bit prettier. You can also instruct the Notebook to do this when you start it from the console by passing a parameter, but I wanted to show you this way too since it can be annoying to have to restart the Notebook just because you want to plot something. In this way, you can do it on the fly and then keep working.</p><p>We also use <code class="literal">pylab</code> to set the <code class="literal">font.family</code> to <code class="literal">serif</code>. This might not be necessary on your system. Try to comment it out and execute the Notebook, and see whether anything changes.</p><p>Now that <code class="literal">DataFrame</code> is complete, let's run<code class="literal">df.describe()</code>(<code class="literal">#26</code>) again. The results should look something like this:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/07fdbc15-8e93-4c5a-ae74-2f8ea3c6cbd7.png"/></div><p>This kind of quick result is perfect for satisfying those managers who have 20 seconds to dedicate to you and just want rough numbers.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note86"></a>Note</h3><p>Once again, please keep in mind that our campaigns have different currencies, so these numbers are actually meaningless. The point here is to demonstrate the <code class="literal">DataFrame</code> capabilities, not to get to a correct or detailed analysis of real data.</p></div><p>Alternatively, a graph is usually much better than a table with numbers because it's much easier to read it and it gives you immediate feedback. So, let's graph out the four pieces of <span>information</span><a class="indexterm" id="id326268883"></a> we have on each campaign—<code class="literal">'Budget'</code>, <code class="literal">'Spent'</code>, <code class="literal">'Clicks'</code>, and <code class="literal">'Impressions'</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="48">#27
+df[['Budget', 'Spent', 'Clicks', 'Impressions']].hist(
+    bins=16, figsize=(16, 6));</code></pre></div><p>We extrapolate those four columns (this will give us another <code class="literal">DataFrame</code> made with only those columns) and call the histogram <code class="literal">hist()</code> method on it. We give some measurements on the bins and figure sizes, but basically, everything is done automatically.</p><p>One important thing: since this instruction is the only one in this cell (which also means, it's the last one), the Notebook will print its result before drawing the graph. To suppress this behavior and have only the graph drawn with no printing, just add a semicolon at the end (you thought I was reminiscing about Java, didn't you?). Here are the graphs:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/6a2e2ade-4a99-4a60-8f4a-0c70af30fb34.png"/></div><p>They are beautiful, aren't they? Did you notice the serif font? How about the meaning of those figures? If you go back and take a look at the way we generate the data, you will see that all these graphs make perfect sense:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc"><strong class="userinput"><code>Budget</code></strong> is simply a random integer in an interval, therefore we were expecting a uniform distribution, and there we have it; it's practically a constant line.</li><li style="list-style-type: disc"><strong class="userinput"><code>Spent</code></strong>is a uniform distribution as well, but the high end of its interval is the budget, which is moving. This means we should expect something such as a quadratic hyperbole that decreases to the right. And there it is as well.</li><li style="list-style-type: disc"><strong class="userinput"><code>Clicks</code></strong> was generated with a triangular distribution with a mean roughly 20% of the interval size, and you can see that the peak is right there, at about 20% to the left.</li><li style="list-style-type: disc"><strong class="userinput"><code>Impressions</code></strong>was a Gaussian distribution, which is the one that assumes the famous bell shape. The mean was exactly in the middle and we had a<span>standard</span><a class="indexterm" id="id326284448"></a>deviation of 2. You can see that the graph matches those parameters.</li></ul></div><p>Good! Let's plot out the measures we calculated:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="49">#28
+df[['CTR', 'CPC', 'CPI']].hist(
+    bins=20, figsize=(16, 6))</code></pre></div><p>Here is the plot representation:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/3a94a67b-a893-4b36-9727-8ee0a6f2153b.png"/></div><p>We can see that the <strong class="userinput"><code>CPC</code></strong> is highly skewed to the left, meaning that most of the <strong class="userinput"><code>CPC</code></strong> values are very low. The <strong class="userinput"><code>CPI</code></strong> has a similar shape, but is less extreme.</p><p>Now, all this is nice, but if you wanted to analyze only a particular segment of the data, how would you do it? We can apply a mask to <code class="literal">DataFrame</code> so that we get <span>another</span><a class="indexterm" id="id326284489"></a> one with only the rows that satisfy the mask condition. It's like applying a global, row-wise <code class="literal">if</code> clause:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="50">#29
+mask = (df.Spent &gt; 0.75 * df.Budget)
+df[mask][['Budget', 'Spent', 'Clicks', 'Impressions']].hist(
+    bins=15, figsize=(16, 6), color='g');</code></pre></div><p>In this case, I prepared <code class="literal">mask</code> to filter out all the rows for which the amount spent is less than or equal to 75% of the budget. In other words, we'll include only those campaigns for which we have spent at least three-quarters of the budget. Notice that in <code class="literal">mask</code>, I am showing you an alternative way of asking for a <code class="literal">DataFrame</code> column, by using direct property access (<code class="literal">object.property_name</code>), instead of dictionary-like access (<code class="literal">object['property_name']</code>). If <code class="literal">property_name</code> is a valid Python name, you can use both ways interchangeably (JavaScript works like this as well).</p><p><code class="literal">mask</code> is applied in the same way that we access a dictionary with a key. When you apply <code class="literal">mask</code> to <code class="literal">DataFrame</code>, you get back another one and we select only the relevant columns on this and call <code class="literal">hist()</code> again. This time, just for fun, we want the results to be green:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/4777b3f7-1c55-4d62-af0f-03c8aeeab350.png"/></div><p>Note that the shapes of the graphs haven't changed much, apart from the <strong class="userinput"><code>Spent</code></strong> graph,  which is quite different. The reason for this is that we've asked only for the rows where the amount spent is at least 75% of the budget. This means that we're including only the rows where the amount spent is close to the budget. The budget numbers come from a uniform distribution. Therefore, it is quite obvious that the <strong class="userinput"><code>Spent</code></strong> graph is now assuming that kind of shape. If you make the boundary even tighter and ask for 85% or more, you'll see the <strong class="userinput"><code>Spent</code></strong> graph become more and more like the <strong class="userinput"><code>Budget</code></strong> one.</p><p>Let's now ask for something different. How about the measure of <code class="literal">'Spent'</code>, <code class="literal">'Clicks'</code>, and <code class="literal">'Impressions'</code> grouped by day of the week:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="51">#30
+df_weekday = df.groupby(['Day of Week']).sum()
+df_weekday[['Impressions', 'Spent', 'Clicks']].plot(
+    figsize=(16, 6), subplots=True);</code></pre></div><p>The first line creates a new <code class="literal">DataFrame</code>, <code class="literal">df_weekday</code>, by asking for a grouping by <code class="literal">'Day of Week'</code> on <code class="literal">df</code>. The function used to aggregate the data is an addition.</p><p>The second line gets a slice of <code class="literal">df_weekday</code> using a list of <span>column</span><a class="indexterm" id="id326291634"></a> names, something we're accustomed to by now. On the result, we call <code class="literal">plot()</code>, which is a bit different to <code class="literal">hist()</code>. The <code class="literal">subplots=True</code> option makes <code class="literal">plot</code> draw three independent graphs:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/9bdea3a9-278d-4129-b3c7-6754008edae8.png"/></div><p>Interestingly enough, we can see that most of the action happens on Sundays and Wednesdays. If this were meaningful data, this would potentially be important information to give to our clients, which is why I'm showing you this example.</p><p>Note that the days are sorted alphabetically, which scrambles them up a bit. Can you think of a quick solution that would fix the issue? I'll leave it to you as an exercise to come up with something.</p><p>Let's finish this presentation section with a couple more things. First, a simple aggregation. We want to aggregate on <code class="literal">'Target Gender'</code> and <code class="literal">'Target Age'</code>, and show <code class="literal">'Impressions'</code> and <code class="literal">'Spent'</code>. For both, we want to see <code class="literal">'mean'</code> and the standard deviation (<code class="literal">'std'</code>):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="52">#31
+agg_config = {
+    'Impressions': ['mean', 'std'],
+    'Spent': ['mean', 'std'],
+}
+df.groupby(['Target Gender', 'Target Age']).agg(agg_config)</code></pre></div><p>It's very easy to do. We will prepare a dictionary that we'll use as a configuration. Then, we perform a grouping on the <code class="literal">'Target Gender'</code> and <code class="literal">'Target Age'</code> columns, and we pass our <span>configuration</span><a class="indexterm" id="id326291772"></a> dictionary to the <code class="literal">agg()</code> method. The result is truncated and rearranged a little bit to make it fit, and shown here:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="53"><span class="strong"><strong>                            Impressions                    Spent
+                                   mean       std           mean
+Target Gender Target Age                                        
+B             20-25       499999.741573  1.904111  218917.000000
+              20-30       499999.618421  2.039393  237180.644737
+              20-35       499999.358025  2.039048  256378.641975
+...                                 ...       ...            ...
+M             20-25       499999.355263  2.108421  277232.276316
+              20-30       499999.635294  2.075062  252140.117647
+              20-35       499999.835821  1.871614  308598.149254 </strong></span></code></pre></div><p>This is the textual representation, of course, but you can also have the HTML one. </p><p>Let's do one more thing before we wrap this chapter up. I want to show you something <span>called</span><a class="indexterm" id="id326291795"></a> a <span class="strong"><strong>pivot table</strong></span>. It's kind of a buzzword in the data environment, so an example such as this one, albeit very simple, is a must:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="54">#32
+pivot = df.pivot_table(
+    values=['Impressions', 'Clicks', 'Spent'],
+    index=['Target Age'],
+    columns=['Target Gender'],
+    aggfunc=np.sum
+)
+pivot</code></pre></div><p>We create a pivot table that shows us the correlation between <code class="literal">'Target Age'</code> and <code class="literal">'Impressions'</code>, <code class="literal">'Clicks'</code>, and <code class="literal">'Spent'</code>. These last three will be subdivided according to <code class="literal">'Target Gender'</code>. The aggregation function (<code class="literal">aggfunc</code>) used to calculate the results is the <code class="literal">numpy.sum</code> function (<code class="literal">numpy.mean</code> would be the default, had I not specified anything).</p><p>After creating the pivot table, we simply print it with the last line in the cell, and here's a crop of the result:</p><div class="mediaobject"><img src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/889113cf-c456-4d16-b93b-adca5210f247.png"/></div><p>It's pretty clear and provides very useful <span>information</span><a class="indexterm" id="id326346670"></a> when the data is meaningful.</p><p>That's it! I'll leave you to discover more about the wonderful world of IPython, Jupyter, and data science. I strongly encourage you to get comfortable with the Notebook environment. It's much better than a console, it's extremely practical and fun to use, and you can even create slides and documents with it.</p></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/adsct" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_13_ch13lvl1sec96_dealing-with-data_files/adsct" type="text/javascript"></script></body></html>

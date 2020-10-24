@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Numbers - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec26/numbers" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec26/numbers" rel="canonical"/>
+<meta content="Let's start by exploring Python's built-in data types for numbers." name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Numbers - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="Let's start by exploring Python's built-in data types for numbers." property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec26/numbers" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Numbers - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="Let's start by exploring Python's built-in data types for numbers." name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_2_ch02lvl1sec26_numbers_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_2_ch02lvl1sec26_numbers_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/script.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/profitwell.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/inferredEvents.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/445429252334850"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/fbevents.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/gtm.js"></script><script src="./9781788996662_2_ch02lvl1sec26_numbers_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_2_ch02lvl1sec26_numbers_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_2_ch02lvl1sec26_numbers_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_2_ch02lvl1sec26_numbers_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_2_ch02lvl1sec26_numbers_files/f(1).txt"></script><script src="./9781788996662_2_ch02lvl1sec26_numbers_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Numbers - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "Let's start by exploring Python's built-in data types for numbers.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_2_ch02lvl1sec26_numbers_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_2_ch02lvl1sec26_numbers_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_2_ch02lvl1sec26_numbers_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_2_ch02lvl1sec26_numbers_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch02lvl1sec26"></a>Numbers</h2></div></div><hr/></div><p>Let's start by exploring Python's built-in data types for numbers. Python was <span>designed</span><a class="indexterm" id="id325915806"></a> by a man with a master's degree in mathematics and computer science, so it's only <span>logical</span><a class="indexterm" id="id325915796"></a> that it has amazing support for numbers.</p><p>Numbers are immutable objects.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec23"></a>Integers</h3></div></div></div><p>Python <span>integers</span><a class="indexterm" id="id325915728"></a> have an unlimited range, subject only to the <span>available</span><a class="indexterm" id="id325891821"></a> virtual memory. This means that it doesn't really matter how big a number you want to store is: as long as it can fit in your computer's memory, Python will take care of it. Integer numbers can be positive, negative, and 0 (zero). They support all the basic mathematical operations, as shown in the following example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"><span class="strong"><strong>&gt;&gt;&gt; a = 14</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; b = 3</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a + b  # addition</strong></span>
+<span class="strong"><strong>17</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a - b  # subtraction</strong></span>
+<span class="strong"><strong>11</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a * b  # multiplication</strong></span>
+<span class="strong"><strong>42</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a / b  # true division</strong></span>
+<span class="strong"><strong>4.666666666666667</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a // b  # integer division</strong></span>
+<span class="strong"><strong>4</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a % b  # modulo operation (reminder of division)</strong></span>
+<span class="strong"><strong>2</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a ** b  # power operation</strong></span>
+<span class="strong"><strong>2744</strong></span></code></pre></div><p>The preceding code should be easy to understand. Just notice one important thing: Python has two <span>division</span><a class="indexterm" id="id325888046"></a> operators, one performs the so-called <span class="strong"><strong>true division</strong></span> (<code class="literal">/</code>), which returns the quotient of the operands, and the other one, the so-called <span class="strong"><strong>integer division</strong></span> (<code class="literal">//</code>), which returns the <span class="emphasis"><em>floored</em></span> quotient of the operands. It might be <span>worth</span><a class="indexterm" id="id325891793"></a> noting that in Python 2 the division operator <code class="literal">/</code> behaves differently than in Python 3. See how that is different for positive and negative numbers:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"><span class="strong"><strong>&gt;&gt;&gt; 7 / 4  # true division</strong></span>
+<span class="strong"><strong>1.75</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 7 // 4  # integer division, truncation returns 1</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; -7 / 4  # true division again, result is opposite of previous</strong></span>
+<span class="strong"><strong>-1.75</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; -7 // 4  # integer div., result not the opposite of previous</strong></span>
+<span class="strong"><strong>-2</strong></span></code></pre></div><p>This is an interesting example. If you were expecting a <code class="literal">-1</code> on the last line, don't feel bad, it's just the way Python works. The result of an <span>integer</span><a class="indexterm" id="id325891886"></a> division in Python is always rounded towards <span>minus</span><a class="indexterm" id="id325905653"></a> infinity. If, instead of flooring, you want to truncate a number to an integer, you can use the built-in <code class="literal">int</code> function, as shown in the following example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"><span class="strong"><strong>&gt;&gt;&gt; int(1.75)</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; int(-1.75)</strong></span>
+<span class="strong"><strong>-1</strong></span></code></pre></div><p>Notice that the truncation is done toward <code class="literal">0</code>.</p><p>There is also an operator to calculate the remainder of a division. It's called a modulo operator, and it's represented by a percentage (<code class="literal">%</code>):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"><span class="strong"><strong>&gt;&gt;&gt; 10 % 3  # remainder of the division 10 // 3</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 10 % 4  # remainder of the division 10 // 4</strong></span>
+<span class="strong"><strong>2</strong></span></code></pre></div><p>One nice feature introduced in Python 3.6 is the ability to add underscores within number literals (between digits or base specifiers, but not leading or trailing). The purpose is to help make some numbers more readable, like for example <code class="literal">1_000_000_000</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"><span class="strong"><strong>&gt;&gt;&gt; n = 1_024</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; n</strong></span>
+<span class="strong"><strong>1024</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; hex_n = 0x_4_0_0  # 0x400 == 1024</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; hex_n</strong></span>
+<span class="strong"><strong>1024
+</strong></span></code></pre></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec24"></a>Booleans</h3></div></div></div><p>Boolean algebra is that subset of <span>algebra</span><a class="indexterm" id="id326288010"></a> in which the values of the <span>variables</span><a class="indexterm" id="id325906640"></a> are the truth values: true and false. In Python, <code class="literal">True</code> and <code class="literal">False</code> are two keywords that are used to represent truth values. Booleans are a subclass of integers, and behave respectively like <code class="literal">1</code> and <code class="literal">0</code>. The equivalent of the <code class="literal">int</code> class for Booleans is the <code class="literal">bool</code> class, which returns either <code class="literal">True</code> or <code class="literal">False</code>. Every built-in Python object has a value in the Boolean context, which means they basically evaluate to either <code class="literal">True</code> or <code class="literal">False</code> when fed to the <code class="literal">bool</code> function. We'll see all about this in <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/3" linkend="ch03"><span>Chapter 3</span></a>, <span class="emphasis"><em>Iterating and Making Decisions</em></span>.</p><p>Boolean values can be combined in Boolean expressions using the logical operators <code class="literal">and</code>, <code class="literal">or</code>, and <code class="literal">not</code>. Again, we'll see them in full in the next chapter, so for now let's just see a simple example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"><span class="strong"><strong>&gt;&gt;&gt; int(True)  # True behaves like 1</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; int(False)  # False behaves like 0</strong></span>
+<span class="strong"><strong>0</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; bool(1)  # 1 evaluates to True in a boolean context</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; bool(-42)  # and so does every non-zero number</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; bool(0)  # 0 evaluates to False</strong></span>
+<span class="strong"><strong>False</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; # quick peak at the operators (and, or, not)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; not True</strong></span>
+<span class="strong"><strong>False</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; not False</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; True and True</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; False or True</strong></span>
+<span class="strong"><strong>True</strong></span></code></pre></div><p>You can see that <code class="literal">True</code> and <code class="literal">False</code> are <span>subclasses</span><a class="indexterm" id="id325973769"></a> of integers when you try to add them. Python upcasts them to integers and performs the addition:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6"><span class="strong"><strong>&gt;&gt;&gt; 1 + True
+2
+&gt;&gt;&gt; False + 42
+42
+&gt;&gt;&gt; 7 - True
+6
+</strong></span></code></pre></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note18"></a>Note</h3><p><span class="strong"><strong>Upcasting</strong></span> is a type conversion operation that goes from a subclass to its parent. In the example presented here, <code class="literal">True</code> and <code class="literal">False</code>, which belong to a class derived from the integer class, are converted back to integers when needed. This topic is about inheritance and will be explained in detail in <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/6" linkend="ch06"><span>Chapter 6</span></a>, <span class="emphasis"><em>OOP, Decorators, and Iterators</em></span>.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec25"></a>Real numbers</h3></div></div></div><p>Real numbers, or floating <span>point</span><a class="indexterm" id="id325976134"></a> numbers, are <span>represented</span><a class="indexterm" id="id325976140"></a> in Python according to the IEEE 754 double-precision binary floating-point format, which is stored in 64 bits of information <span>divided</span><a class="indexterm" id="id325976150"></a> into three sections: sign, exponent, and mantissa.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note19"></a>Note</h3><p>Quench your thirst for knowledge about this format on Wikipedia: <span><a class="ulink" href="http://en.wikipedia.org/wiki/Double-precision_floating-point_format" target="_blank">http://en.wikipedia.org/wiki/Double-precision_floating-point_format</a>.</span></p></div><p>Usually, programming languages give coders two different formats: single and double precision. The former takes up 32 bits of memory, and the latter 64. Python supports only the double format. Let's see a simple example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7"><span class="strong"><strong>&gt;&gt;&gt; pi = 3.1415926536  # how many digits of PI can you remember?
+&gt;&gt;&gt; radius = 4.5
+&gt;&gt;&gt; area = pi * (radius ** 2)
+&gt;&gt;&gt; area
+63.617251235400005
+</strong></span></code></pre></div><p></p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note20"></a>Note</h3><p>In the calculation of the area, I wrapped the <code class="literal">radius ** 2</code> within braces. Even though that wasn't necessary because the power operator has higher precedence than the multiplication one, I think the formula reads more easily like that. Moreover, should you get a slightly different result for the area, don't worry. It might depend on your OS, how Python was compiled, and so on. As long as the first few decimal digits are correct, you know it's a correct result. </p></div><p>The <code class="literal">sys.float_info</code> struct sequence holds information about how floating point numbers will behave on your system. This is what I see on my box:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8"><span class="strong"><strong>&gt;&gt;&gt; import sys</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; sys.float_info</strong></span>
+<span class="strong"><strong>sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)</strong></span></code></pre></div><p>Let's make a few <span>considerations</span><a class="indexterm" id="id325980922"></a> here: we have 64 bits to represent <span>float</span><a class="indexterm" id="id325980931"></a> numbers. This means we can represent at most <code class="literal">2 ** 64 == 18,446,744,073,709,551,616</code> numbers with that amount of bits. Take a look at the <code class="literal">max</code> and <code class="literal">epsilon</code> values for the float numbers, and you'll realize it's impossible to represent them all. There is just not enough space, so they are approximated to the closest representable number. You probably think that only extremely big or extremely small numbers suffer from this issue. Well, think again and try the following in your console:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9"><span class="strong"><strong>&gt;&gt;&gt; 0.3 - 0.1 * 3  # this should be 0!!!
+-5.551115123125783e-17
+</strong></span></code></pre></div><p>What does this tell you? It tells you that double precision numbers suffer from approximation issues even when it comes to simple numbers like <code class="literal">0.1</code> or <code class="literal">0.3</code>. Why is this important? It can be a big problem if you're handling prices, or financial calculations, or any kind of data that needs not to be approximated. Don't worry, Python gives you the <span class="strong"><strong>decimal</strong></span> type, which doesn't suffer from these issues; we'll see them in a moment.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec26"></a>Complex numbers</h3></div></div></div><p>Python gives you <span>complex</span><a class="indexterm" id="id325980972"></a> numbers support out of the box. If you don't know what complex <span>numbers</span><a class="indexterm" id="id326021428"></a> are, they are numbers that can be expressed in the form <span class="emphasis"><em>a + ib</em></span> where <span class="emphasis"><em>a</em></span> and <span class="emphasis"><em>b</em></span> are real numbers, and <span class="emphasis"><em>i</em></span> (or <span class="emphasis"><em>j</em></span> if you're an engineer) is the imaginary unit, that is, the square root of <span class="emphasis"><em>-1</em></span>. <span class="emphasis"><em>a</em></span> and <span class="emphasis"><em>b</em></span> are called, respectively, the <span class="emphasis"><em>real</em></span> and <span class="emphasis"><em>imaginary</em></span> part of the number.</p><p>It's actually unlikely you'll be using them, unless you're coding something scientific. Let's see a small example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10"><span class="strong"><strong>&gt;&gt;&gt; c = 3.14 + 2.73j</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c.real  # real part</strong></span>
+<span class="strong"><strong>3.14</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c.imag  # imaginary part</strong></span>
+<span class="strong"><strong>2.73</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c.conjugate()  # conjugate of A + Bj is A - Bj</strong></span>
+<span class="strong"><strong>(3.14-2.73j)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c * 2  # multiplication is allowed</strong></span>
+<span class="strong"><strong>(6.28+5.46j)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c ** 2  # power operation as well</strong></span>
+<span class="strong"><strong>(2.4067000000000007+17.1444j)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d = 1 + 1j  # addition and subtraction as well</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c - d</strong></span>
+<span class="strong"><strong>(2.14+1.73j)</strong></span></code></pre></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch02lvl2sec27"></a>Fractions and decimals</h3></div></div></div><p>Let's finish the tour of the number department with a look at <span>fractions</span><a class="indexterm" id="id326055162"></a> and decimals. Fractions hold a <span>rational</span><a class="indexterm" id="id326055169"></a> numerator and denominator in their lowest forms. Let's see a quick example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11"><span class="strong"><strong>&gt;&gt;&gt; from fractions import Fraction</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; Fraction(10, 6)  # mad hatter?</strong></span>
+<span class="strong"><strong>Fraction(5, 3)  # notice it's been simplified</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; Fraction(1, 3) + Fraction(2, 3)  # 1/3 + 2/3 == 3/3 == 1/1</strong></span>
+<span class="strong"><strong>Fraction(1, 1)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; f = Fraction(10, 6)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; f.numerator</strong></span>
+<span class="strong"><strong>5</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; f.denominator</strong></span>
+<span class="strong"><strong>3</strong></span></code></pre></div><p>Although they can be very useful at times, it's not that common to spot them in commercial software. Much easier instead, is to see decimal numbers being used in all those contexts where precision is everything; for example, in scientific and financial calculations.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note21"></a>Note</h3><p>It's important to remember that arbitrary precision decimal numbers come at a price in performance, of course. The amount of data to be stored for each number is far greater than it is for fractions or floats as well as the way they are handled, which causes the Python interpreter much more work behind the scenes. Another interesting thing to note is that you can get and set the precision by accessing <code class="literal">decimal.getcontext().prec</code>.</p></div><p>Let's see a quick <span>example</span><a class="indexterm" id="id326065408"></a> with <span>decimal</span><a class="indexterm" id="id326065416"></a> numbers:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"><span class="strong"><strong>&gt;&gt;&gt; from decimal import Decimal as D  # rename for brevity</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; D(3.14)  # pi, from float, so approximation issues</strong></span>
+<span class="strong"><strong>Decimal('3.140000000000000124344978758017532527446746826171875')</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; D('3.14')  # pi, from a string, so no approximation issues</strong></span>
+<span class="strong"><strong>Decimal('3.14')</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; D(0.1) * D(3) - D(0.3)  # from float, we still have the issue</strong></span>
+<span class="strong"><strong>Decimal('2.775557561565156540423631668E-17')</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; D('0.1') * D(3) - D('0.3')  # from string, all perfect</strong></span>
+<span class="strong"><strong>Decimal('0.0')</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; D('1.4').as_integer_ratio()  # 7/5 = 1.4 (isn't this cool?!)</strong></span>
+<span class="strong"><strong>(7, 5)</strong></span></code></pre></div><p>Notice that when we construct a <code class="literal">Decimal</code> number from a <code class="literal">float</code>, it takes on all the approximation issues <code class="literal">float</code> may come from. On the other hand, when the <code class="literal">Decimal</code> has no approximation issues (for example, when we feed an <code class="literal">int</code> or a <code class="literal">string</code> representation to the constructor), then the calculation has no quirky behavior. When it comes to money, use decimals.</p><p>This concludes our introduction to built-in numeric types. Let's now look at sequences.</p></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_2_ch02lvl1sec26_numbers_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_2_ch02lvl1sec26_numbers_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_2_ch02lvl1sec26_numbers_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_2_ch02lvl1sec26_numbers_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_2_ch02lvl1sec26_numbers_files/adsct" type="text/javascript"></script></body></html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Decorators - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/6/ch06lvl1sec62/decorators" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/6/ch06lvl1sec62/decorators" rel="canonical"/>
+<meta content="In Chapter 5, Saving Time and Memory, I measured the execution time of various expressions." name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Decorators - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="In Chapter 5, Saving Time and Memory, I measured the execution time of various expressions." property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/6/ch06lvl1sec62/decorators" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Decorators - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="In Chapter 5, Saving Time and Memory, I measured the execution time of various expressions." name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_6_ch06lvl1sec62_decorators_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_6_ch06lvl1sec62_decorators_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/script.js"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/profitwell.js"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/inferredEvents.js"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/445429252334850"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/fbevents.js"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/gtm.js"></script><script src="./9781788996662_6_ch06lvl1sec62_decorators_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_6_ch06lvl1sec62_decorators_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_6_ch06lvl1sec62_decorators_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_6_ch06lvl1sec62_decorators_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_6_ch06lvl1sec62_decorators_files/f(1).txt"></script><script src="./9781788996662_6_ch06lvl1sec62_decorators_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Decorators - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "In Chapter 5, Saving Time and Memory, I measured the execution time of various expressions.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_6_ch06lvl1sec62_decorators_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_6_ch06lvl1sec62_decorators_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_6_ch06lvl1sec62_decorators_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_6_ch06lvl1sec62_decorators_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch06lvl1sec62"></a>Decorators</h2></div></div><hr/></div><p>In Chapter 5, <span class="emphasis"><em>Saving Time and Memory</em></span>, I measured the <span>execution</span><a class="indexterm" id="id326008525"></a> time of various expressions. If you recall, I had to initialize a variable to the start time, and subtract it from the current time after execution in order to calculate the elapsed time. I also printed it on the console after each measurement. That was very tedious.</p><p>Every time you find yourself repeating things, an alarm bell should go off. Can you put that code in a function and avoid repetition? The answer most of the time is <span class="emphasis"><em>yes</em></span>, so let's look at an example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"># decorators/time.measure.start.py
+from time import sleep, time
+
+def f():
+    sleep(.3)
+
+def g():
+    sleep(.5)
+
+t = time()
+f()
+print('f took:', time() - t)  # f took: 0.3001396656036377
+
+t = time()
+g()
+print('g took:', time() - t)  # g took: 0.5039339065551758</code></pre></div><p>In the preceding code, I defined two functions, <code class="literal">f</code> and <code class="literal">g</code>, which do nothing but sleep (by 0.3 and 0.5 seconds, respectively). I used the <code class="literal">sleep</code> function to suspend the execution for the desired amount of time. Notice how the time measure is pretty accurate. Now, how do we avoid repeating that code and those calculations? One first potential approach could be the following:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"># decorators/time.measure.dry.py
+from time import sleep, time
+
+def f():
+    sleep(.3)
+
+def g():
+    sleep(.5)
+
+def measure(func):
+    t = time()
+    func()
+    print(func.__name__, 'took:', time() - t)
+
+measure(f)  # f took: 0.30434322357177734
+measure(g)  # g took: 0.5048270225524902</code></pre></div><p>Ah, much better now. The whole timing <span>mechanism</span><a class="indexterm" id="id326008403"></a> has been encapsulated into a function so we don't repeat code. We print the function name dynamically and it's easy enough to code. What if we need to pass arguments to the function we measure? This code would get just a bit more complicated, so let's see an example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"># decorators/time.measure.arguments.py
+from time import sleep, time
+
+def f(sleep_time=0.1):
+    sleep(sleep_time)
+
+def measure(func, *args, **kwargs):
+    t = time()
+    func(*args, **kwargs)
+    print(func.__name__, 'took:', time() - t)
+
+measure(f, sleep_time=0.3)  # f took: 0.30056095123291016
+measure(f, 0.2)  # f took: 0.2033553123474121</code></pre></div><p>Now, <code class="literal">f</code> is expecting to be fed <code class="literal">sleep_time</code> (with a default value of <code class="literal">0.1</code>), so we don't need <code class="literal">g</code> any more. I also had to change the <code class="literal">measure</code> function so that it is now accepts a function, any variable positional arguments, and any variable keyword arguments. In this way, whatever we call <code class="literal">measure</code> with, we redirect those arguments to the call to <code class="literal">func</code> we do inside.</p><p>This is very good, but we can push it a little bit further. Let's say we want to somehow have that timing behavior built-in into the <code class="literal">f</code> function, so that we could just call it and have that measure taken. Here's how we could do it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"># decorators/time.measure.deco1.py
+from time import sleep, time
+
+def f(sleep_time=0.1):
+    sleep(sleep_time)
+
+def measure(func):
+    def wrapper(*args, **kwargs):
+        t = time()
+        func(*args, **kwargs)
+        print(func.__name__, 'took:', time() - t)
+    return wrapper
+
+f = measure(f)  # decoration point
+
+</code></pre></div><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4">f(0.2)  # f took: 0.20372915267944336
+f(sleep_time=0.3)  # f took: 0.30455899238586426
+print(f.__name__)  # wrapper &lt;- ouch!</code></pre></div><p>The preceding code is probably not so straightforward. Let's see what happens here. The magic is in the <span class="strong"><strong>decoration point</strong></span>. We basically reassign <code class="literal">f</code> with whatever is returned by <code class="literal">measure</code> when we call it with <code class="literal">f</code> as an argument. Within <code class="literal">measure</code>, we define another function, <code class="literal">wrapper</code>, and then we return it. So, the net effect is that after the decoration point, when we call <code class="literal">f</code>, we're actually calling <code class="literal">wrapper</code>. Since the <code class="literal">wrapper</code> inside is calling <code class="literal">func</code>, which is <code class="literal">f</code>, we are actually closing the loop like that. If you don't believe me, take a look at the last line.</p><p><code class="literal">wrapper</code> is actually... a wrapper. It takes variable and positional arguments, and calls <code class="literal">f</code> with them. It also does the time measurement calculation around the call.</p><p>This <span>technique</span><a class="indexterm" id="id326081563"></a> is called <span class="strong"><strong>decoration</strong></span>, and <code class="literal">measure</code> is, effectively, a <span class="strong"><strong>decorator</strong></span>. This paradigm became so popular and widely used that at some point, Python added a <span>special</span><a class="indexterm" id="id326346740"></a> syntax for it (check out <a class="ulink" href="https://www.python.org/dev/peps/pep-0318/" target="_blank">https://www.python.org/dev/peps/pep-0318/</a>). Let's explore <span>three</span><a class="indexterm" id="id326402356"></a> cases: one decorator, two decorators, and one decorator that takes arguments:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"># decorators/syntax.py
+def func(arg1, arg2, ...):
+    pass
+func = decorator(func)
+
+# is equivalent to the following:
+
+@decorator
+def func(arg1, arg2, ...):
+    pass</code></pre></div><p>Basically, instead of manually reassigning the function to what was returned by the decorator, we prepend the definition of the function with the special syntax, <code class="literal">@decorator_name</code>.</p><p>We can apply multiple decorators to the same function in the following way:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6"># decorators/syntax.py
+def func(arg1, arg2, ...):
+    pass
+func = deco1(deco2(func))
+
+# is equivalent to the following:
+
+@deco1
+@deco2
+def func(arg1, arg2, ...):
+    pass</code></pre></div><p>When applying multiple decorators, pay attention to the order. In the preceding example, <code class="literal">func</code> is decorated with <code class="literal">deco2</code> first, and the result is decorated with <code class="literal">deco1</code>. A good rule of thumb is: <span class="emphasis"><em>the closer the decorator is to the function, the sooner it is applied</em></span>.</p><p>Some decorators can take arguments. This technique is generally used to produce other decorators. Let's look at the syntax, and then we'll see an example of it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7"># decorators/syntax.py
+def func(arg1, arg2, ...):
+    pass
+func = decoarg(arg_a, arg_b)(func)
+
+# is equivalent to the following:
+
+@decoarg(arg_a, arg_b)
+def func(arg1, arg2, ...):
+    pass</code></pre></div><p>As you can see, this case is a bit different. First, <code class="literal">decoarg</code> is called with the given arguments, and then its return value (the actual decorator) is called with <code class="literal">func</code>. Before I give you another example, let's fix one thing that is bothering me. I don't want to lose the original function name and docstring (and other attributes as well, check the documentation for the details) when I decorate it. But because inside our decorator we return <code class="literal">wrapper</code>, the original attributes from <code class="literal">func</code> are lost and <code class="literal">f</code> ends up being assigned the attributes of <code class="literal">wrapper</code>. There is an easy fix for that from the beautiful <code class="literal">functools</code> module. I will fix the last example, and I will also rewrite its syntax to use the <code class="literal">@</code> operator:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8"># decorators/time.measure.deco2.py
+from time import sleep, time
+from functools import wraps
+
+def measure(func):
+<span class="strong"><strong>@wraps(func)</strong></span>
+    def wrapper(*args, **kwargs):
+        t = time()
+        func(*args, **kwargs)
+        print(func.__name__, 'took:', time() - t)
+    return wrapper
+
+@measure
+def f(sleep_time=0.1):
+    """I'm a cat. I love to sleep! """
+    sleep(sleep_time)
+
+f(sleep_time=0.3)  # f took: 0.3010902404785156
+print(f.__name__, ':', f.__doc__)  # f : I'm a cat. I love to sleep!</code></pre></div><p>Now we're talking! As you can see, all we <span>need</span><a class="indexterm" id="id326549094"></a> to do is to tell Python that <code class="literal">wrapper</code> actually wraps <code class="literal">func</code> (by means of the <code class="literal">wraps</code> function), and you can see that the original name and docstring are now maintained.</p><p>Let's see another example. I want a decorator that prints an error message when the result of a function is greater than a certain threshold. I will also take this opportunity to show you how to apply two decorators at once:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9"># decorators/two.decorators.py
+from time import sleep, time
+from functools import wraps
+
+def measure(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        t = time()
+        result = func(*args, **kwargs)
+        print(func.__name__, 'took:', time() - t)
+        return result
+    return wrapper
+
+def max_result(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        if result &gt; 100:
+            print('Result is too big ({0}). Max allowed is 100.'
+                  .format(result))
+        return result
+    return wrapper
+
+@measure
+@max_result
+def cube(n):
+    return n ** 3
+
+print(cube(2))
+print(cube(5))</code></pre></div><p></p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="tip54"></a>Note</h3><p>Take your time in studying the preceding example until you are sure you understand it well. If you do, I don't think there is any decorator you now won't be able to write.</p></div><p>I had to enhance the <code class="literal">measure</code> decorator, so that its <code class="literal">wrapper</code> now returns the result of the call to <code class="literal">func</code>. The <code class="literal">max_result</code> decorator does that as well, but before returning, it checks that <code class="literal">result</code> is not greater than <code class="literal">100</code>, which is the maximum allowed. I decorated <code class="literal">cube</code> with both of them. First, <code class="literal">max_result</code> is applied, then <code class="literal">measure</code>. Running this code yields this result:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10"><span class="strong"><strong>$ python two.decorators.py</strong></span>
+<span class="strong"><strong>cube took: 3.0994415283203125e-06</strong></span>
+<span class="strong"><strong>8
+</strong></span>
+<span class="strong"><strong>Result is too big (125). Max allowed is 100.</strong></span>
+<span class="strong"><strong>cube took: 1.0013580322265625e-05</strong></span>
+<span class="strong"><strong>125</strong></span></code></pre></div><p>For your convenience, I have <span>separated</span><a class="indexterm" id="id326611857"></a> the results of the two calls with a blank line. In the first call, the result is <code class="literal">8</code>, which passes the threshold check. The running time is measured and printed. Finally, we print the result (<code class="literal">8</code>).</p><p>On the second call, the result is <code class="literal">125</code>, so the error message is printed, the result returned, and then it's the turn of <code class="literal">measure</code>, which prints the running time again, and finally, we print the result (<code class="literal">125</code>).</p><p>Had I decorated the <code class="literal">cube</code> function with the same two decorators but in a different order, the error message would have followed the line that prints the running time, instead of have preceded it.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch06lvl2sec75"></a>A decorator factory</h3></div></div></div><p>Let's simplify this <span>example</span><a class="indexterm" id="id325636162"></a> now, going back to a single decorator: <code class="literal">max_result</code>. I want to make it so that I can decorate different functions with different thresholds, as I don't want to write one decorator for each threshold. Let's amend <code class="literal">max_result</code> so that it allows us to decorate functions specifying the threshold dynamically:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11"># decorators/decorators.factory.py
+from functools import wraps
+
+def max_result(threshold):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            result = func(*args, **kwargs)
+            if result &gt; threshold:
+                print(
+                    'Result is too big ({0}). Max allowed is {1}.'
+                    .format(result, threshold))
+            return result
+        return wrapper
+    return decorator
+
+@max_result(75)
+def cube(n):
+    return n ** 3
+
+print(cube(5))</code></pre></div><p>The preceding code shows you how to write a <span class="strong"><strong>decorator factory</strong></span>. If you recall, decorating a function with a decorator that takes arguments is the same as writing <code class="literal">func = decorator(argA, argB)(func)</code>, so when we decorate <code class="literal">cube</code> with <code class="literal">max_result(75)</code>, we're doing <code class="literal">cube = max_result(75)(cube)</code>.</p><p>Let's go through what happens, step by step. When we call <code class="literal">max_result(75)</code>, we enter its body. A <code class="literal">decorator</code> function is defined inside, which takes a function as its only argument. Inside that function, the usual decorator trick is performed. We define <code class="literal">wrapper</code>, inside of which we check the result of the original function's call. The beauty of this approach is that from the innermost level, we can still refer to as both <code class="literal">func</code> and <code class="literal">threshold</code>, which allows us to set the threshold dynamically.</p><p><code class="literal">wrapper</code> returns <code class="literal">result</code>, <code class="literal">decorator</code> returns <code class="literal">wrapper</code>, and <code class="literal">max_result</code> returns <code class="literal">decorator</code>. This means that our <code class="literal">cube = max_result(75)(cube)</code> call actually becomes <code class="literal">cube = decorator(cube)</code>. Not just any <code class="literal">decorator</code> though, but one for which <code class="literal">threshold</code> has a value of <code class="literal">75</code>. This is achieved by a mechanism called <span class="strong"><strong>closure</strong></span>, which is outside of the <span>scope</span><a class="indexterm" id="id325644484"></a> of this chapter but still very interesting, so I mentioned it for you to do some research on it.</p><p>Running the last example produces the following result:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"><span class="strong"><strong>$ python decorators.factory.py</strong></span>
+<span class="strong"><strong>Result is too big (125). Max allowed is 75.</strong></span>
+<span class="strong"><strong>125</strong></span></code></pre></div><p>The preceding code allows me to use the <code class="literal">max_result</code> decorator with different thresholds at my own will, like this:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="13"># decorators/decorators.factory.py
+@max_result(75)
+def cube(n):
+    return n ** 3
+
+@max_result(100)
+def square(n):
+    return n ** 2
+
+@max_result(1000)
+def multiply(a, b):
+    return a * b</code></pre></div><p>Note that every decoration uses a different <code class="literal">threshold</code> value.</p><p>Decorators are very popular in Python. They are used quite often and they simplify (and beautify, I dare say) the code a lot.</p></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_6_ch06lvl1sec62_decorators_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_6_ch06lvl1sec62_decorators_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_6_ch06lvl1sec62_decorators_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_6_ch06lvl1sec62_decorators_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_6_ch06lvl1sec62_decorators_files/adsct" type="text/javascript"></script></body></html>
