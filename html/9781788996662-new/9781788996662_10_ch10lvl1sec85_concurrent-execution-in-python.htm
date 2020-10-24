@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Concurrent execution in Python - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec85/concurrent-execution-in-python" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec85/concurrent-execution-in-python" rel="canonical"/>
+<meta content="Let's start by exploring the basics of Python multithreading and multiprocessing with some simple examples." name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Concurrent execution in Python - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="Let's start by exploring the basics of Python multithreading and multiprocessing with some simple examples." property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec85/concurrent-execution-in-python" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Concurrent execution in Python - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="Let's start by exploring the basics of Python multithreading and multiprocessing with some simple examples." name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/script.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/profitwell.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/inferredEvents.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/445429252334850"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/fbevents.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/gtm.js"></script><script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/f(1).txt"></script><script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Concurrent execution in Python - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "Let's start by exploring the basics of Python multithreading and multiprocessing with some simple examples.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch10lvl1sec85"></a>Concurrent execution in Python</h2></div></div><hr/></div><p>Let's start by exploring the <span>basics</span><a class="indexterm" id="id326402621"></a> of Python multithreading <span>and</span><a class="indexterm" id="id326402637"></a> multiprocessing with some simple examples.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note73"></a>Note</h3><p>Keep in mind that several of the following examples will produce an output that depends on a particular run. When dealing with threads, things can get non-deterministic, as I mentioned earlier. So, if you experience different results, it is absolutely fine. You will probably notice that some of your results will vary from run to run too.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec119"></a>Starting a thread</h3></div></div></div><p>First things first, let's <span>start</span><a class="indexterm" id="id326402609"></a> a thread:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"># start.py
+import threading
+
+def sum_and_product(a, b):
+    s, p = a + b, a * b
+    print(f'{a}+{b}={s}, {a}*{b}={p}')
+
+t = threading.Thread(
+    target=sum_and_product, name='SumProd', args=(3, 7)
+)
+t.start()</code></pre></div><p>After importing <code class="literal">threading</code>, we define a function: <code class="literal">sum_and_product</code>. This function calculates the sum and the product of two numbers, and prints the results. The interesting bit is after the function. We instantiate <code class="literal">t</code> from <code class="literal">threading.Thread</code>. This is our thread. We passed the name of the function that will be run as the thread body, we gave it a name, and passed the arguments <code class="literal">3</code> and <code class="literal">7</code>, which will be fed into the function as <code class="literal">a</code> and <code class="literal">b</code>, respectively.</p><p>After having created the thread, we start it with the homonymous method.</p><p>At this point, Python will start executing the function in a new thread, and when that operation is done, the whole program will be done as well, and exit. Let's run it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"><span class="strong"><strong>$ python start.py</strong></span>
+<span class="strong"><strong>3+7=10, 3*7=21
+</strong></span></code></pre></div><p>Starting a thread is therefore quite simple. Let's see a more interesting example where we display more information:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"># start_with_info.py
+import threading
+from time import sleep
+
+def sum_and_product(a, b):
+    sleep(.2)
+    print_current()
+    s, p = a + b, a * b
+    print(f'{a}+{b}={s}, {a}*{b}={p}')
+
+def status(t):
+    if t.is_alive():
+        print(f'Thread {t.name} is alive.')
+    else:
+        print(f'Thread {t.name} has terminated.')
+
+def print_current():
+    print('The current thread is {}.'.format(
+        threading.current_thread()
+    ))
+    print('Threads: {}'.format(list(threading.enumerate())))
+
+print_current()
+t = threading.Thread(
+    target=sum_and_product, name='SumPro', args=(3, 7)
+)
+t.start()
+status(t)
+t.join()
+status(t)</code></pre></div><p>In this example, the thread logic is exactly the <span>same</span><a class="indexterm" id="id325699138"></a> as in the previous one, so you don't need to sweat on it and can concentrate on the (insane!) amount of logging information I added. We use two functions to display information: <code class="literal">status</code> and <code class="literal">print_current</code>. The first one takes a thread in input and displays its name and whether or not it's alive by calling its <code class="literal">is_alive</code> method. The second one prints the current thread, and then enumerates all the threads in the process. This information comes from <code class="literal">threading.current_thread</code> and <code class="literal">threading.enumerate</code>.</p><p>There is a reason why I put <code class="literal">.2</code> seconds of sleeping time within the function. When the thread starts, its first instruction is to sleep for a moment. The sneaky scheduler will catch that, and switch execution back to the main thread. You can verify this by the fact that in the output, you will see the result of <code class="literal">status(t)</code> before that of <code class="literal">print_current</code> from within the thread. This means that that call happens while the thread is sleeping.</p><p>Finally, notice I called <code class="literal">t.join()</code> at the end. That instructs Python to block until the thread has completed. The reason for that is because I want the last call to <code class="literal">status(t)</code> to tell us that the thread is gone. Let's peek at the output (slightly rearranged for readability):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"><span class="strong"><strong>$ python start_with_info.py</strong></span>
+<span class="strong"><strong>The current thread is</strong></span>
+<span class="strong"><strong>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_MainThread(MainThread,</span> <span class="token attr-name">started</span> <span class="token attr-name">140735733822336)</span><span class="token punctuation">&gt;</span></span>.</strong></span>
+<span class="strong"><strong>Threads: [<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_MainThread(MainThread,</span> <span class="token attr-name">started</span> <span class="token attr-name">140735733822336)</span><span class="token punctuation">&gt;</span></span>]</strong></span>
+<span class="strong"><strong>Thread SumProd is alive.</strong></span>
+<span class="strong"><strong>The current thread is <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Thread(SumProd,</span> <span class="token attr-name">started</span> <span class="token attr-name">123145375604736)</span><span class="token punctuation">&gt;</span></span>.</strong></span>
+<span class="strong"><strong>Threads: [</strong></span>
+<span class="strong"><strong>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_MainThread(MainThread,</span> <span class="token attr-name">started</span> <span class="token attr-name">140735733822336)</span><span class="token punctuation">&gt;</span></span>,</strong></span>
+<span class="strong"><strong>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Thread(SumProd,</span> <span class="token attr-name">started</span> <span class="token attr-name">123145375604736)</span><span class="token punctuation">&gt;</span></span></strong><span class="token tag"><span class="token punctuation"></span></span></span><span class="token tag"><span class="token punctuation"></span></span>
+<span class="strong"><strong>]</strong></span>
+<span class="strong"><strong>3+7=10, 3*7=21</strong></span>
+<span class="strong"><strong>Thread SumProd has terminated.</strong></span></code></pre></div><p>As you can see, at first the current thread is the main thread. The enumeration shows only one thread. Then we create and start <code class="literal">SumProd</code>. We print its status and we learn it is alive. Then, and this time from within <code class="literal">SumProd</code>, we display information about the current thread again. Of course, now the current thread is <code class="literal">SumProd</code>, and we can see that enumerating all threads returns both of them. After the result is printed, we verify, with one last call to <code class="literal">status</code>, that the thread has terminated, as predicted. Should you get different results (apart from the IDs of the threads, of course), try <span>increasing</span><a class="indexterm" id="id325891901"></a> the sleeping time and see whether anything changes.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec120"></a>Starting a process</h3></div></div></div><p>Let's now see an <span>equivalent</span><a class="indexterm" id="id325891916"></a> example, but instead of using a thread, we'll use a process:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"># start_proc.py
+import multiprocessing
+
+...
+
+p = multiprocessing.Process(
+    target=sum_and_product, name='SumProdProc', args=(7, 9)
+)
+p.start()</code></pre></div><p>The code is exactly the same as for the first example, but instead of using a <code class="literal">Thread</code>, we actually instantiate <code class="literal">multiprocessing.Process</code>. The <code class="literal">sum_and_product</code> function is the same as before. The output is also the same, except the numbers are different.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec121"></a>Stopping threads and processes</h3></div></div></div><p>As mentioned before, in general, stopping a thread is a bad idea, and the same goes for a process. Being sure you've taken care to dispose and close everything that is <span>open</span><a class="indexterm" id="id325915739"></a> can be <span>quite</span><a class="indexterm" id="id325915801"></a> difficult. However, there are situations in which you might want to be able to stop a thread, so let me show you how to do it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"># stop.py
+import threading
+from time import sleep
+
+class Fibo(threading.Thread):
+    def __init__(self, *a, **kwa):
+        super().__init__(*a, **kwa)
+        self._running = True
+
+    def stop(self):
+        self._running = False
+
+    def run(self):
+        a, b = 0, 1
+        while self._running:
+            print(a, end=' ')
+            a, b = b, a + b
+            sleep(0.07)
+        print()
+
+fibo = Fibo()
+fibo.start()
+sleep(1)
+fibo.stop()
+fibo.join()
+print('All done.')</code></pre></div><p>For this example, we use a Fibonacci generator. We've seen it before so I won't explain it. The important bit to focus on is the <code class="literal">_running</code> attribute. First of all, notice the class inherits from <code class="literal">Thread</code>. By overriding the <code class="literal">__init__</code> method, we can set the <code class="literal">_running</code> flag to <code class="literal">True</code>. When you write a thread this way, instead of giving it a target function, you simply override the <code class="literal">run</code> method in the class. Our <code class="literal">run</code> method calculates a new Fibonacci number, and then sleeps for about <code class="literal">0.07</code> seconds.</p><p>In the last block of code, we create and start an instance of our class. Then we sleep for one second, which should give the thread time to produce about 14 Fibonacci numbers. When we call <code class="literal">fibo.stop()</code>, we aren't actually stopping the thread. We simply set our flag to <code class="literal">False</code>, and this allows the code within <code class="literal">run</code> to reach its natural end. This means that the thread will die organically. We call <code class="literal">join</code> to make sure the thread is actually done before we print <code class="literal">All done.</code> on the console. Let's check the output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6"><span class="strong"><strong>$ python stop.py</strong></span>
+<span class="strong"><strong>0 1 1 2 3 5 8 13 21 34 55 89 144 233</strong></span>
+<span class="strong"><strong>All done.</strong></span></code></pre></div><p>Check how many numbers were printed: 14, as predicted.</p><p>This is basically a workaround technique that allows you to stop a thread. If you design your code correctly according to multithreading paradigms, you shouldn't <span>have</span><a class="indexterm" id="id325916600"></a> to kill threads all the time, so let that need become your alarm bell that something could be designed better.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec36"></a>Stopping a process</h4></div></div></div><p>When it comes to <span>stopping</span><a class="indexterm" id="id325916615"></a> a process, things are different, and fuss-free. You can use either the <code class="literal">terminate</code> or <code class="literal">kill</code> method, but please make sure you know what you're doing, as all the preceding considerations about open resources left hanging are still true.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec122"></a>Spawning multiple threads</h3></div></div></div><p>Just for fun, let's play <span>with</span><a class="indexterm" id="id325916636"></a> two threads now:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7"># starwars.py
+import threading
+from time import sleep
+from random import random
+
+def run(n):
+    t = threading.current_thread()
+    for count in range(n):
+        print(f'Hello from {t.name}! ({count})')
+        sleep(0.2 * random())
+
+obi = threading.Thread(target=run, name='Obi-Wan', args=(4, ))
+ani = threading.Thread(target=run, name='Anakin', args=(3, ))
+obi.start()
+ani.start()
+obi.join()
+ani.join()</code></pre></div><p>The <code class="literal">run</code> function simply prints the current thread, and then enters a loop of <code class="literal">n</code> cycles, in which it prints a greeting message, and sleeps for a random amount of time, between <code class="literal">0</code> and <code class="literal">0.2</code> seconds (<code class="literal">random()</code> returns a float between <code class="literal">0</code> and <code class="literal">1</code>).</p><p>The purpose of this example is to show you how a scheduler might jump between threads, so it helps to make them sleep a little. Let's see the output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8"><span class="strong"><strong>$ python starwars.py</strong></span>
+<span class="strong"><strong>Hello from Obi-Wan! (0)</strong></span>
+<span class="strong"><strong>Hello from Anakin! (0)</strong></span>
+<span class="strong"><strong>Hello from Obi-Wan! (1)</strong></span>
+<span class="strong"><strong>Hello from Obi-Wan! (2)</strong></span>
+<span class="strong"><strong>Hello from Anakin! (1)</strong></span>
+<span class="strong"><strong>Hello from Obi-Wan! (3)</strong></span>
+<span class="strong"><strong>Hello from Anakin! (2)</strong></span></code></pre></div><p>As you can see, the output <span>alternates</span><a class="indexterm" id="id326115283"></a> randomly between the two. Every time that happens, you know a context switch has been performed by the scheduler.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec123"></a>Dealing with race conditions</h3></div></div></div><p>Now that we have the tools to start <span>threads</span><a class="indexterm" id="id326115299"></a> and run them, let's simulate a race condition such as the one we discussed earlier:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9"># race.py
+import threading
+from time import sleep
+from random import random
+
+counter = 0
+randsleep = lambda: sleep(0.1 * random())
+
+def incr(n):
+    global counter
+    for count in range(n):
+        current = counter
+        randsleep()
+        counter = current + 1
+        randsleep()
+
+n = 5
+t1 = threading.Thread(target=incr, args=(n, ))
+t2 = threading.Thread(target=incr, args=(n, ))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print(f'Counter: {counter}')</code></pre></div><p>In this example, we define the <code class="literal">incr</code> function, which gets a number <code class="literal">n</code> in input, and loops over <code class="literal">n</code>. In each cycle, it reads the value of the counter, sleeps for a random amount of time (between <code class="literal">0</code> and <code class="literal">0.1</code> seconds) by calling <code class="literal">randsleep</code>, a tiny Lambda function I wrote to improve readability, then increases the value of the <code class="literal">counter</code> by <code class="literal">1</code>.</p><p>I chose to use <code class="literal">global</code> in order to have read/write access to <code class="literal">counter</code>, but it could be anything really, so feel free to experiment with that yourself.</p><p>The whole script basically starts two threads, each of which runs the same function, and gets <code class="literal">n = 5</code>. Notice how we need to join on both <span>threads</span><a class="indexterm" id="id326208645"></a> at the end to make sure that when we print the final value of the counter (last line), both threads are done doing their work.</p><p>When we print the final value, we would expect the counter to be 10, right? Two threads, five loops each, that makes 10. However, we almost never get 10 if we run this script. I ran it myself many times, and it seems to always hit somewhere between 5 and 7. The reason this happens is that there is a race condition in this code, and those random sleeps I added are there to exacerbate it. If you removed them, there would still be a race condition, because the counter is increased in a non-atomic way (which means an operation that can be broken down in multiple steps, and therefore paused in between). However, the likelihood of that race condition showing is really low, so adding the random sleep helps.</p><p>Let's analyze the code. <code class="literal">t1</code> gets the current value of the counter, say, <code class="literal">3</code>. <code class="literal">t1</code> then sleeps for a moment. If the scheduler switches context in that moment, pausing <code class="literal">t1</code> and starting <code class="literal">t2</code>, <code class="literal">t2</code> will read the same value, <code class="literal">3</code>. Whatever happens afterward, we know that both threads will update the counter to be <code class="literal">4</code>, which will be incorrect as after two readings it should have gone up to <code class="literal">5</code>. Adding the second random sleep call, after the update, helps the scheduler switch more frequently, and makes it easier to show the race condition. Try commenting out one of them, and see how the result changes (it will do so, dramatically).</p><p>Now that we have identified the issue, let's fix it by using a lock. The code is basically the same, so I'll show you only what changes:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10"># race_with_lock.py
+incr_lock = threading.Lock()
+
+def incr(n):
+    global counter
+    for count in range(n):
+        with incr_lock:
+            current = counter
+            randsleep()
+            counter = current + 1
+            randsleep()</code></pre></div><p>This time we have created a lock, from the <code class="literal">threading.Lock</code> class. We could call its <code class="literal">acquire</code> and <code class="literal">release</code> methods manually, or we can be Pythonic and use it within a context manager, which looks much nicer, and does the whole acquire/release business for us. Notice I left the random sleeps in the code. However, every time you run it, it will now return <code class="literal">10</code>.</p><p>The difference is this: when the first thread acquires that lock, it doesn't matter that when it's sleeping, a moment later, the scheduler switches the context. The second thread will try to acquire the lock, and Python will answer with a resounding <span class="emphasis"><em>no</em></span>. So, the second thread will just sit and wait until that lock is released. As soon as the scheduler switches back to the first thread, and the lock is released, then the other thread will have a chance (if it gets there first, which is not necessarily guaranteed), to acquire the lock and update the counter. Try adding some <span>prints</span><a class="indexterm" id="id326599931"></a> into that logic to see whether the threads alternate perfectly or not. My guess is that they won't, at least not every time. Remember the <code class="literal">threading.current_thread</code> function, to be able to see which thread is actually printing the information.</p><p>Python offers several data structures in the <code class="literal">threading</code> module: Lock, RLock, Condition, Semaphore, Event, Timer, and Barrier. I won't be able to show you all of them, because unfortunately I don't have the room to explain all the use cases, but reading the documentation <span>of</span><a class="indexterm" id="id326677958"></a> the <code class="literal">threading</code> module (<a class="ulink" href="https://docs.python.org/3.7/library/threading.html" target="_blank">https://docs.python.org/3.7/library/threading.html</a>) will be a good place to start understanding them.</p><p>Let's now see an example about thread's local data.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec124"></a>A thread's local data</h3></div></div></div><p>The <code class="literal">threading</code> module offers a way to <span>implement</span><a class="indexterm" id="id325639865"></a> local data for threads. <span>Local data is an object that holds thread-specific data</span>. Let me show you an example, and allow me to sneak in a <code class="literal">Barrier</code> too, so I can tell you how it works:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11"># local.py
+import threading
+from random import randint
+
+local = threading.local()
+
+def run(local, barrier):
+    local.my_value = randint(0, 10**2)
+    t = threading.current_thread()
+    print(f'Thread {t.name} has value {local.my_value}')
+    barrier.wait()
+    print(f'Thread {t.name} still has value {local.my_value}')
+
+count = 3
+barrier = threading.Barrier(count)
+threads = [
+    threading.Thread(
+        target=run, name=f'T{name}', args=(local, barrier)
+    ) for name in range(count)
+]
+for t in threads:
+    t.start()</code></pre></div><p>We start by defining <code class="literal">local</code>. That is the special object that holds thread-specific data. We run three threads. Each of them will assign a random value to <code class="literal">local.my_value</code>, and print it. Then the thread reaches a <code class="literal">Barrier</code> object, which is programmed to hold three threads in total. When the barrier is hit by the third thread, they all can pass. It's basically a nice way to make sure that <span class="emphasis"><em>N</em></span> amount of threads reach a certain point and they all wait until every single one of them has arrived.</p><p>Now, if <code class="literal">local</code> was a normal, dummy object, the second thread would override the value of <code class="literal">local.my_value</code>, and the third would do the same. This means that we would see them printing different values in the first set of prints, but they would show the same value (the last one) in the second <span>round</span><a class="indexterm" id="id325639910"></a> of prints. But that doesn't happen, thanks to <code class="literal">local</code>. The output shows the following:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"><span class="strong"><strong>$ python local.py</strong></span>
+<span class="strong"><strong>Thread T0 has value 61</strong></span>
+<span class="strong"><strong>Thread T1 has value 52</strong></span>
+<span class="strong"><strong>Thread T2 has value 38</strong></span>
+<span class="strong"><strong>Thread T2 still has value 38</strong></span>
+<span class="strong"><strong>Thread T0 still has value 61</strong></span>
+<span class="strong"><strong>Thread T1 still has value 52</strong></span></code></pre></div><p>Notice the wrong order, due to the scheduler switching context, but the values are all correct.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec125"></a>Thread and process communication</h3></div></div></div><p>We have seen quite a lot of examples so far. So, let's <span>explore</span><a class="indexterm" id="id325644469"></a> how to make <span>threads</span><a class="indexterm" id="id325644477"></a> and processes talk to one another by employing a queue. Let's start with threads.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec37"></a>Thread communication</h4></div></div></div><p>For this example, we will be <span>using</span><a class="indexterm" id="id325993097"></a> a normal <code class="literal">Queue</code>, from the <code class="literal">queue</code> module:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="13"># comm_queue.py
+import threading
+from queue import Queue
+
+SENTINEL = object()
+
+def producer(q, n):
+    a, b = 0, 1
+    while a &lt;= n:
+        q.put(a)
+        a, b = b, a + b
+    q.put(SENTINEL)
+
+def consumer(q):
+    while True:
+        num = q.get()
+        q.task_done()
+        if num is SENTINEL:
+            break
+        print(f'Got number {num}')
+
+q = Queue()
+cns = threading.Thread(target=consumer, args=(q, ))
+prd = threading.Thread(target=producer, args=(q, 35))
+cns.start()
+prd.start()
+q.join()</code></pre></div><p>The logic is very basic. We have a <code class="literal">producer</code> function that generates Fibonacci numbers and puts them in a queue. When the next number is greater than a given <code class="literal">n</code>, the producer exits the <code class="literal">while</code> loop, and puts one last thing in the queue: a <code class="literal">SENTINEL</code>. A <code class="literal">SENTINEL</code> is any object that is used to signal something, and in our case, it signals to the consumer that the producer is done.</p><p>The interesting bit of logic is in the <code class="literal">consumer</code> function. It loops indefinitely, reading values out of the queue and printing them out. There are a couple of things to notice here. First, see how we are calling <code class="literal">q.task_done()</code>? That is to acknowledge that the element in the queue has been processed. The purpose of this is to allow the final instruction in the code, <code class="literal">q.join()</code>, to unblock when all elements have been acknowledged, so that the execution can end.</p><p>Second, notice how we use the <code class="literal">is</code> operator to compare against the items in order to find the sentinel. We'll see shortly that when using a <code class="literal">multiprocessing.Queue</code> this won't be possible any more. Before we get there, would you be able to guess why?</p><p>Running this example <span>produces</span><a class="indexterm" id="id325993159"></a> a series of lines, such as <code class="literal">Got number 0</code>, <code class="literal">Got number 1</code>, and so on, until <code class="literal">34</code>, since the limit we put is <code class="literal">35</code>, and the next Fibonacci number would be <code class="literal">55</code>.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec38"></a>Sending events</h4></div></div></div><p>Another way to make <span>threads</span><a class="indexterm" id="id326011589"></a> communicate is to fire events. Let me quickly show you an example of that:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="14"># evt.py
+import threading
+
+def fire():
+    print('Firing event...')
+    event.set()
+
+def listen():
+    event.wait()
+    print('Event has been fired')
+
+event = threading.Event()
+t1 = threading.Thread(target=fire)
+t2 = threading.Thread(target=listen)
+t2.start()
+t1.start()</code></pre></div><p>Here we have two threads that run <code class="literal">fire</code> and <code class="literal">listen</code>, respectively firing and listening for an event. To fire an event, call the <code class="literal">set</code> method on it. The <code class="literal">t2</code> thread, which is started first, is already listening to the event, and will sit there until the event is fired. The output from the previous example is the following:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="15"><span class="strong"><strong>$ python evt.py</strong></span>
+<span class="strong"><strong>Firing event...</strong></span>
+<span class="strong"><strong>Event has been fired</strong></span></code></pre></div><p>Events are great in some situations. Think about having <span>threads</span><a class="indexterm" id="id326016072"></a> that are waiting on a connection object to be ready, before they can actually start using it. They could be waiting on an event, and one thread could be checking that connection, and firing the event when it's ready. Events are fun to play with, so make sure you experiment and think about use cases for them.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec39"></a>Inter-process communication with queues</h4></div></div></div><p>Let's now see how to communicate <span>between</span><a class="indexterm" id="id326016087"></a> processes using a queue. This example is very very similar to the one for threads:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="16"># comm_queue_proc.py
+import multiprocessing
+
+SENTINEL = 'STOP'
+
+def producer(q, n):
+    a, b = 0, 1
+    while a &lt;= n:
+        q.put(a)
+        a, b = b, a + b
+    q.put(SENTINEL)
+
+def consumer(q):
+    while True:
+        num = q.get()
+        if num == SENTINEL:
+            break
+        print(f'Got number {num}')
+
+q = multiprocessing.Queue()
+cns = multiprocessing.Process(target=consumer, args=(q, ))
+prd = multiprocessing.Process(target=producer, args=(q, 35))
+cns.start()
+prd.start()</code></pre></div><p>As you can see, in this case, we have to use a queue that is an instance of <code class="literal">multiprocessing.Queue</code>, which doesn't expose a <code class="literal">task_done</code> method. However, because of the way this queue is designed, it automatically joins the main thread, therefore we only need to start the two processes and all will work. The output of this example is the same as the one before.</p><p>When it comes to IPC, be careful. Objects are pickled when they enter the queue, so IDs get lost, and there are a few other subtle things to take care of. This is why in this example I can no longer use an object as a sentinel, and compare using <code class="literal">is</code>, like I did in the multi-threaded version. That sentinel object would be pickled in the queue (because this time the <code class="literal">Queue</code> comes from <code class="literal">multiprocessing</code> and not from <code class="literal">queue</code> like before), and would assume a new ID after unpickling, failing to compare correctly. The string <code class="literal">"STOP"</code> in this case does the trick, and it will be up to you to find a suitable value for a sentinel, which needs to be something that could never clash with any of the items that could be in the same queue. I leave it up to you to refer to the documentation, and learn as much as you can on this topic.</p><p>Queues aren't the only way to communicate <span>between</span><a class="indexterm" id="id326016130"></a> processes. You can also use pipes (<code class="literal">multiprocessing.Pipe</code>), which provide a connection (as in, a pipe, clearly) from one process to another, and vice versa. You can find plenty of examples in the documentation; they aren't that different from what we've seen here.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec126"></a>Thread and process pools</h3></div></div></div><p>As mentioned before, pools are structures designed to hold <span class="emphasis"><em>N</em></span> objects (threads, processes, and so on). When the usage reaches capacity, no work is assigned to a thread (or process) until one of those currently working becomes available again. Pools, therefore, are a great way to limit the <span>number</span><a class="indexterm" id="id326020077"></a> of threads (or processes) that can be alive at the same time, preventing the system from starving due to resource exhaustion, or the computation time from <span>being</span><a class="indexterm" id="id326020086"></a> affected by too much context switching.</p><p>In the following examples, I will be tapping into the <code class="literal">concurrent.futures</code> module to use the <code class="literal">ThreadPoolExecutor</code> and <code class="literal">ProcessPoolExecutor</code> executors. These two classes, use a pool of threads (and processes, respectively), to execute calls asynchronously. They both accept a parameter, <code class="literal">max_workers</code>, which sets the upper limit to how many threads (or processes) can be used at the same time by the executor.</p><p>Let's start from the multithreaded example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="17"># pool.py
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from random import randint
+import threading
+
+def run(name):
+    value = randint(0, 10**2)
+    tname = threading.current_thread().name
+    print(f'Hi, I am {name} ({tname}) and my value is {value}')
+    return (name, value)
+
+with ThreadPoolExecutor(max_workers=3) as executor:
+    futures = [
+        executor.submit(run, f'T{name}') for name in range(5)
+    ]
+    for future in as_completed(futures):
+        name, value = future.result()
+        print(f'Thread {name} returned {value}')</code></pre></div><p>After importing the necessary bits, we define the <code class="literal">run</code> function. It gets a random value, prints it, and returns it, along with the <code class="literal">name</code> argument it was called with. The interesting bit comes right after the function.</p><p>As you can see, we're using a context manager to call <code class="literal">ThreadPoolExecutor</code>, to which we pass <code class="literal">max_workers=3</code>, which means the pool size is <code class="literal">3</code>. This means only three threads at any time will be alive.</p><p>We define a list of future objects by making a list comprehension, in which we call <code class="literal">submit</code> on our executor object. We instruct the executor to run the <code class="literal">run</code> function, with a name that will go from <code class="literal">T0</code> to <code class="literal">T4</code>. A <code class="literal">future</code> is an object that encapsulates the asynchronous execution of a callable.</p><p>Then we loop over the <code class="literal">future</code> objects, as they are are done. To do this, we use <code class="literal">as_completed</code> to get an iterator of the <code class="literal">future</code> instances that returns them as soon as they complete (finish or were cancelled). We grab the result of each <code class="literal">future</code> by calling the homonymous method, and simply print it. Given that <code class="literal">run</code> returns a tuple <code class="literal">name</code><span class="emphasis"><em>,</em></span><code class="literal">value</code>, we expect the result to be a two-tuple containing <code class="literal">name</code> and <code class="literal">value</code>. If we print the output of a <code class="literal">run</code> (bear in mind each <code class="literal">run</code> can potentially be slightly different), we get:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="18"><span class="strong"><strong>$ python pool.py</strong></span>
+<span class="strong"><strong>Hi, I am T0 (ThreadPoolExecutor-0_0) and my value is 5</strong></span>
+<span class="strong"><strong>Hi, I am T1 (ThreadPoolExecutor-0_0) and my value is 23</strong></span>
+<span class="strong"><strong>Hi, I am T2 (ThreadPoolExecutor-0_1) and my value is 58</strong></span>
+<span class="strong"><strong>Thread T1 returned 23</strong></span>
+<span class="strong"><strong>Thread T0 returned 5</strong></span>
+<span class="strong"><strong>Hi, I am T3 (ThreadPoolExecutor-0_0) and my value is 93</strong></span>
+<span class="strong"><strong>Hi, I am T4 (ThreadPoolExecutor-0_1) and my value is 62</strong></span>
+<span class="strong"><strong>Thread T2 returned 58</strong></span>
+<span class="strong"><strong>Thread T3 returned 93</strong></span>
+<span class="strong"><strong>Thread T4 returned 62</strong></span></code></pre></div><p>Before reading on, can you tell why the output looks like this? Could you explain what happened? Spend a moment thinking about it.</p><p>So, what goes on is that three threads start running, so we get three <code class="literal">Hi, I am...</code> messages printed out. Once all three of them are running, the pool is at capacity, so we need to wait for at least one thread to complete before anything else can happen. In the example run, <code class="literal">T0</code> and <code class="literal">T2</code> complete (which is signaled by the printing of what they returned), so they return to the pool and can be used again. They get run with names <code class="literal">T3</code> and <code class="literal">T4</code>, and finally all three, <code class="literal">T1</code>, <code class="literal">T3</code>, and <code class="literal">T4</code> complete. You can see from the output how the threads are actually reused, and how the first two are reassigned to <code class="literal">T3</code> and <code class="literal">T4</code> after they complete.</p><p>Let's now <span>see</span><a class="indexterm" id="id326052267"></a> the same example, but <span>with</span><a class="indexterm" id="id326052276"></a> the multiprocess design:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="19"># pool_proc.py
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from random import randint
+from time import sleep
+
+def run(name):
+    sleep(.05)
+    value = randint(0, 10**2)
+    print(f'Hi, I am {name} and my value is {value}')
+    return (name, value)
+
+with ProcessPoolExecutor(max_workers=3) as executor:
+    futures = [
+        executor.submit(run, f'P{name}') for name in range(5)
+    ]
+    for future in as_completed(futures):
+        name, value = future.result()
+        print(f'Process {name} returned {value}')</code></pre></div><p>The difference is truly minimal. We use <code class="literal">ProcessPoolExecutor</code> this time, and the <code class="literal">run</code> function is exactly the same, with one small addition: we sleep for 50 milliseconds at the beginning of each <code class="literal">run</code>. This is to exacerbate the behavior and have the output clearly show the size of the pool, which is still three. If we run the example, we get:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="20"><span class="strong"><strong>$ python pool_proc.py</strong></span>
+<span class="strong"><strong>Hi, I am P0 and my value is 19</strong></span>
+<span class="strong"><strong>Hi, I am P1 and my value is 97</strong></span>
+<span class="strong"><strong>Hi, I am P2 and my value is 74</strong></span>
+<span class="strong"><strong>Process P0 returned 19</strong></span>
+<span class="strong"><strong>Process P1 returned 97</strong></span>
+<span class="strong"><strong>Process P2 returned 74</strong></span>
+<span class="strong"><strong>Hi, I am P3 and my value is 80</strong></span>
+<span class="strong"><strong>Hi, I am P4 and my value is 68</strong></span>
+<span class="strong"><strong>Process P3 returned 80</strong></span>
+<span class="strong"><strong>Process P4 returned 68</strong></span></code></pre></div><p>This output clearly shows the pool size being three. It is very interesting to notice that if we remove that call to <code class="literal">sleep</code>, most of the time the output will have five prints of <code class="literal">Hi, I am...</code>, followed by five prints of <code class="literal">Process Px returned...</code>. How can we explain that? Well it's simple. By the time the first three processes are done, and returned by <code class="literal">as_completed</code>, all three are asked for their result, and whatever is returned, is printed. While this happens, the executor can already start recycling two processes to run the final two tasks, and they happen to print their <code class="literal">Hi, I am...</code> messages, before the prints in the <code class="literal">for</code> loop are allowed to take place.</p><p>This basically means <code class="literal">ProcessPoolExecutor</code> is quite fast and aggressive (in terms of getting the scheduler's attention), and it's worth noting that this behavior doesn't happen <span>with</span><a class="indexterm" id="id326059819"></a> the <span>thread</span><a class="indexterm" id="id326060170"></a> counterpart, in which, if you recall, we didn't need to use any artificial sleeping.</p><p>The important thing to keep in mind though, is being able to appreciate that even simple examples such as these can already be slightly tricky to understand or explain. Let this be a lesson to you, so that you raise your attention to 110% when you code for multithreaded or multiprocess designs.</p><p>Let's now move on to a more interesting example.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec127"></a>Using a process to add a timeout to a function</h3></div></div></div><p>Most, if not all, libraries <span>that</span><a class="indexterm" id="id326060189"></a> expose functions to make HTTP requests, provide the ability to specify a timeout when performing the request. This means that if after <span class="emphasis"><em>X</em></span> seconds (<span class="emphasis"><em>X</em></span> being the timeout), the request hasn't completed, the whole operation is aborted and execution resumes from the next instruction. Not all functions expose this feature though, so, when a function doesn't provide the ability to being interrupted, we can use a process to simulate that behavior. In this example, we'll be trying to translate a hostname into an IPv4 address. The <code class="literal">gethostbyname</code> function, from the <code class="literal">socket</code> module, doesn't allow us to put a timeout on the operation though, so we use a process to do that artificially. The code that follows might not be so straightforward, so I encourage you to spend some time going through it before you read on for the explanation:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="21"># hostres/util.py
+import socket
+from multiprocessing import Process, Queue
+
+def resolve(hostname, timeout=5):
+    exitcode, ip = resolve_host(hostname, timeout)
+    if exitcode == 0:
+        return ip
+    else:
+        return hostname
+
+def resolve_host(hostname, timeout):
+    queue = Queue()
+    proc = Process(target=gethostbyname, args=(hostname, queue))
+    proc.start()
+    proc.join(timeout=timeout)
+
+    if queue.empty():
+        proc.terminate()
+        ip = None
+    else:
+        ip = queue.get()
+    return proc.exitcode, ip
+
+def gethostbyname(hostname, queue):
+    ip = socket.gethostbyname(hostname)
+    queue.put(ip)</code></pre></div><p>Let's start from <code class="literal">resolve</code>. It simply takes a <code class="literal">hostname</code> and a <code class="literal">timeout</code>, and calls <code class="literal">resolve_host</code> with them. If the exit code is <code class="literal">0</code> (which means the process terminated correctly), it returns the IPv4 that corresponds to that host. Otherwise, it returns the <code class="literal">hostname</code> itself, as a fallback mechanism.</p><p>Next, let's talk about <code class="literal">gethostbyname</code>. It takes a <code class="literal">hostname</code> and a <code class="literal">queue</code>, and calls <code class="literal">socket.gethostbyname</code> to resolve the <code class="literal">hostname</code>. When the result is available, it is put into the <code class="literal">queue</code>. Now, this is where the issue lies. If the call to <code class="literal">socket.gethostbyname</code> takes longer than the timeout we want to assign, we need to kill it.</p><p>The <code class="literal">resolve_host</code> function does exactly this. It receives the <code class="literal">hostname</code> and the <code class="literal">timeout</code>, and, at first, it simply creates a <code class="literal">queue</code>. Then it spawns a new process that takes <code class="literal">gethostbyname</code> as the <code class="literal">target</code>, and passes the appropriate arguments. Then the process is started and joined on, but with a timeout.</p><p>Now, the successful scenario is this: the call to <code class="literal">socket.gethostbyname</code> succeeds quickly, the IP is in the queue, the process terminates well before its timeout time, and when we get to the <code class="literal">if</code> part, the queue will not be empty. We fetch the IP from it, and return it, alongside the process exit code.</p><p>In the unsuccessful scenario, the call to <code class="literal">socket.gethostbyname</code> takes too long, and the process is killed after its timeout has expired. Because the call failed, no IP has been inserted in the <code class="literal">queue</code>, and therefore it will be empty. In the <code class="literal">if</code> logic, we therefore set the IP to <code class="literal">None</code>, and return as before. The <code class="literal">resolve</code> function will find <span>that</span><a class="indexterm" id="id326065979"></a> the exit code is not <code class="literal">0</code> (as the process didn't terminate happily, but was killed instead), and will correctly return the hostname instead of the IP, which we couldn't get anyway.</p><p>In the source code of the book, in the <code class="literal">hostres</code> folder of this chapter, I have added some tests to make sure this behavior is actually correct. You can find instructions on how to run them in the <code class="literal">README.md</code> file in the folder. Make sure you check the test code too, it should be quite interesting.</p></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><div></div><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_10_ch10lvl1sec85_concurrent-execution-in-python_files/adsct" type="text/javascript"></script></body></html>

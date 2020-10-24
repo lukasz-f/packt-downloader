@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Debugging and Troubleshooting - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/11" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/11" rel="canonical"/>
+<meta content='"If debugging is the process of removing software bugs, then programming must be the process of putting them in."– Edsger W.' name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Debugging and Troubleshooting - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content='"If debugging is the process of removing software bugs, then programming must be the process of putting them in."– Edsger W.' property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/11" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Debugging and Troubleshooting - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content='"If debugging is the process of removing software bugs, then programming must be the process of putting them in."– Edsger W.' name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_11_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_11_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/ec.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/profitwell.js"></script><script async="" src="./9781788996662_11_files/inferredEvents.js"></script><script async="" src="./9781788996662_11_files/445429252334850"></script><script async="" src="./9781788996662_11_files/fbevents.js"></script><script async="" src="./9781788996662_11_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_11_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/script.js"></script><script async="" src="./9781788996662_11_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_11_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_11_files/gtm.js"></script><script src="./9781788996662_11_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_11_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_11_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style>
+<script async="" src="./9781788996662_11_files/hotjar-982604(1).js"></script><script async="" charset="utf-8" src="./9781788996662_11_files/modules.a7de8a5b8f73bddac58d.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style></style><script src="./9781788996662_11_files/f(1).txt"></script><script src="./9781788996662_11_files/f(2).txt"></script><script src="./9781788996662_11_files/f(3).txt"></script><script src="./9781788996662_11_files/f(4).txt"></script><script src="./9781788996662_11_files/f(5).txt"></script><script src="./9781788996662_11_files/f(6).txt"></script><script src="./9781788996662_11_files/f(7).txt"></script><script src="./9781788996662_11_files/f(8).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Debugging and Troubleshooting - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "\"If debugging is the process of removing software bugs, then programming must be the process of putting them in.\"– Edsger W.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_11_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script><script id="mmpack.0" src="./9781788996662_11_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_11_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_11_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="chapter" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title"><a id="ch11"></a>Chapter 11. Debugging and Troubleshooting</h2></div></div></div><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>"If debugging is the process of removing software bugs, then programming must be the process of putting them in."</em></span></p></blockquote></div><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>– Edsger W. Dijkstra</em></span></p></blockquote></div><p>In the life of a professional coder, debugging and troubleshooting take up a significant amount of time. Even if you work on the most beautiful code base ever written by a human, there will still be bugs in it; that is guaranteed.</p><p>We spend an awful lot of time reading other people's code and, in my opinion, a good software developer is someone who keeps their attention high, even when they're reading code that is not reported to be wrong or buggy.</p><p>Being able to debug code efficiently and quickly is a skill that every coder needs to keep improving. Some think that because they have read the manual, they're fine, but the reality is, the number of variables in the game is so great that there is no manual. There are guidelines one can follow, but there is no magic book that will teach you everything you need to know in order to become good at this.</p><p>I feel that on this particular subject, I have learned the most from my colleagues. It amazes me to observe someone very skilled attacking a problem. I enjoy seeing the steps they take, the things they verify to exclude possible causes, and the way they consider the suspects that eventually lead them to a solution.</p><p>Every colleague we work with can teach us something, or surprise us with a fantastic guess that turns out to be the right one. When that happens, don't just remain in wonderment (or worse, in envy), but seize the moment and ask them how they got to that guess and why. The answer will allow you to see whether there is something you can study in-depth later on so that, maybe next time, you'll be the one who will catch the bug.</p><p>Some bugs are very easy to spot. They come out of coarse mistakes and, once you see the effects of those mistakes, it's easy to find a solution that fixes the problem.</p><p>But there are other bugs that are much more subtle, much more slippery, and require true expertise, and a great deal of creativity and out-of-the-box thinking, to be dealt with.</p><p>The worst of all, at least for me, are the nondeterministic ones. These sometimes happen, and sometimes don't. Some happen only in environment A but not in environment B, even though A and B are supposed to be exactly the same. Those bugs are the truly evil ones, and they can drive you crazy.</p><p>And of course, bugs don't just happen in the sandbox, right? With your boss telling you, <span class="emphasis"><em>"Don't worry! Take your time to fix this. Have lunch first!"</em></span> Nope. They happen on a Friday at half past five, when your brain is cooked and you just want to go home. It's in those moments when everyone is getting upset in a split second, when your boss is breathing down your neck, that you have to be able to keep calm. And I do mean it. That's the most important skill to have if you want to be able to fight bugs effectively. If you allow your mind to get stressed, say goodbye to creative thinking, to logical deduction, and to everything you need at that moment. So take a deep breath, sit properly, and focus.</p><p>In this chapter, I will try to demonstrate some useful techniques that you can employ according to the severity of the bug, and a few suggestions that will hopefully boost your weapons against bugs and issues.</p><p>Specifically, we're going to look at the following:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc">Debugging techniques
+<div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc">Profiling</li><li style="list-style-type: disc">Assertions</li></ul></div></li><li style="list-style-type: disc">Troubleshooting guidelines</li></ul></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_11_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(5)]);</script><iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_11_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div></div><script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_11_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script src="./9781788996662_11_files/adsct" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_11_files/adsct(1)" type="text/javascript"></script><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><div></div><script src="./9781788996662_11_files/adsct(2)" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_11_files/adsct(3)" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><div></div><script src="./9781788996662_11_files/adsct(2)" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_11_files/adsct(3)" type="text/javascript"></script><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_11_files/adsct(4)" type="text/javascript"></script><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><div></div><script src="./9781788996662_11_files/adsct(5)" type="text/javascript"></script></body></html>

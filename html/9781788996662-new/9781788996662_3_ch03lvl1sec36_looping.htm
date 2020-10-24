@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Looping - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/3/ch03lvl1sec36/looping" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/3/ch03lvl1sec36/looping" rel="canonical"/>
+<meta content="If you have any experience with looping in other programming languages, you will find Python's way of looping a bit different." name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Looping - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="If you have any experience with looping in other programming languages, you will find Python's way of looping a bit different." property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/3/ch03lvl1sec36/looping" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Looping - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="If you have any experience with looping in other programming languages, you will find Python's way of looping a bit different." name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_3_ch03lvl1sec36_looping_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_3_ch03lvl1sec36_looping_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/script.js"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/profitwell.js"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/inferredEvents.js"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/445429252334850"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/fbevents.js"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/gtm.js"></script><script src="./9781788996662_3_ch03lvl1sec36_looping_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_3_ch03lvl1sec36_looping_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_3_ch03lvl1sec36_looping_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_3_ch03lvl1sec36_looping_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_3_ch03lvl1sec36_looping_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_3_ch03lvl1sec36_looping_files/f(1).txt"></script><script src="./9781788996662_3_ch03lvl1sec36_looping_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Looping - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "If you have any experience with looping in other programming languages, you will find Python's way of looping a bit different.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_3_ch03lvl1sec36_looping_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_3_ch03lvl1sec36_looping_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_3_ch03lvl1sec36_looping_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_3_ch03lvl1sec36_looping_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch03lvl1sec36"></a>Looping</h2></div></div><hr/></div><p>If you have any experience with looping in other <span>programming</span><a class="indexterm" id="id325998750"></a> languages, you will find Python's way of looping a bit different. First of all, what is looping? <span class="strong"><strong>Looping</strong></span> means being able to repeat the execution of a code block more than once, according to the loop parameters we're given. There are different looping constructs, which serve different purposes, and Python has distilled all of them down to just two, which you can use to achieve everything you need. These are the <code class="literal">for</code> and <code class="literal">while</code> statements.</p><p>While it's definitely possible to do everything you need using either of them, they serve different purposes and therefore they're usually used in different contexts. We'll explore this difference thoroughly in this chapter.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec41"></a>The for loop</h3></div></div></div><p>The <code class="literal">for</code> loop is used <span>when</span><a class="indexterm" id="id325980244"></a> looping over a sequence, such as a list, tuple, or a <span>collection</span><a class="indexterm" id="id325980233"></a> of objects. Let's start with a simple example and expand on the concept to see what the Python syntax allows us to do:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"># simple.for.py
+for number in [0, 1, 2, 3, 4]: 
+    print(number) </code></pre></div><p>This simple snippet of code, when executed, prints all numbers from <code class="literal">0</code> to <code class="literal">4</code>. The <code class="literal">for</code> loop is fed the list <code class="literal">[0, 1, 2, 3, 4]</code> and at each iteration, <code class="literal">number</code> is given a value from the sequence (which is iterated sequentially, in order), then the body of the loop is executed (the print line). The <code class="literal">number</code> value changes at every iteration, according to which value is coming next from the sequence. When the sequence is exhausted, the <code class="literal">for</code> loop terminates, and the execution of the code resumes normally with the code after the loop.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch03lvl3sec3"></a>Iterating over a range</h4></div></div></div><p>Sometimes we need to iterate over a <span>range</span><a class="indexterm" id="id325699118"></a> of numbers, and it would be quite unpleasant to have to do so by hardcoding the list somewhere. In such cases, the <code class="literal">range</code> function comes to the rescue. Let's see the equivalent of the previous snippet of code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"># simple.for.py
+for number in range(5): 
+    print(number) </code></pre></div><p>The <code class="literal">range</code> function is used extensively in Python programs when it comes to creating sequences: you can call it by passing one value, which acts as <code class="literal">stop</code> (counting from <code class="literal">0</code>), or you can pass two values (<code class="literal">start</code> and <code class="literal">stop</code>), or even three (<code class="literal">start</code>, <code class="literal">stop</code>, and <code class="literal">step</code>). Check out the following example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"><span class="strong"><strong>&gt;&gt;&gt; list(range(10))  # one value: from 0 to value (excluded)</strong></span>
+<span class="strong"><strong>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; list(range(3, 8))  # two values: from start to stop (excluded)</strong></span>
+<span class="strong"><strong>[3, 4, 5, 6, 7]</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; list(range(-10, 10, 4))  # three values: step is added</strong></span>
+<span class="strong"><strong>[-10, -6, -2, 2, 6]</strong></span></code></pre></div><p>For the moment, ignore that we need to wrap <code class="literal">range(...)</code> within a <code class="literal">list</code>. The <code class="literal">range</code> object is a little bit special, but in this case, we're just interested in understanding what values it will return to us. You can see that the deal is the same with slicing: <code class="literal">start</code> is included, <code class="literal">stop</code> excluded, and optionally you can add a <code class="literal">step</code> parameter, which by default is <code class="literal">1</code>.</p><p>Try modifying the parameters of the <code class="literal">range()</code> call in our <code class="literal">simple.for.py</code> code and see what it prints. Get comfortable with it.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch03lvl3sec4"></a>Iterating over a sequence</h4></div></div></div><p>Now we have all the tools to iterate over a sequence, so let's <span>build</span><a class="indexterm" id="id325891883"></a> on that example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"># simple.for.2.py
+surnames = ['Rivest', 'Shamir', 'Adleman'] 
+for position in range(len(surnames)): 
+    print(position, surnames[position]) </code></pre></div><p>The preceding code adds a little bit of complexity to the game. Execution will show this result:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"><span class="strong"><strong>$ python simple.for.2.py</strong></span>
+<span class="strong"><strong>0 Rivest</strong></span>
+<span class="strong"><strong>1 Shamir</strong></span>
+<span class="strong"><strong>2 Adleman</strong></span></code></pre></div><p>Let's use the <span class="strong"><strong>inside-out</strong></span> technique to break it down, OK? We start from the innermost part of what we're trying to understand, and we expand outward. So, <code class="literal">len(surnames)</code> is the length of the <code class="literal">surnames</code> list: <code class="literal">3</code>. Therefore, <code class="literal">range(len(surnames))</code> is actually transformed into <code class="literal">range(3)</code>. This gives us the range [0, 3), which is basically a sequence (<code class="literal">0</code>, <code class="literal">1</code>, <code class="literal">2</code>). This means that the <code class="literal">for</code> loop will run three iterations. In the first one, <code class="literal">position</code> will take value <code class="literal">0</code>, while in the second one, it will take value <code class="literal">1</code>, and finally value <code class="literal">2</code> in the third and last iteration. What is (<code class="literal">0</code>, <code class="literal">1</code>, <code class="literal">2</code>), if not the possible indexing positions for the <code class="literal">surnames</code> list? At position <code class="literal">0</code>, we find <code class="literal">'Rivest'</code>, at position <code class="literal">1</code>, <code class="literal">'Shamir'</code>, and at position <code class="literal">2</code>, <code class="literal">'Adleman'</code>. If you are curious about what these three men created together, change <code class="literal">print(position, surnames[position])</code> to <code class="literal">print(surnames[position][0], end='')</code>, add a final <code class="literal">print()</code> outside of the loop, and run the code again.</p><p>Now, this style of looping is actually much closer to languages such as Java or C++. In Python, it's quite rare to see code like this. You can just iterate over any <span>sequence</span><a class="indexterm" id="id325916572"></a> or collection, so there is no need to get the list of positions and retrieve elements out of a sequence at each iteration. It's expensive, needlessly expensive. Let's change the example into a more Pythonic form:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"># simple.for.3.py
+surnames = ['Rivest', 'Shamir', 'Adleman'] 
+for surname in surnames: 
+    print(surname) </code></pre></div><p>Now that's something! It's practically English. The <code class="literal">for</code> loop can iterate over the <code class="literal">surnames</code> list, and it gives back each element in order at each interaction. Running this code will print the three surnames, one at a time. It's much easier to read, right?</p><p>What if you wanted to print the position as well though? Or what if you actually needed it? Should you go back to the <code class="literal">range(len(...))</code> form? No. You can use the <code class="literal">enumerate</code> built-in function, like this:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6"># simple.for.4.py
+surnames = ['Rivest', 'Shamir', 'Adleman'] 
+for position, surname in enumerate(surnames): 
+    print(position, surname) </code></pre></div><p>This code is very interesting as well. Notice that enumerate gives back a two-tuple <code class="literal">(position, surname)</code> at each iteration, but still, it's much more readable (and more efficient) than the <code class="literal">range(len(...))</code> example. You can call <code class="literal">enumerate</code> with a <code class="literal">start</code> parameter, such as <code class="literal">enumerate(iterable, start)</code>, and it will start from <code class="literal">start</code>, rather than <code class="literal">0</code>. Just another little thing that shows you how much thought has been given in designing Python so that it makes your life easier.</p><p>You can use a <code class="literal">for</code> loop to iterate over lists, tuples, and in general anything that Python calls iterable. This is a very important concept, so let's talk about it a bit more.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec42"></a>Iterators and iterables</h3></div></div></div><p>According to the Python documentation (<a class="ulink" href="https://docs.python.org/3/glossary.html" target="_blank">https://docs.python.org/3/glossary.html</a>), an <span>iterable</span><a class="indexterm" id="id325919212"></a> is:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>An object capable of returning its members one at a time. Examples of iterables include all sequence types (such as list, str, and tuple) and some non-sequence types like dict, file objects, and objects of any classes you define with an __iter__() or __getitem__() method. Iterables can be used in a for loop and in many other places where a sequence is needed (zip(), map(), ...). When an iterable object is passed as an argument to the built-in function iter(), it returns an iterator for the object. This iterator is good for one pass over the set of values. When using iterables, it is usually not necessary to call iter() or deal with iterator objects yourself. The for statement does that automatically for you, creating a temporary unnamed variable to hold the iterator for the duration of the loop.</em></span></p></blockquote></div><p>Simply put, what happens when you write <code class="literal">for k in sequence: ... body ...</code>, is that the <code class="literal">for</code> loop asks <code class="literal">sequence</code> for the next element, it gets something back, it calls that something <code class="literal">k</code>, and then executes its body. Then, once again, the <code class="literal">for</code> loop asks <code class="literal">sequence</code> for the next element, it calls it <code class="literal">k</code> again, and executes the body again, and so on and so forth, until the sequence is exhausted. Empty sequences will result in zero executions of the body.</p><p>Some data structures, when iterated over, produce their elements in order, such as lists, tuples, and strings, while some others don't, such as sets and dictionaries (prior to Python 3.6). Python gives us the ability to <span>iterate</span><a class="indexterm" id="id326650293"></a> over iterables, using a type of object called an <span class="strong"><strong>iterator</strong></span>.</p><p>According to the official documentation (<a class="ulink" href="https://docs.python.org/3/glossary.html" target="_blank">https://docs.python.org/3/glossary.html</a>), an iterator is:</p><div class="blockquote"><blockquote class="blockquote"><p><span class="emphasis"><em>An object representing a stream of data. Repeated calls to the iterator's __next__() method (or passing it to the built-in function next()) return successive items in the stream. When no more data are available a StopIteration exception is raised instead. At this point, the iterator object is exhausted and any further calls to its __next__() method just raise StopIteration again. Iterators are required to have an __iter__() method that returns the iterator object itself so every iterator is also iterable and may be used in most places where other iterables are accepted. One notable exception is code which attempts multiple iteration passes. A container object (such as a list) produces a fresh new iterator each time you pass it to the iter() function or use it in a for loop. Attempting this with an iterator will just return the same exhausted iterator object used in the previous iteration pass, making it appear like an empty container.</em></span></p></blockquote></div><p>Don't worry if you don't fully understand all the preceding legalese, you will in due time. I put it here as a handy reference for the future.</p><p>In practice, the whole iterable/iterator mechanism is somewhat hidden behind the code. Unless you need to code your own iterable or iterator for some reason, you won't have to worry about this too much. But it's very important to understand how Python handles this key aspect of control flow because it will shape the way you will write your code.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec43"></a>Iterating over multiple sequences</h3></div></div></div><p>Let's see another example of how to iterate over two <span>sequences</span><a class="indexterm" id="id326650437"></a> of the same length, in order to work on their respective elements in pairs. Say we have a list of people and a list of numbers representing the age of the people in the first list. We want to print a pair person/age on one line for all of them. Let's start with an example and let's refine it gradually:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7"># multiple.sequences.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+for position in range(len(people)):
+    person = people[position]
+    age = ages[position]
+    print(person, age)</code></pre></div><p>By now, this code should be pretty straightforward for you to understand. We need to iterate over the list of positions (<code class="literal">0</code>, <code class="literal">1</code>, <code class="literal">2</code>, <code class="literal">3</code>) because we want to retrieve elements from two different lists. Executing it we get the following:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8"><span class="strong"><strong>$ python multiple.sequences.py</strong></span>
+<span class="strong"><strong>Conrad 29</strong></span>
+<span class="strong"><strong>Deepak 30</strong></span>
+<span class="strong"><strong>Heinrich 34</strong></span>
+<span class="strong"><strong>Tom 36</strong></span></code></pre></div><p>This code is both inefficient and not Pythonic. It's inefficient <span>because</span><a class="indexterm" id="id325906662"></a> retrieving an element given the position can be an expensive operation, and we're doing it from scratch at each iteration. The postal worker doesn't go back to the beginning of the road each time they deliver a letter, right? They move from house to house. From one to the next one. Let's try to make it better using <code class="literal">enumerate</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9"># multiple.sequences.enumerate.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+for position, person in enumerate(people):
+    age = ages[position]
+    print(person, age)</code></pre></div><p>That's better, but still not perfect. And it's still a bit ugly. We're iterating properly on <code class="literal">people</code>, but we're still fetching <code class="literal">age</code> using positional indexing, which we want to lose as well. Well, no worries, Python gives you the <code class="literal">zip</code> function, remember? Let's use it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10"># multiple.sequences.zip.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+for person, age in zip(people, ages):
+    print(person, age)</code></pre></div><p>Ah! So much better! Once again, compare the preceding code with the first example and admire Python's elegance. The reason I wanted to show this example is twofold. On the one hand, I wanted to give you an idea of how shorter code in Python can be compared to other languages where the syntax doesn't allow you to iterate over sequences or collections as easily. And on the other hand, and much more importantly, notice that when the <code class="literal">for</code> loop asks <code class="literal">zip(sequenceA, sequenceB)</code> for the next element, it gets back a tuple, not just a single object. It gets back a tuple with as many elements as the number of sequences we feed to the <code class="literal">zip</code> function. Let's expand a little on the previous example in two ways, using explicit and implicit assignment:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11"># multiple.sequences.explicit.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+nationalities = ['Poland', 'India', 'South Africa', 'England']
+for person, age, nationality in zip(people, ages, nationalities):
+    print(person, age, nationality)</code></pre></div><p>In the preceding code, we added the nationalities list. Now <span>that</span><a class="indexterm" id="id326007065"></a> we feed three sequences to the <code class="literal">zip</code> function, the for loop gets back a <span class="emphasis"><em>three-tuple</em></span> at each iteration. Notice that the position of the elements in the tuple respects the position of the sequences in the <code class="literal">zip</code> call. Executing the code will yield the following result:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"><span class="strong"><strong>$ python multiple.sequences.explicit.py</strong></span>
+<span class="strong"><strong>Conrad 29 Poland</strong></span>
+<span class="strong"><strong>Deepak 30 India</strong></span>
+<span class="strong"><strong>Heinrich 34 South Africa</strong></span>
+<span class="strong"><strong>Tom 36 England</strong></span></code></pre></div><p>Sometimes, for reasons that may not be clear in a simple example such as the preceding one, you may want to explode the tuple within the body of the <code class="literal">for</code> loop. If that is your desire, it's perfectly possible to do so:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="13"># multiple.sequences.implicit.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+nationalities = ['Poland', 'India', 'South Africa', 'England']
+for data in zip(people, ages, nationalities):
+    person, age, nationality = data
+    print(person, age, nationality)</code></pre></div><p>It's basically doing what the <code class="literal">for</code> loop does automatically for you, but in some cases you may want to do it yourself. Here, the three-tuple <code class="literal">data</code> that comes from <code class="literal">zip(...)</code> is exploded within the body of the <code class="literal">for</code> loop into three variables: <code class="literal">person</code>, <code class="literal">age</code>, and <code class="literal">nationality</code>.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec44"></a>The while loop</h3></div></div></div><p>In the preceding pages, we saw the <code class="literal">for</code> loop in action. It's <span>incredibly</span><a class="indexterm" id="id326015310"></a> useful when you need to <span>loop</span><a class="indexterm" id="id326015317"></a> over a sequence or a collection. The key point to keep in mind, when you need to be able to discriminate which looping construct to use, is that the <code class="literal">for</code> loop rocks when you have to iterate over a finite amount of elements. It can be a huge amount, but still, something that ends at some point.</p><p>There are other cases though, when you just need to loop until some condition is satisfied, or even loop indefinitely until the application is stopped, such as cases where we don't really have something to iterate on, and therefore the <code class="literal">for</code> loop would be a poor choice. But fear not, for these cases, Python provides us with the <code class="literal">while</code> loop.</p><p>The <code class="literal">while</code> loop is similar to the <code class="literal">for</code> loop, in that they both loop, and at each iteration they execute a body of instructions. What is different between them is that the <code class="literal">while</code> loop doesn't loop over a sequence (it can, but you have to write the logic manually and it wouldn't make any sense, you would just want to use a <code class="literal">for</code> loop), rather, it loops as long as a certain condition is satisfied. When the condition is no longer satisfied, the loop ends.</p><p>As usual, let's see an example that will clarify everything for us. We want to print the binary representation of a positive number. In order to do so, we can use a simple algorithm that collects the remainders of division by <code class="literal">2</code> (in reverse order), and that turns out to be the binary representation of the number itself:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="14">6 / 2 = 3 (remainder: 0) 
+3 / 2 = 1 (remainder: 1) 
+1 / 2 = 0 (remainder: 1) 
+List of remainders: 0, 1, 1. 
+Inverse is 1, 1, 0, which is also the binary representation of 6: 110</code></pre></div><p>Let's write some code to calculate the binary representation for the number 39: 100111<sub>2</sub>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="15"># binary.py
+n = 39
+remainders = []
+while <span class="strong"><strong>n &gt; 0</strong></span>:
+    remainder = n % 2  # remainder of division by 2
+    remainders.insert(0, remainder)  # we keep track of remainders
+    n //= 2  # we divide n by 2
+
+print(remainders)</code></pre></div><p>In the preceding code, I highlighted <code class="literal">n &gt; 0</code>, which is the condition to keep looping. We can make the code a little shorter (and more Pythonic), by using the <code class="literal">divmod</code> function, which is called with a number and a divisor, and returns a tuple with the result of the integer division and its remainder. For example, <code class="literal">divmod(13, 5)</code> would return <code class="literal">(2, 3)</code>, and indeed <span class="emphasis"><em>5 * 2 + 3 = 13</em></span>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="16"># binary.2.py
+n = 39
+remainders = []
+while n &gt; 0:
+    n, remainder = divmod(n, 2)
+    remainders.insert(0, remainder)
+
+print(remainders)</code></pre></div><p>In the preceding code, we have reassigned <code class="literal">n</code> to the result of the division by <code class="literal">2</code>, and the remainder, in one single line.</p><p>Notice that the condition in a <code class="literal">while</code> loop is a condition to <span>continue</span><a class="indexterm" id="id326039991"></a> looping. If it evaluates to <code class="literal">True</code>, then the body is executed and then another evaluation follows, and so on, until the <span>condition</span><a class="indexterm" id="id326040002"></a> evaluates to <code class="literal">False</code>. When that happens, the loop is exited immediately <span>without</span><a class="indexterm" id="id326040013"></a> executing its body.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note29"></a>Note</h3><p>If the condition never evaluates to <code class="literal">False</code>, the loop becomes a so-called <span class="strong"><strong>infinite loop</strong></span>. Infinite loops are used, for example, when polling from network devices: you ask the socket whether there is any data, you do something with it if there is any, then you sleep for a small amount of time, and then you ask the socket again, over and over again, without ever stopping.</p></div><p>Having the ability to loop over a condition, or to loop indefinitely, is the reason why the <code class="literal">for</code> loop alone is not enough, and therefore Python provides the <code class="literal">while</code> loop.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="tip30"></a>Note</h3><p>By the way, if you need the binary representation of a number, check out the <code class="literal">bin</code> function.</p></div><p>Just for fun, let's adapt one of the examples (<code class="literal">multiple.sequences.py</code>) using the while logic:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="17"># multiple.sequences.while.py
+people = ['Conrad', 'Deepak', 'Heinrich', 'Tom']
+ages = [29, 30, 34, 36]
+<span class="strong"><strong>position = 0</strong></span>
+while <span class="strong"><strong>position &lt; len(people)</strong></span>:
+    person = people[position]
+    age = ages[position]
+    print(person, age)
+<span class="strong"><strong>position += 1</strong></span></code></pre></div><p>In the preceding code, I have highlighted the <span class="emphasis"><em>initialization</em></span>, <span class="emphasis"><em>condition</em></span>, and <span class="emphasis"><em>update</em></span> of the <code class="literal">position</code> variable, which makes it possible to simulate the equivalent <code class="literal">for</code> loop code by handling the iteration variable manually. Everything that can be done with a <code class="literal">for</code> loop can also be done with a <code class="literal">while</code> loop, even though you can see there's a bit of boilerplate you have to go through in order to achieve the same result. The opposite is also true, but unless you have a reason to do so, you ought to use the right tool for the job, and 99.9% of the time you'll be fine.</p><p>So, to recap, use a <code class="literal">for</code> loop when you need to iterate over an iterable, and a <code class="literal">while</code> loop when you need to loop according to a condition being satisfied or not. If you keep in mind the difference between the two purposes, you will never choose the wrong looping construct.</p><p>Let's now see how to alter the normal flow of a loop.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec45"></a>The break and continue statements</h3></div></div></div><p>According to the task at hand, sometimes you will need to alter the regular flow of a loop. You can either skip a single iteration (as many times as you want), or you can <span>break</span><a class="indexterm" id="id326040182"></a> out of the loop entirely. A common use case for skipping iterations is, for example, when you're iterating over a list of items and you need to work on each of them only if some condition is verified. On the other hand, if you're <span>iterating</span><a class="indexterm" id="id326040188"></a> over a collection of items, and you have found one of them that satisfies some need you have, you may decide not to continue the loop entirely and therefore break out of it. There are countless possible scenarios, so it's better to see a couple of examples.</p><p>Let's say you want to apply a 20% discount to all products in a basket list for those that have an expiration date of today. The way you achieve this is to use the <code class="literal">continue</code> statement, which tells the looping construct (<code class="literal">for</code> or <code class="literal">while</code>) to stop execution of the body immediately and go to the next iteration, if any. This example will take us a little deeper down the rabbit hole, so be ready to jump:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="18"># discount.py
+from datetime import date, timedelta
+
+today = date.today()
+tomorrow = today + timedelta(days=1)  # today + 1 day is tomorrow
+products = [
+    {'sku': '1', 'expiration_date': today, 'price': 100.0},
+    {'sku': '2', 'expiration_date': tomorrow, 'price': 50},
+    {'sku': '3', 'expiration_date': today, 'price': 20},
+]
+
+for product in products:
+    if product['expiration_date'] != today:
+        continue
+    product['price'] *= 0.8  # equivalent to applying 20% discount
+    print(
+        'Price for sku', product['sku'],
+        'is now', product['price'])</code></pre></div><p>We start by importing the <code class="literal">date</code> and <code class="literal">timedelta</code> objects, then we set up our products. Those with <code class="literal">sku</code> as <code class="literal">1</code> and <code class="literal">3</code> have an expiration date of <code class="literal">today</code>, which means we want to apply a 20% discount on them. We loop over each <code class="literal">product</code> and we inspect the expiration date. If it is not (inequality operator, <code class="literal">!=</code>) <code class="literal">today</code>, we don't want to execute the rest of the body suite, so we <code class="literal">continue</code>.</p><p>Notice that it is not important where in the body <span>suite</span><a class="indexterm" id="id326040899"></a> you place the <code class="literal">continue</code> statement (you can even use it more than once). When you reach it, execution stops and goes back to the <span>next</span><a class="indexterm" id="id326040908"></a> iteration. If we run the <code class="literal">discount.py</code> module, this is the output:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="19"><span class="strong"><strong>$ python discount.py</strong></span>
+<span class="strong"><strong>Price for sku 1 is now 80.0</strong></span>
+<span class="strong"><strong>Price for sku 3 is now 16.0</strong></span></code></pre></div><p>This shows you that the last two lines of the body haven't been executed for <code class="literal">sku</code> number <code class="literal">2</code>.</p><p>Let's now see an example of breaking out of a loop. Say we want to tell whether at least one of the elements in a list evaluates to <code class="literal">True</code> when fed to the <code class="literal">bool</code> function. Given that we need to know whether there is at least one, when we find it, we don't need to keep scanning the list any further. In Python code, this translates to using the <code class="literal">break</code> statement. Let's write this down into code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="20"># any.py
+items = [0, None, 0.0, True, 0, 7]  # True and 7 evaluate to True
+
+found = False  # this is called "flag"
+for item in items:
+    print('scanning item', item)
+    if item:
+        found = True  # we update the flag
+        break
+
+if found:  # we inspect the flag
+    print('At least one item evaluates to True')
+else:
+    print('All items evaluate to False')</code></pre></div><p>The preceding code is such a common pattern in programming, you will see it a lot. When you inspect items this way, basically what you do is to set up a <code class="literal">flag</code> variable, then start the inspection. If you find one element that matches your criteria (in this example, that evaluates to <code class="literal">True</code>), then you update the flag and stop iterating. After iteration, you inspect the flag and take action accordingly. Execution yields:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="21"><span class="strong"><strong>$ python any.py</strong></span>
+<span class="strong"><strong>scanning item 0</strong></span>
+<span class="strong"><strong>scanning item None</strong></span>
+<span class="strong"><strong>scanning item 0.0</strong></span>
+<span class="strong"><strong>scanning item True</strong></span>
+<span class="strong"><strong>At least one item evaluates to True</strong></span></code></pre></div><p>See how execution stopped after <code class="literal">True</code> was found? The <code class="literal">break</code> statement acts exactly like the <code class="literal">continue</code> one, in that it stops executing the body of the loop immediately, but also, prevents any other iteration from running, effectively breaking out of the loop. The <code class="literal">continue</code> and <code class="literal">break</code> statements can be used together with no limitation in their numbers, both in the <code class="literal">for</code> and <code class="literal">while</code> looping constructs.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="tip31"></a>Note</h3><p>By the way, there is no need to write code to detect whether there is at least one element in a sequence that evaluates to <code class="literal">True</code>. Just check out the built-in <code class="literal">any</code> function.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch03lvl2sec46"></a>A special else clause</h3></div></div></div><p>One of the features I've seen only in the Python language is the ability to have <code class="literal">else</code> clauses after <code class="literal">while</code> and <code class="literal">for</code> loops. It's very rarely used, but it's definitely nice to have. In short, you can have an <code class="literal">else</code> suite after a <code class="literal">for</code> or <code class="literal">while</code> loop. If the loop ends normally, because of <span>exhaustion</span><a class="indexterm" id="id326064001"></a> of the iterator (<code class="literal">for</code> loop) or <span>because</span><a class="indexterm" id="id326064010"></a> the condition is finally not met (<code class="literal">while</code> loop), then the <code class="literal">else</code> suite (if present) is executed. In case execution is interrupted by a <code class="literal">break</code> statement, the <code class="literal">else</code> clause is not executed. Let's take an example of a <code class="literal">for</code> loop that iterates over a group of items, looking for one that would match some condition. In case we don't find at least one that <span>satisfies</span><a class="indexterm" id="id326064035"></a> the condition, we want to raise an <span class="strong"><strong>exception</strong></span>. This means we want to arrest the regular execution of the program and signal that there was an error, or exception, that we cannot deal with. Exceptions will be the subject of <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/8" linkend="ch08"><span>Chapter 8</span></a>, <span class="emphasis"><em>Testing, Profiling, and Dealing with Exceptions</em></span>, so don't worry if you don't fully understand them now. Just bear in mind that they will alter the regular flow of the code.</p><p>Let me now show you two examples that do exactly the same thing, but one of them is using the special <code class="literal">for...else</code> syntax. Say that we want to find, among a collection of people, one that could drive a car:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="22"># for.no.else.py
+class DriverException(Exception):
+    pass
+
+people = [('James', 17), ('Kirk', 9), ('Lars', 13), ('Robert', 8)]
+driver = None
+for person, age in people:
+    if age &gt;= 18:
+        driver = (person, age)
+        break
+
+if driver is None:
+    raise DriverException('Driver not found.')</code></pre></div><p>Notice the <code class="literal">flag</code> pattern again. We set the driver to be <code class="literal">None</code>, then if we find one, we update the <code class="literal">driver</code> flag, and then, at the end of the loop, we inspect it to see whether one was found. I kind of have the feeling that those kids would drive a very <span class="emphasis"><em>metallic</em></span> car, but anyway, notice that if a driver is not found, <code class="literal">DriverException</code> is raised, signaling to the program that execution cannot continue (we're lacking the driver).</p><p>The same functionality can be rewritten a bit <span>more</span><a class="indexterm" id="id326064086"></a> elegantly using the <span>following</span><a class="indexterm" id="id326064094"></a> code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="23"># for.else.py
+class DriverException(Exception):
+    pass
+
+people = [('James', 17), ('Kirk', 9), ('Lars', 13), ('Robert', 8)]
+for person, age in people:
+    if age &gt;= 18:
+        driver = (person, age)
+        break
+else:
+    raise DriverException('Driver not found.')</code></pre></div><p>Notice that we aren't forced to use the <code class="literal">flag</code> pattern any more. The exception is raised as part of the <code class="literal">for</code> loop logic, which makes good sense because the <code class="literal">for</code> loop is checking on some condition. All we need is to set up a <code class="literal">driver</code> object in case we find one, because the rest of the code is going to use that information somewhere. Notice the code is shorter and more elegant, because the logic is now correctly grouped together where it belongs.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note32"></a>Note</h3><p>In the <span class="emphasis"><em>Transforming Code into Beautiful, Idiomatic Python</em></span> video, Raymond Hettinger suggests a much better name for the <code class="literal">else</code> statement associated with a for loop: <code class="literal">nobreak</code>. If you struggle remembering how the <code class="literal">else</code> works for a <code class="literal">for</code> loop, simply remembering this fact should help you.</p></div></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_3_ch03lvl1sec36_looping_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_3_ch03lvl1sec36_looping_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><div></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_3_ch03lvl1sec36_looping_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_3_ch03lvl1sec36_looping_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_3_ch03lvl1sec36_looping_files/adsct" type="text/javascript"></script></body></html>

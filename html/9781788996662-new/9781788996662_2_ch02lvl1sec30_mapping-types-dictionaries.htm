@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Mapping types – dictionaries - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec30/mapping-types-dictionaries" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec30/mapping-types-dictionaries" rel="canonical"/>
+<meta content="Of all the built-in Python data types, the dictionary is easily the most interesting one." name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Mapping types – dictionaries - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="Of all the built-in Python data types, the dictionary is easily the most interesting one." property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/2/ch02lvl1sec30/mapping-types-dictionaries" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Mapping types – dictionaries - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="Of all the built-in Python data types, the dictionary is easily the most interesting one." name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/script.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/profitwell.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/inferredEvents.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/445429252334850"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/fbevents.js"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/gtm.js"></script><script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/f(1).txt"></script><script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Mapping types – dictionaries - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "Of all the built-in Python data types, the dictionary is easily the most interesting one.",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch02lvl1sec30"></a>Mapping types – dictionaries</h2></div></div><hr/></div><p>Of all the built-in Python data types, the dictionary is easily the <span>most</span><a class="indexterm" id="id325891884"></a> interesting one. It's the only standard <span>mapping</span><a class="indexterm" id="id325905659"></a> type, and it is the backbone of every Python object.</p><p>A <span>dictionary</span><a class="indexterm" id="id325891923"></a> maps keys to values. Keys need to be hashable objects, while values can be of any arbitrary type. Dictionaries are mutable objects. There are quite a few different ways to create a dictionary, so let me give you a simple example of how to create a dictionary equal to <code class="literal">{'A': 1, 'Z': -1}</code> in five different ways:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"><span class="strong"><strong>&gt;&gt;&gt; a = dict(A=1, Z=-1)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; b = {'A': 1, 'Z': -1}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; c = dict(zip(['A', 'Z'], [1, -1]))</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d = dict([('A', 1), ('Z', -1)])</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; e = dict({'Z': -1, 'A': 1})</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; a == b == c == d == e  # are they all the same?</strong></span>
+<span class="strong"><strong>True  # They are indeed</strong></span></code></pre></div><p>Have you noticed those double equals? Assignment is done with one equal, while to check whether an object is the same as another one (or five in one go, in this case), we use double equals. There is also another way to compare objects, which involves the <code class="literal">is</code> operator, and checks whether the two objects are the same (if they have the same ID, not just the value), but unless you have a good reason to use it, you should use the double equals instead. In the preceding code, I also used one nice function: <code class="literal">zip</code>. It is named after the real-life zip, which glues together two things taking one element from each at a time. Let me show you an example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"><span class="strong"><strong>&gt;&gt;&gt; list(zip(['h', 'e', 'l', 'l', 'o'], [1, 2, 3, 4, 5]))</strong></span><span class="strong"><strong>[('h', 1), ('e', 2), ('l', 3), ('l', 4), ('o', 5)]</strong></span><span class="strong"><strong>&gt;&gt;&gt; list(zip('hello', range(1, 6)))  # equivalent, more Pythonic</strong></span><span class="strong"><strong>[('h', 1), ('e', 2), ('l', 3), ('l', 4), ('o', 5)]</strong></span></code></pre></div><p>In the preceding example, I have created the same list in two different ways, one more explicit, and the other a little bit more Pythonic. Forget for a moment that I had to wrap the <code class="literal">list</code> constructor around the <code class="literal">zip</code> call (the reason is because <code class="literal">zip</code> returns an iterator, not a <code class="literal">list</code>, so if I want to see the result I need to exhaust that iterator into something—a list in this case), and concentrate on the result. See how <code class="literal">zip</code> has coupled the first elements of its two arguments together, then the second ones, then the third ones, and so on and so forth? Take a look at your pants (or at your purse, if you're a lady) and you'll see the same behavior in your actual zip. But let's go back to dictionaries and see how many wonderful methods they expose for allowing us to manipulate them as we want.</p><p>Let's start with the basic operations:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"><span class="strong"><strong>&gt;&gt;&gt; d = {}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d['a'] = 1  # let's set a couple of (key, value) pairs</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d['b'] = 2</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; len(d)  # how many pairs?</strong></span>
+<span class="strong"><strong>2</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d['a']  # what is the value of 'a'?</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d  # how does `d` look now?</strong></span>
+<span class="strong"><strong>{'a': 1, 'b': 2}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; del d['a']  # let's remove `a`</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'b': 2}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d['c'] = 3  # let's add 'c': 3</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 'c' in d  # membership is checked against the keys</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 3 in d  # not the values</strong></span>
+<span class="strong"><strong>False</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 'e' in d</strong></span>
+<span class="strong"><strong>False</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.clear()  # let's clean everything from this dictionary</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{}</strong></span></code></pre></div><p>Notice how accessing keys of a dictionary, regardless of the type of operation we're performing, is done through square brackets. Do you remember strings, lists, and tuples? We were accessing elements at some position through square brackets as well, which is yet another example of Python's consistency.</p><p>Let's see now three special <span>objects</span><a class="indexterm" id="id326497829"></a> called dictionary views: <code class="literal">keys</code>, <code class="literal">values</code>, and <code class="literal">items</code>. These <span>objects</span><a class="indexterm" id="id326497847"></a> provide a dynamic view of the dictionary entries and they change when the dictionary changes. <code class="literal">keys()</code> returns all the keys in the dictionary, <code class="literal">values()</code> returns all the values in the dictionary, and <code class="literal">items()</code> returns all the <span class="emphasis"><em>(key, value)</em></span> pairs in the dictionary.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note26"></a>Note</h3><p>According to the Python documentation: "<span class="emphasis"><em>Keys and values are iterated over in an arbitrary order which is non-random, varies across Python implementations, and depends on the dictionary’s history of insertions and deletions. If keys, values and items views are iterated over with no intervening modifications to the dictionary, the order of items will directly correspond.</em></span>"</p></div><p>Enough with this chatter; let's put all this down into code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"><span class="strong"><strong>&gt;&gt;&gt; d = dict(zip('hello', range(5)))</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'h': 0, 'e': 1, 'l': 3, 'o': 4}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.keys()</strong></span>
+<span class="strong"><strong>dict_keys(['h', 'e', 'l', 'o'])</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.values()</strong></span>
+<span class="strong"><strong>dict_values([0, 1, 3, 4])</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.items()</strong></span>
+<span class="strong"><strong>dict_items([('h', 0), ('e', 1), ('l', 3), ('o', 4)])</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; 3 in d.values()</strong></span>
+<span class="strong"><strong>True</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; ('o', 4) in d.items()</strong></span>
+<span class="strong"><strong>True</strong></span></code></pre></div><p>There are a few things to notice in the preceding code. First, notice how we're creating a dictionary by iterating over the zipped version of the string <code class="literal">'hello'</code> and the list <code class="literal">[0, 1, 2, 3, 4]</code>. The string <code class="literal">'hello'</code> has two <code class="literal">'l'</code> characters inside, and they are paired up with the values <code class="literal">2</code> and <code class="literal">3</code> by the <code class="literal">zip</code> function. Notice how in the dictionary, the second occurrence of the <code class="literal">'l'</code> key (the one with value <code class="literal">3</code>), overwrites the first one (the one with value <code class="literal">2</code>). Another thing to notice is that when asking for any view, the original order is now preserved, while before Version 3.6 there was no guarantee of that.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note27"></a>Note</h3><p>As of Python 3.6, the <code class="literal">dict</code> type has been reimplemented to use a more compact representation. This resulted in dictionaries using 20% to 25% less memory when compared to Python 3.5. Moreover, in Python 3.6, as a side effect, dictionaries are natively ordered. This feature has received such a welcome from the community that in 3.7 it has become a legit feature of the language rather than an implementation side effect. A <code class="literal">dict</code> is ordered if it remembers the order in which keys were first inserted.</p></div><p>We'll see how these views are fundamental tools when we talk about iterating over collections. Let's take a look now at some other methods exposed by Python's dictionaries; there's plenty of them and they are very useful:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"><span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'e': 1, 'h': 0, 'o': 4, 'l': 3}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.popitem()  # removes a random item (useful in algorithms)</strong></span>
+<span class="strong"><strong>('o', 4)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'h': 0, 'e': 1, 'l': 3}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.pop('l')  # remove item with key `l`</strong></span>
+<span class="strong"><strong>3</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.pop('not-a-key')  # remove a key not in dictionary: KeyError</strong></span>
+<span class="strong"><strong>Traceback (most recent call last):</strong></span>
+<span class="strong"><strong>  File "<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>stdin</span><span class="token punctuation">&gt;</span></span>", line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span></strong><span class="token tag"><span class="token punctuation"></span></span></span><span class="token tag"><span class="token punctuation"></span></span>
+<span class="strong"><strong>KeyError: 'not-a-key'</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.pop('not-a-key', 'default-value')  # with a default value?</strong></span>
+<span class="strong"><strong>'default-value'  # we get the default value</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.update({'another': 'value'})  # we can update dict this way</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.update(a=13)  # or this way (like a function call)</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'h': 0, 'e': 1, 'another': 'value', 'a': 13}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.get('a')  # same as d['a'] but if key is missing no KeyError</strong></span>
+<span class="strong"><strong>13</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.get('a', 177)  # default value used if key is missing</strong></span>
+<span class="strong"><strong>13</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.get('b', 177)  # like in this case</strong></span>
+<span class="strong"><strong>177</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.get('b')  # key is not there, so None is returned</strong></span></code></pre></div><p>All these methods are quite simple to understand, but it's worth talking about that <code class="literal">None</code>, for a moment. Every function in Python returns <code class="literal">None</code>, unless the <code class="literal">return</code> statement is explicitly used to return something else, but we'll see this when we explore functions. <code class="literal">None</code> is frequently used to represent the absence of a value, and it is quite commonly used as a default value for arguments in function declaration. Some inexperienced coders sometimes write code that returns either <code class="literal">False</code> or <code class="literal">None</code>. Both <code class="literal">False</code> and <code class="literal">None</code> evaluate to <code class="literal">False</code> in a Boolean context so it may seem there is not much difference between them. But actually, I would argue there is quite an important difference: <code class="literal">False</code> means that we have information, and the information we have is <code class="literal">False</code>. <code class="literal">None</code> means <span class="emphasis"><em>no information</em></span>. And no information is very different from information that is <code class="literal">False</code>. In layman's terms, if you ask your mechanic,  <span class="emphasis"><em>Is my car ready?</em></span>, there is a big difference between the answer, <span class="emphasis"><em>No, it's not</em></span> (<code class="literal">False</code>) and, <span class="emphasis"><em>I have no idea</em></span> (<code class="literal">None</code>).</p><p>One last method I really like about dictionaries is <code class="literal">setdefault</code>. It behaves like <code class="literal">get</code>, but also sets the key with the given value if it is not there. Let's see an example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"><span class="strong"><strong>&gt;&gt;&gt; d = {}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.setdefault('a', 1)  # 'a' is missing, we get default value</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'a': 1}  # also, the key/value pair ('a', 1) has now been added</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.setdefault('a', 5)  # let's try to override the value</strong></span>
+<span class="strong"><strong>1</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d</strong></span>
+<span class="strong"><strong>{'a': 1}  # no override, as expected</strong></span></code></pre></div><p>So, we're now at the end of this tour. Test your knowledge about dictionaries by trying to foresee what <code class="literal">d</code> looks like after this line:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6"><span class="strong"><strong>&gt;&gt;&gt; d = {}</strong></span>
+<span class="strong"><strong>&gt;&gt;&gt; d.setdefault('a', {}).setdefault('b', []).append(1)</strong></span></code></pre></div><p>Don't worry if you don't get it immediately. I just wanted to encourage you to experiment with dictionaries.</p><p>This concludes our tour of built-in data types. Before I discuss some considerations about what we've seen in this chapter, I want to take a peek briefly at the <code class="literal">collections</code> module.</p></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><div></div><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_2_ch02lvl1sec30_mapping-types-dictionaries_files/adsct" type="text/javascript"></script></body></html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="ng-scope" lang="en" ng-app="PacktUnlimited" ng-strict-di=""><head class="ng-scope" ng-controller="metadataController as metadataController"><meta content="text/html; charset=utf-8" http-equiv="Content-Type"/><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<title class="ng-binding" ng-bind-html="metadataController.pageTitle">Case examples - Learn Python Programming - Second Edition</title>
+<link href="https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<meta content="CGEyu7dKgqkqBrxdainq9bY0WowOCMOdZ1nKVzzvYJg" name="google-site-verification"/>
+<meta content="index,follow" name="robots"/>
+<link href="https://fonts.googleapis.com/" rel="dns-prefetch"/>
+<link href="https://maxcdn.bootstrapcdn.com/" rel="dns-prefetch"/>
+<link href="https://cdn.polyfill.io/" rel="dns-prefetch"/>
+<meta content="!" name="fragment"/>
+<link href="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec86/case-examples" ng-href="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec86/case-examples" rel="canonical"/>
+<meta content="In this final part of the chapter, I am going to show you three case examples in which we'll see how to do the same thing by employing different approaches" name="description"/>
+<meta content="#212121" name="theme-color"/>
+<meta class="ng-scope" content="book" ng-if="metadataController.productType" property="og:type"/>
+<meta content="Case examples - Learn Python Programming - Second Edition" property="og:title"/>
+<meta content="In this final part of the chapter, I am going to show you three case examples in which we'll see how to do the same thing by employing different approaches" property="og:description"/>
+<meta content="https://subscription.packtpub.com/book/application_development/9781788996662/10/ch10lvl1sec86/case-examples" property="og:url"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" property="og:image:secure_url"/>
+<link href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" ng-href="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" rel="image_src"/>
+<meta class="ng-scope" content="Fabrizio Romano" name="book:author" ng-if="metadataController.productType &amp;&amp; metadataController.authorListString"/>
+<meta class="ng-scope" content="9781788996662" name="book:isbn" ng-if="metadataController.productType &amp;&amp; metadataController.isbn"/>
+<meta class="ng-scope" content="2018-06-29T06:10:00.000Z" name="book:release_date" ng-if="metadataController.productType &amp;&amp; metadataController.releaseDate"/>
+<meta class="ng-scope" content="https://packtpub.com/" name="book:publisher" ng-if="metadataController.productType"/>
+<meta content="Case examples - Learn Python Programming - Second Edition" name="twitter:title"/>
+<meta content="In this final part of the chapter, I am going to show you three case examples in which we'll see how to do the same thing by employing different approaches" name="twitter:description"/>
+<meta content="https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png" name="twitter:image"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="@packtpub" name="twitter:site"/>
+<meta content="@packtpub" name="twitter:creator"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="."/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="https://subscription.packtpub.com/images/apple-icons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link crossorigin="anonymous" href="./9781788996662_10_ch10lvl1sec86_case-examples_files/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
+<link href="./9781788996662_10_ch10lvl1sec86_case-examples_files/css" rel="stylesheet" type="text/css"/>
+<script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/script.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/profitwell.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/inferredEvents.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/445429252334850"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/fbevents.js"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/f.txt" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/uwt.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/analytics.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/e8mdsr07" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/heap-34805961.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/hotjar-982604.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/recaptcha__pl.js" type="text/javascript"></script><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/gtm.js"></script><script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/polyfill.min.js"></script>
+<script async="" defer="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/api.js"></script>
+<script async="" defer="" ng-src="https://static.zuora.com/Resources/libs/hosted/1.3.0/zuora-min.js" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/zuora-min.js"></script>
+<script>
+            //Set your APP_ID
+            var APP_ID = 'e8mdsr07'; // to come from wpConfig
+
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + APP_ID;var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+
+        </script>
+<script async="" charset="utf-8" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/modules.bb88fc9b50ded24ae044.js"></script><style id="mm_style_mm_cdApiStyleId_1" media="screen" type="text/css"></style><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script async="" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/hotjar-982604(1).js"></script><style></style><script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/f(1).txt"></script><script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/f(2).txt"></script><script id="schema" type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "book",
+	"author": [
+		"Fabrizio Romano"
+	],
+	"datePublished": "2018-06-29T06:10:00.000Z",
+	"image": "https://d255esdrn735hr.cloudfront.net/sites/default/files/B10074_Ned_coccover.png",
+	"name": "Case examples - Learn Python Programming - Second Edition",
+	"publisher": {
+		"@type": "Organization",
+		"name": "Packt",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://d3ginfw2u4xn7p.cloudfront.net/c825bf9a03a944639d91ecb1f0010fc4/images/white-packt.png"
+		}
+	},
+	"isPartOf": "/book/application_development/9781788996662",
+	"description": "In this final part of the chapter, I am going to show you three case examples in which we'll see how to do the same thing by employing different approaches",
+	"isbn": "9781788996662",
+	"bookFormat": "https://schema.org/EBook"
+}</script></head><body class="prototype-nav home-body" ng-class="{
+    'cover-background': currentPage === 'login' ||
+        currentPage === 'create-account' ||
+        currentPage === 'password-reset',
+    'checkout': currentPage === 'checkout',
+    'has-footer': currentPage !== 'login' &amp;&amp;
+        currentPage !== 'create-account' &amp;&amp;
+        currentPage !== 'password-reset' &amp;&amp;
+        currentPage !== 'product',
+    'has-bottom-pagination': currentPage === 'saved' ||
+        currentPage === 'bookmarks' ||
+        currentPage === 'purchases' ||
+        currentPage === 'history',
+    
+    'sidebar-open': showSideBarOverlay,
+    'home-body': currentPage != 'create-account' || !freeWeekend,
+    'free-weekend': currentPage === 'create-account' &amp;&amp; freeWeekend,
+     }"><prerender-ready class="ng-isolate-scope">
+<script>
+    window.prerenderReady = false;
+</script>
+</prerender-ready>
+<script>
+                window.dataLayer = window.dataLayer || [];
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-WJMM825');
+            </script>
+<script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/mmapi.js" type="text/javascript"></script><script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({originalLocation:document.location.protocol+"//"+document.location.hostname+document.location.pathname+document.location.search});</script><script id="" type="text/javascript">Element.prototype.matches||(Element.prototype.matches=Element.prototype.matchesSelector||Element.prototype.mozMatchesSelector||Element.prototype.msMatchesSelector||Element.prototype.oMatchesSelector||Element.prototype.webkitMatchesSelector||function(a){a=(this.document||this.ownerDocument).querySelectorAll(a);for(var b=a.length;0<=--b&&a.item(b)!==this;);return-1<b});</script>
+<script id="" type="text/javascript">hj("tagRecording",[google_tag_manager["GTM-WJMM825"].macro(4)]);</script><script id="mmpack.0" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/mmpackage-1.12.js" type="text/javascript"></script>
+
+<script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/cookieconsent.min.js" type="text/javascript"></script>
+
+<link href="./9781788996662_10_ch10lvl1sec86_case-examples_files/app.104d50d2c3a3114104d18ba8a565ba3d.bundle.css" rel="stylesheet"/>
+
+
+<sidebar-overlay class="ng-isolate-scope" show="showSideBarOverlay"></sidebar-overlay>
+<div class="page">
+<div class="alertbox" id="alertbox"></div>
+<div autoscroll="true" class="ng-scope" ng-view="" style="height:100%;">
+
+
+
+
+<div class="book-page-wrapper ng-scope">
+<div class="container book-page">
+
+<div class="clearfix"></div>
+
+
+
+<div class="container-fluid" id="book-wrapper">
+<div class="ng-scope" ng-include="productController.contentView" onload="productController.onFinishLoadContent()"><div class="col-sm-12 ng-scope reader-container" id="reader-content" ng-class="{'reader-container': productController.productType === 'book'}" ng-show="productController.isContentAvailable" on-finish-page-render="productController.applyFontSize()">
+<div class="row">
+<div class="book-content" style="position:relative;">
+<div class="ng-binding" ng-bind-html="productController.content"><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="ch10lvl1sec86"></a>Case examples</h2></div></div><hr/></div><p>In this final part of the chapter, I am going to <span>show</span><a class="indexterm" id="id325974336"></a> you three case examples in which we'll see how to do the same thing by employing different approaches (single-thread, multithread, and multiprocess). Finally, I'll dedicate a few words to <code class="literal">asyncio</code>, a module that introduces yet another way of doing asynchronous programming in Python.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec128"></a>Example one – concurrent mergesort</h3></div></div></div><p>The first example will revolve <span>around</span><a class="indexterm" id="id325974316"></a> the mergesort algorithm. This sorting algorithm is based on the <span class="emphasis"><em>divide et impera</em></span> (divide and conquer) design paradigm. The way it works is <span>very</span><a class="indexterm" id="id325974306"></a> simple. You have a list of numbers you want to sort. The first step is to divide the list into two parts, sort them, and merge the results back into one sorted list. Let me give you a simple example with six numbers. Imagine we have a list, <code class="literal">v=[8, 5, 3, 9, 0, 2]</code>. The first step would be to divide the list, <code class="literal">v</code>, into two sublists of three numbers: <code class="literal">v1=[8, 5, 3]</code> and <code class="literal">v2=[9, 0, 2]</code>. Then we sort <code class="literal">v1</code> and <code class="literal">v2</code> by recursively calling mergesort on them. The result would be <code class="literal">v1=[3, 5, 8]</code> and <code class="literal">v2=[0, 2, 9]</code>. In order to combine <code class="literal">v1</code> and <code class="literal">v2</code> back into a sorted <code class="literal">v</code>, we simply consider the first item in both lists, and pick the minimum of those. The first iteration would compare <code class="literal">3</code> and <code class="literal">0</code>. We pick <code class="literal">0</code>, leaving <code class="literal">v2=[2, 9]</code>. Then we rinse and repeat: we compare <code class="literal">3</code> and <code class="literal">2</code>, we pick <code class="literal">2</code>, so now <code class="literal">v2=[9]</code>. Then we compare <code class="literal">3</code> and <code class="literal">9</code>. This time we pick <code class="literal">3</code>, leaving <code class="literal">v1=[5, 8]</code>, and so on and so forth. Next we would pick <code class="literal">5</code> (<code class="literal">5</code> versus <code class="literal">9</code>), then <code class="literal">8</code> (<code class="literal">8</code> versus <code class="literal">9</code>), and finally <code class="literal">9</code>. This would give us a new, sorted version of <code class="literal">v</code>: <code class="literal">v=[0, 2, 3, 5, 8, 9]</code>.</p><p>The reason why I chose this algorithm as an example is twofold. First, it is easy to parallelize. You split the list in two, have two processes work on them, and then collect the results. Second, it is possible to amend the algorithm so that it splits the initial list into any <span class="emphasis"><em>N ≥ 2</em></span>, and assigns <span>those</span><a class="indexterm" id="id325909434"></a> parts to <span class="emphasis"><em>N</em></span> processes. Recombination is as <span>simple</span><a class="indexterm" id="id325909448"></a> as dealing with just two parts. This characteristic makes it a good candidate for a concurrent implementation.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec40"></a>Single-thread mergesort</h4></div></div></div><p>Let's see how all this translates into code, starting by <span>learning</span><a class="indexterm" id="id325909463"></a> how to code our own homemade <code class="literal">mergesort</code>:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="0"># ms/algo/mergesort.py
+def sort(v):
+    if len(v) &lt;= 1:
+        return v
+    mid = len(v) // 2
+    v1, v2 = sort(v[:mid]), sort(v[mid:])
+    return merge(v1, v2)
+
+def merge(v1, v2):
+    v = []
+    h = k = 0
+    len_v1, len_v2 = len(v1), len(v2)
+    while h &lt; len_v1 or k &lt; len_v2:
+        if k == len_v2 or (h &lt; len_v1 and v1[h] &lt; v2[k]):
+            v.append(v1[h])
+            h += 1
+        else:
+            v.append(v2[k])
+            k += 1
+    return v</code></pre></div><p>Let's start from the <code class="literal">sort</code> function. First we encounter the base of the recursion, which says that if the list has <code class="literal">0</code> or <code class="literal">1</code> elements, we don't need to sort it, we can simply return it as it is. If that is not the case, then we calculate the midpoint (<code class="literal">mid</code>), and recursively call sort on <code class="literal">v[:mid]</code> and <code class="literal">v[mid:]</code>. I hope you are by now very familiar with the slicing syntax, but just in case you need a refresher, the first one is all elements in <code class="literal">v</code> up to the <code class="literal">mid</code> index (excluded), and the second one is all elements from <code class="literal">mid</code> to the end. The results of sorting them are assigned respectively to <code class="literal">v1</code> and <code class="literal">v2</code>. Finally, we call <code class="literal">merge</code>, passing <code class="literal">v1</code> and <code class="literal">v2</code>.</p><p>The logic of <code class="literal">merge</code> uses two pointers, <code class="literal">h</code> and <code class="literal">k</code>, to keep track of which elements in <code class="literal">v1</code> and <code class="literal">v2</code> we have already compared. If we find that the minimum is in <code class="literal">v1</code>, we append it to <code class="literal">v</code>, and increase <code class="literal">h</code>. On the other hand, if the minimum is in <code class="literal">v2</code>, we append it to <code class="literal">v</code> but increase <code class="literal">k</code> this time. The procedure is running in a <code class="literal">while</code> loop whose condition, combined with the inner <code class="literal">if</code>, makes sure we don't get errors due to indexes out of bounds. It's a pretty standard <span>algorithm</span><a class="indexterm" id="id326471355"></a> that you can find in many different variations on the web.</p><p>In order to make sure this code is solid, I have written a test suite that resides in the <code class="literal">ch10/ms</code> folder. I encourage you to check it out.</p><p>Now that we have the building blocks, let's see how we modify this to make it so that it works with an arbitrary number of parts.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec41"></a>Single-thread multipart mergesort</h4></div></div></div><p>The code for the multipart version of the <span>algorithm</span><a class="indexterm" id="id326471378"></a> is quite simple. We can reuse the <code class="literal">merge</code> function, but we'll have to rewrite the <code class="literal">sort</code> one:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="1"># ms/algo/multi_mergesort.py
+from functools import reduce
+from .mergesort import merge
+
+def sort(v, parts=2):
+    assert parts &gt; 1, 'Parts need to be at least 2.'
+    if len(v) &lt;= 1:
+        return v
+
+    chunk_len = max(1, len(v) // parts)
+    chunks = (
+        sort(v[k: k + chunk_len], parts=parts)
+        for k in range(0, len(v), chunk_len)
+    )
+    return multi_merge(*chunks)
+
+def multi_merge(*v):
+    return reduce(merge, v)</code></pre></div><p>We saw <code class="literal">reduce</code> in <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/4" linkend="ch04">Chapter 4</a>, <span class="emphasis"><em>Functions, the Building Blocks of Code</em></span>, when we coded our own factorial function. The way it works within <code class="literal">multi_merge</code> is to merge the first two lists in <code class="literal">v</code>. Then the result is merged with the third one, after which the result is merged with the fourth one, and so on.</p><p>Take a look at the new version of <code class="literal">sort</code>. It takes the <code class="literal">v</code> list, and the number of parts we want to split it into. The first thing we do is check that we passed a correct number for <code class="literal">parts</code>, which needs to be at least two. Then, like before, we have the base of the recursion. And finally we get into the main logic of the function, which is simply a multipart version of the one we saw in the previous example. We calculate the length of each <code class="literal">chunk</code> using the <code class="literal">max</code> function, just in case there are fewer elements in the list than parts. And then we write a generator expression that calls <code class="literal">sort</code> recursively on each <code class="literal">chunk</code>. Finally, we merge all the results by calling <code class="literal">multi_merge</code>.</p><p>I am aware that in <span>explaining</span><a class="indexterm" id="id326583288"></a> this code, I haven't been as exhaustive as I usually am, and I'm afraid it is on purpose. The example that comes after the mergesort will be much more complex, so I would like to encourage you to really try to understand the previous two snippets as thoroughly as you can.</p><p>Now, let's take this example to the next step: multithreading.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec42"></a>Multithreaded mergesort</h4></div></div></div><p>In this example, we amend the <code class="literal">sort</code> function once again, so that, after the initial division into chunks, it spawns a thread per part. Each thread uses the single-threaded version of the <span>algorithm</span><a class="indexterm" id="id326598601"></a> to sort its part, and then at the end we use the multi-merge technique to calculate the final result. Translating into Python:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="2"># ms/algo/mergesort_thread.py
+from functools import reduce
+from math import ceil
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from .mergesort import sort as _sort, merge
+
+def sort(v, workers=2):
+    if len(v) == 0:
+        return v
+    dim = ceil(len(v) / workers)
+    chunks = (v[k: k + dim] for k in range(0, len(v), dim))
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [
+            executor.submit(_sort, chunk) for chunk in chunks
+        ]
+        return reduce(
+            merge,
+            (future.result() for future in as_completed(futures))
+        )</code></pre></div><p>We import all the required tools, including executors, the <code class="literal">ceiling</code> function, and <code class="literal">sort</code> and <code class="literal">merge</code> from the single-threaded version of the algorithm. Notice how I changed the name of the single-threaded <code class="literal">sort</code> into <code class="literal">_sort</code> upon importing it.</p><p>In this version of <code class="literal">sort</code>, we check whether <code class="literal">v</code> is empty first, and if not we proceed. We calculate the dimension of each <code class="literal">chunk</code> using the <code class="literal">ceil</code> function. It's basically doing what we were doing with <code class="literal">max</code> in the previous snippet, but I wanted to show you another way to solve the issue.</p><p>When we have the dimension, we <span>calculate</span><a class="indexterm" id="id326599104"></a> the <code class="literal">chunks</code> and prepare a nice generator expression to serve them to the executor. The rest is straightforward: we define a list of future objects, each of which is the result of calling <code class="literal">submit</code> on the executor. Each future object runs the single-threaded <code class="literal">_sort</code> algorithm on the <code class="literal">chunk</code> it has been assigned to.</p><p>Finally as they are returned by the <code class="literal">as_completed</code> function, the results are merged using the same technique we saw in the earlier multipart example.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec43"></a>Multiprocess mergesort</h4></div></div></div><p>To perform the final step, we need to <span>amend</span><a class="indexterm" id="id326599138"></a> only two lines in the previous code. If you have paid attention in the introductory examples, you will know which of the two lines I am referring to. In order to save some space, I'll just give you the diff of the code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="3"># ms/algo/mergesort_proc.py
+...
+from concurrent.futures import ProcessPoolExecutor, as_completed
+...
+
+def sort(v, workers=2):
+    ...
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+    ...</code></pre></div><p>That's it! Basically all you have to do is use <code class="literal">ProcessPoolExecutor</code> instead of <code class="literal">ThreadPoolExecutor</code>, and instead of spawning threads, you are spawning processes.</p><p>Do you recall when I was saying that processes can actually run on different cores, while threads run within the same process so they are not actually running in parallel? This is a good example to show you a consequence of choosing one approach or the other. Because the code is CPU-intensive, and there is no IO going on, splitting the list and having threads working the chunks doesn't add any advantage. On the other hand, using processes does. I have run some performance tests (run the <code class="literal">ch10/ms/performance.py</code> module by yourself and you will see how your machine performs) and the <span>results</span><a class="indexterm" id="id326599164"></a> prove my expectations:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="4"><span class="strong"><strong>$ python performance.py</strong></span>
+
+<span class="strong"><strong>Testing Sort</strong></span>
+<span class="strong"><strong>Size: 100000</strong></span>
+<span class="strong"><strong>Elapsed time: 0.492s</strong></span>
+<span class="strong"><strong>Size: 500000</strong></span>
+<span class="strong"><strong>Elapsed time: 2.739s</strong></span>
+
+<span class="strong"><strong>Testing Sort Thread</strong></span>
+<span class="strong"><strong>Size: 100000</strong></span>
+<span class="strong"><strong>Elapsed time: 0.482s</strong></span>
+<span class="strong"><strong>Size: 500000</strong></span>
+<span class="strong"><strong>Elapsed time: 2.818s</strong></span>
+
+<span class="strong"><strong>Testing Sort Proc</strong></span>
+<span class="strong"><strong>Size: 100000</strong></span>
+<span class="strong"><strong>Elapsed time: 0.313s</strong></span>
+<span class="strong"><strong>Size: 500000</strong></span>
+<span class="strong"><strong>Elapsed time: 1.586s</strong></span></code></pre></div><p>The two tests are run on two lists of 100,000 and 500,000 items, respectively. And I am using four workers for the multithreaded and multiprocessing versions. Using different sizes is quite useful when looking for patterns. As you can see, the time elapsed is basically the same for the first two versions (single-threaded, and multithreaded), but they are reduced by about 50% for the multiprocessing version. It's slightly more than 50% because having to spawn processes, and handle them, comes at a price. But still, you can definitely appreciate that I have a processor with two cores on my machine.</p><p>This also tells you that even though I used four workers in the multiprocessing version, I can still only parallelize proportionately to the amount of cores my processor has. Therefore, two or more workers makes very little difference.</p><p>Now that you are all warmed up, let's move on to the next example.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec129"></a>Example two – batch sudoku-solver</h3></div></div></div><p>In this example, we are <span>going</span><a class="indexterm" id="id326600945"></a> to explore a sudoku-solver. We are not going to go into much detail with it, as the point is not that of understanding how to solve sudoku, but <span>rather</span><a class="indexterm" id="id326600953"></a> to show you how to use multi-processing to solve a batch of sudoku puzzles.</p><p>What is interesting in this example, is that instead of making the comparison between single and multithreaded versions again, we're going to skip that and compare the single-threaded version with two different multiprocess versions. One will assign one puzzle per worker, so if we solve 1,000 puzzles, we'll use 1,000 workers (well, we will use a pool of <span class="emphasis"><em>N</em></span> workers, each of which is constantly recycled). The other version will instead divide the initial batch of puzzles by the pool size, and batch-solve each chunk within one process. This means, assuming a pool size of four, dividing those 1,000 puzzles into chunks of 250 puzzles each, and giving each chunk to one worker, for a total of four of them.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note74"></a>Note</h3><p>The code I will present to you for the sudoku-solver (without the multiprocessing part), comes from a solution designed by Peter Norvig, which has been distributed under the MIT license. His solution is so efficient that, after trying to re-implement my own for a few days, and getting to the same result, I simply gave up and decided to go with his design. I did do a lot of refactoring though, because I wasn't happy with his choice of function and variable names, so I made those more <span class="emphasis"><em>book friendly</em></span>, so to speak. You can find the original code, a link to the original page from which I got it, and the original MIT license, in the <code class="literal">ch10/sudoku/norvig</code> folder. If you follow the link, you'll find a very thorough explanation of the sudoku-solver by Norvig himself.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec44"></a>What is Sudoku?</h4></div></div></div><p>First things first. What is a sudoku puzzle? Sudoku is a number-placement puzzle based on logic that originated in Japan. The objective is to fill a <span class="emphasis"><em>9x9</em></span> grid with <span>digits</span><a class="indexterm" id="id326601129"></a> so that each row, column, and box (<span class="emphasis"><em>3x3</em></span> subgrids that compose the grid) contains all of the digits from <span class="emphasis"><em>1</em></span> to <span class="emphasis"><em>9</em></span>. You start from a partially populated grid, and add number after number using logic considerations.</p><p>Sudoku can be interpreted, from a computer science perspective, as a problem that fits in the <span class="emphasis"><em>exact cover</em></span> category. Donald Knuth, the author of <span class="emphasis"><em>The Art of Computer Programming</em></span> (and many other wonderful books), has devised an algorithm, called <span class="strong"><strong>Algorithm X</strong></span>, to solve problems in this category. A beautiful and efficient implementation of Algorithm X, called <span class="strong"><strong>Dancing Links</strong></span>, which harnesses the power of circular doubly-linked lists, can be used to solve sudoku. The beauty of this approach is that all it requires is a mapping between the structure of the sudoku, and the Dancing Links algorithm, and without having to do any of the logic deductions normally needed to solve the puzzle, it gets to the <span>solution</span><a class="indexterm" id="id326601164"></a> at the speed of light.</p><p>Many years ago, when my free time was a number greater than zero, I wrote a Dancing Links sudoku-solver in C#, which I still have archived somewhere, which was great fun to design and code. I definitely encourage you to check out the literature and code your own solver, it's a great exercise, if you can spare the time.</p><p>In this example's solution though, we're going to use a <span class="strong"><strong>search</strong></span> algorithm <span>used</span><a class="indexterm" id="id326677914"></a> in conjunction with a process that, in artificial intelligence, is <span>known</span><a class="indexterm" id="id326677921"></a> as <span class="strong"><strong>constraint propagation</strong></span>. The two are quite commonly used together to make a problem simpler to solve. We'll see that in our example, they are enough for us to be able to solve a difficult sudoku in a matter of milliseconds.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec45"></a>Implementing a sudoku-solver in Python</h4></div></div></div><p>Let's now explore my refactored <span>implementation</span><a class="indexterm" id="id326677938"></a> of the solver. I'm going to present the code to you in steps, as it is quite involved (also, I won't repeat the source name at the top of each snippet, until I move to another module):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="5"># sudoku/algo/solver.py
+import os
+from itertools import zip_longest, chain
+from time import time
+
+def cross_product(v1, v2):
+    return [w1 + w2 for w1 in v1 for w2 in v2]
+
+def chunk(iterable, n, fillvalue=None):
+    args = [iter(iterable)] * n
+    return zip_longest(*args, fillvalue=fillvalue)</code></pre></div><p>We start with some imports, and then we define a couple of useful functions: <code class="literal">cross_product</code> and <code class="literal">chunk</code>. They do exactly what the names hint at. The first one returns the cross-product between two iterables, while the second one returns a list of chunks from <code class="literal">iterable</code>, each of which has <code class="literal">n</code> elements, and the last of which might be padded with a given <code class="literal">fillvalue</code>, should the length of <code class="literal">iterable</code> not be a multiple of <code class="literal">n</code>. Then we <span>proceed</span><a class="indexterm" id="id325610413"></a> to define a few structures, which will be used by the solver:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="6">digits = '123456789'
+rows = 'ABCDEFGHI'
+cols = digits
+squares = cross_product(rows, cols)
+all_units = (
+    [cross_product(rows, c) for c in cols]
+    + [cross_product(r, cols) for r in rows]
+    + [cross_product(rs, cs)
+        for rs in chunk(rows, 3) for cs in chunk(cols, 3)]
+)
+units = dict(
+    (square, [unit for unit in all_units if square in unit])
+    for square in squares
+)
+peers = dict(
+    (square, set(chain(*units[square])) - set([square]))
+    for square in squares
+)</code></pre></div><p>Without going too much into detail, let's hover over these objects. <code class="literal">squares</code> is a list of all squares in the grid. Squares are represented by a string such as <span class="emphasis"><em>A3</em></span> or <span class="emphasis"><em>C7</em></span>. Rows are numbered with letters, and columns with numbers, so <span class="emphasis"><em>A3</em></span> will indicate the square in the first row, and third column.</p><p><code class="literal">all_units</code> is a list of all possible rows, columns, and blocks. Each of those elements is represented as a list of the squares that belong to the row/column/block. <code class="literal">units</code> is a more complex structure. It is a dictionary with 81 keys. Each key represents a square, and the corresponding value is a list with three elements in it: a row, a column, and a block. Of course, those are the row, column, and block that the square belongs to.</p><p>Finally, <code class="literal">peers</code> is a dictionary very similar to <code class="literal">units</code>, but the value of each key (which still represents a square), is a set containing all peers for that square. Peers are defined as all the squares belonging to the row, column, and block the square in the key belongs to. These structures will be used in the calculation of the solution, when attempting to solve a puzzle.</p><p>Before we take a look at the function that parses the input lines, let me give you an example of what an input puzzle looks like:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="7">1..3.......75...3..3.4.8.2...47....9.........689....4..5..178.4.....2.75.......1.</code></pre></div><p>The first nine characters represent the first row, then <span>another</span><a class="indexterm" id="id325634121"></a> nine for the second row, and so on. Empty squares are represented by dots:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="8">def parse_puzzle(puzzle):
+    assert set(puzzle) &lt;= set('.0123456789')
+    assert len(puzzle) == 81
+
+    grid = dict((square, digits) for square in squares)
+    for square, digit in zip(squares, puzzle):
+        if digit in digits and not place(grid, square, digit):
+            return False  # Incongruent puzzle
+    return grid
+
+def solve(puzzle):
+    grid = parse_puzzle(puzzle)
+    return search(grid)</code></pre></div><p>This simple <code class="literal">parse_puzzle</code> function is used to parse an input puzzle. We do a little bit of sanity checking at the beginning, asserting that the input puzzle has to shrink into a set that is a subset of the set of all numbers plus a dot. Then we make sure we have <code class="literal">81</code> input characters, and finally we define <code class="literal">grid</code>, which initially is simply a dictionary with <code class="literal">81</code> keys, each of which is a square, all with the same value, which is a string of all possible digits. This is because a square in a completely empty grid has the potential to become any number from 1 to 9.
+The <code class="literal">for</code> loop is definitely the most interesting part. We parse each of the 81 characters in the input puzzle, coupling them with the corresponding square in the grid, and we try to <span class="emphasis"><em>"place"</em></span> them. I put that in double quotes because, as we'll see in a moment, the <code class="literal">place</code> function does much more than simply setting a given number in a given square. If we find that we cannot place a digit from the input puzzle, it means the input is invalid, and we return <code class="literal">False</code>. Otherwise, we're good to go and we return the <code class="literal">grid</code>.</p><p><code class="literal">parse_puzzle</code> is used in the <code class="literal">solve</code> function, which simply parses the input puzzle, and unleashes <code class="literal">search</code> on it. What follows is therefore the heart of the algorithm:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="9">def search(grid):
+    if not grid:
+        return False
+    if all(len(grid[square]) == 1 for square in squares):
+        return grid  # Solved
+    values, square = min(
+        (len(grid[square]), square) for square in squares
+        if len(grid[square]) &gt; 1
+    )
+    for digit in grid[square]:
+        result = search(place(grid.copy(), square, digit))
+        if result:
+            return result</code></pre></div><p>This simple function first checks <span>whether</span><a class="indexterm" id="id325634182"></a> the grid is actually non-empty. Then it tries to see whether the grid is solved. A solved grid will have one value per square. If that is not the case, it loops through each square and finds the square with the minimum amount of candidates. If a square has a string value of only one digit, it means a number has been placed in that square. But if the value is more than one digit, then those are possible candidates, so we need to find the square with the minimum amount of candidates, and try them. Trying a square with <code class="literal">"23"</code> candidates is much better than trying one with <code class="literal">"23589"</code>. In the first case, we have a 50% chance of getting the right value, while in the second one, we only have 20%. Choosing the square with the minimum amount of candidates therefore maximizes the chances for us to place good numbers in the grid.</p><p>Once the candidates have been found, we try them in order and if any of them results in being successful, we have solved the grid and we return. You might have noticed the use of the <code class="literal">place</code> function in the search too. So let's explore its code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="10">def place(grid, square, digit):
+    """Eliminate all the other values (except digit) from
+    grid[square] and propagate.
+    Return grid, or False if a contradiction is detected.
+    """
+    other_vals = grid[square].replace(digit, '')
+    if all(eliminate(grid, square, val) for val in other_vals):
+        return grid
+    return False</code></pre></div><p>This function takes a work-in-progress grid, and tries to place a given digit in a given square. As I mentioned before, <span class="emphasis"><em>"placing"</em></span> is not that straightforward. In fact, when we place a number, we have to propagate the consequences of that action throughout the grid. We do that by calling the <code class="literal">eliminate</code> function, which applies two strategies of the sudoku game:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc">If a square has only one possible value, eliminate that value from the square's peers</li><li style="list-style-type: disc">If a unit has only one place for a value, place the value there</li></ul></div><p>Let me briefly offer an example of both points. For the first one, if you place, say, number 7 in a square, then you can eliminate 7 from the list of candidates for all the squares that belong to the row, column, and block that square belongs to.</p><p>For the second point, say you're examining the fourth row and, of all the squares that belong to it, only one of them has number 7 in its candidates. This means that number 7 can only go in that precise square, so you should go ahead and place it there.</p><p>The following function, <code class="literal">eliminate</code>, applies these two rules. Its code is quite involved, so instead of going line by line and offering an excruciating explanation, I have added <span>some</span><a class="indexterm" id="id325650550"></a> comments, and will leave you with the task of understanding it:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="11">def eliminate(grid, square, digit):
+    """Eliminate digit from grid[square]. Propagate when candidates
+    are &lt;= 2.
+    Return grid, or False if a contradiction is detected.
+    """
+    if digit not in grid[square]:
+        return grid  # already eliminated
+    grid[square] = grid[square].replace(digit, '')
+
+    ## (1) If a square is reduced to one value, eliminate value
+    ## from peers.
+    if len(grid[square]) == 0:
+        return False  # nothing left to place here, wrong solution
+    elif len(grid[square]) == 1:
+        value = grid[square]
+        if not all(
+            eliminate(grid, peer, value) for peer in peers[square]
+        ):
+            return False
+
+    ## (2) If a unit is reduced to only one place for a value,
+    ## then put it there.
+    for unit in units[square]:
+        places = [sqr for sqr in unit if digit in grid[sqr]]
+        if len(places) == 0:
+            return False  # No place for this value
+        elif len(places) == 1:
+            # digit can only be in one place in unit,
+            # assign it there
+            if not place(grid, places[0], digit):
+                return False
+    return grid</code></pre></div><p>The rest of the functions in the module aren't important for the rest of this example, so I will skip them. You can run this module by itself; it will first perform a series of checks on its data structures, and then it will solve all the sudoku puzzles I have placed in the <code class="literal">sudoku/puzzles</code> folder. But that is not what we're interested in, right? We want to see how to solve sudoku using multiprocessing techniques, so let's get to it.</p></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec46"></a>Solving sudoku with multiprocessing</h4></div></div></div><p>In this module, we're going to <span>implement</span><a class="indexterm" id="id325676005"></a> three functions. The first one simply solves a batch of sudoku puzzles, with no multiprocessing involved. We will use the results for benchmarking. The second and the third ones will use multiprocessing, with and without batch-solving, so we can appreciate the differences. Let's start:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="12"># sudoku/process_solver.py
+import os
+from functools import reduce
+from operator import concat
+from math import ceil
+from time import time
+from contextlib import contextmanager
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from unittest import TestCase
+from algo.solver import solve
+
+@contextmanager
+def timer():
+    t = time()
+    yield
+    tot = time() - t
+    print(f'Elapsed time: {tot:.3f}s')</code></pre></div><p>After a long list of imports, we define a context manager that we're going to use as a timer device. It takes a reference to the current time (<code class="literal">t</code>), and then it yields. After having yielded, that's when the body of the managed context is executed. Finally, on exiting the managed context, we calculate <code class="literal">tot</code>, which is the total amount of time elapsed, and print it. It's a simple and elegant context manager written with the <span>decoration</span><a class="indexterm" id="id325676027"></a> technique, and it's super fun. Let's now see the three functions I mentioned earlier:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="13">def batch_solve(puzzles):
+    # Single thread batch solve.
+    return [solve(puzzle) for puzzle in puzzles]</code></pre></div><p>This one is a single-threaded simple batch solver, which will give us a time to compare against. It simply returns a list of all solved grids. Boring. Now, check out the following code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="14">def parallel_single_solver(puzzles, workers=4):
+    # Parallel solve - 1 process per each puzzle
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = (
+            executor.submit(solve, puzzle) for puzzle in puzzles
+        )
+        return [
+            future.result() for future in as_completed(futures)
+        ]</code></pre></div><p>This one is much better. It uses <code class="literal">ProcessPoolExecutor</code> to use a pool of <code class="literal">workers</code>, each of which is used to solve roughly one-fourth of the puzzles. This is because we are spawning one future object per puzzle. The logic is extremely similar to any multiprocessing example we have already seen in the chapter. Let's see the third function:  </p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="15">def parallel_batch_solver(puzzles, workers=4):
+    # Parallel batch solve - Puzzles are chunked into `workers`
+    # chunks. A process for each chunk.
+    assert len(puzzles) &gt;= workers
+    dim = ceil(len(puzzles) / workers)
+    chunks = (
+        puzzles[k: k + dim] for k in range(0, len(puzzles), dim)
+    )
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = (
+            executor.submit(batch_solve, chunk) for chunk in chunks
+        )
+        results = (
+            future.result() for future in as_completed(futures)
+        )
+        return reduce(concat, results)</code></pre></div><p>This last function is slightly different. Instead of spawning one <code class="literal">future</code> object per puzzle, it splits the total list of puzzles into <code class="literal">workers</code> chunks, and then creates one <code class="literal">future</code> object per chunk. This means that if <code class="literal">workers</code> is eight, we're going to spawn eight <code class="literal">future</code> objects. Notice that instead of passing <code class="literal">solve</code> to <code class="literal">executor.submit</code>, we're passing <code class="literal">batch_solve</code>, which does the trick. The reason why I coded the last two functions so differently is because I was curious to see the severity of the impact of the overhead we incur into when we recycle processes <span>from</span><a class="indexterm" id="id325906659"></a> a pool a non-negligible amount of times.</p><p>Now that we have the functions defined, let's use them:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="16">puzzles_file = os.path.join('puzzles', 'sudoku-topn234.txt')
+with open(puzzles_file) as stream:
+    puzzles = [puzzle.strip() for puzzle in stream]
+
+# single thread solve
+with timer():
+    res_batch = batch_solve(puzzles)
+
+# parallel solve, 1 process per puzzle
+with timer():
+    res_parallel_single = parallel_single_solver(puzzles)
+
+# parallel batch solve, 1 batch per process
+with timer():
+    res_parallel_batch = parallel_batch_solver(puzzles)
+
+# Quick way to verify that the results are the same, but
+# possibly in a different order, as they depend on how the
+# processes have been scheduled.
+assert_items_equal = TestCase().assertCountEqual
+assert_items_equal(res_batch, res_parallel_single)
+assert_items_equal(res_batch, res_parallel_batch)
+print('Done.')</code></pre></div><p>We use a set of 234 very hard sudoku puzzles for this benchmarking session. As you can see, we simply run the three functions, <code class="literal">batch_solve</code>, <code class="literal">parallel_single_solver</code>, and <code class="literal">parallel_batch_solver</code>, all within a timed context. We collect the results, and, just to make sure, we verify that all the runs have produced the same results.</p><p>Of course, in the second and third runs, we have used multiprocessing, so we cannot guarantee that the order in the results will be the same as that of the single-threaded <code class="literal">batch_solve</code>. This minor issue is brilliantly solved with the aid of <code class="literal">assertCountEqual</code>, one of the worst-named methods in the Python standard library. We find it in the <code class="literal">TestCase</code> class, which we can instantiate just to take a reference to the method we need. We're not actually running unit tests, but this is a cool trick, and I wanted to show it to you. Let's see the output of running this module:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="17"><span class="strong"><strong>$ python process_solver.py</strong></span>
+<span class="strong"><strong>Elapsed time: 5.368s</strong></span>
+<span class="strong"><strong>Elapsed time: 2.856s</strong></span>
+<span class="strong"><strong>Elapsed time: 2.818s</strong></span>
+<span class="strong"><strong>Done. </strong></span></code></pre></div><p>Wow. That is quite interesting. First of all, you can once <span>again</span><a class="indexterm" id="id325979122"></a> see that my machine has a two-core processor, as the time elapsed for the multiprocessing runs is about half the time taken by the single-threaded solver. However, what is actually much more interesting is the fact that there is basically no difference in the time taken by the two multiprocessing functions. Multiple runs sometimes end in favor of one approach, and sometimes in favor of the other. Understanding why requires a deep understanding of all the components that are taking part in the game, not just the processes, and therefore is not something we can discuss here. It is fairly safe to say though, that the two approaches are comparable in terms of performance.</p><p>In the source code for the book, you can find tests in the <code class="literal">sudoku</code> folder, with instructions on how to run them. Take the time to check them out!</p><p>And now, let's get to the final example.</p></div></div><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h3 class="title"><a id="ch10lvl2sec130"></a>Example three – downloading random pictures</h3></div></div></div><p>This example has been fun to code. We are <span>going</span><a class="indexterm" id="id325979144"></a> to download random pictures <span>from</span><a class="indexterm" id="id325979153"></a> a website. I'll show you three versions: a serial one, a multiprocessing one, and finally a solution coded using <code class="literal">asyncio</code>. In these examples, we are going to use a website called <a class="ulink" href="http://lorempixel.com/" target="_blank">http://lorempixel.com</a>, which provides you with an API that you can call to get random images. If you find that the website is down or slow, you can use an excellent alternative to it: <a class="ulink" href="https://lorempizza.com/" target="_blank">https://lorempizza.com/</a>.</p><p>It may be something of a <span class="emphasis"><em>cliché</em></span> for a book written by an Italian, but the pictures are gorgeous. You can search for another alternative on the web, if you want to have some fun. Whatever website you choose, please be sensible and try not to hammer it by making a million requests to it. The multiprocessing and <code class="literal"><span>asyncio</span></code> versions of this code can be quite aggressive!</p><p>Let's start by <span>exploring</span><a class="indexterm" id="id325979360"></a> the single-threaded <span>version</span><a class="indexterm" id="id325979368"></a> of the code:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="18"># aio/randompix_serial.py
+import os
+from secrets import token_hex
+import requests
+
+PICS_FOLDER = 'pics'
+URL = 'http://lorempixel.com/640/480/'
+
+def download(url):
+    resp = requests.get(URL)
+    return save_image(resp.content)
+
+def save_image(content):
+    filename = '{}.jpg'.format(token_hex(4))
+    path = os.path.join(PICS_FOLDER, filename)
+    with open(path, 'wb') as stream:
+        stream.write(content)
+    return filename
+
+def batch_download(url, n):
+    return [download(url) for _ in range(n)]
+
+if __name__ == '__main__':
+    saved = batch_download(URL, 10)
+    print(saved)</code></pre></div><p>This code should be straightforward to you by now. We define a <code class="literal">download</code> function, which makes a request to the given <code class="literal">URL</code>, saves the result by calling <code class="literal">save_image</code>, and feeds it the body of the response from the website. Saving the image is very simple: we create a random filename with <code class="literal">token_hex</code>, just because it's fun, then we calculate the full path of the file, create it in binary mode, and write into it the content of the response. We return the <code class="literal">filename</code> to be able to print it on screen. Finally <code class="literal">batch_download</code> simply runs the <code class="literal">n</code> requests we want to run and returns the filenames as a result.</p><p>You can leapfrog the <code class="literal">if __name__ ...</code> line for now, it will be explained in <a class="link" href="https://subscription.packtpub.com/book/application_development/9781788996662/12" linkend="ch12">Chapter 12</a>,<span class="emphasis"><em> GUIs and Scripts</em></span> and it's not important here. All we do is call <code class="literal">batch_download</code> with the URL and we tell it to download <code class="literal">10</code> images. If you have an editor, open the <code class="literal">pics</code> folder, and you can see it getting populated in a few seconds (also notice: the script assumes the <code class="literal">pics</code> folder exists).</p><p>Let's spice things up a bit. Let's <span>introduce</span><a class="indexterm" id="id325979435"></a> multiprocessing (the code is vastly similar, so I will not repeat it):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="19"># aio/randompix_proc.py
+...
+from concurrent.futures import ProcessPoolExecutor, as_completed
+...
+
+def batch_download(url, n, workers=4):
+    with ProcessPoolExecutor(max_workers=workers) as executor:
+        futures = (executor.submit(download, url) for _ in range(n))
+        return [future.result() for future in as_completed(futures)]
+
+...</code></pre></div><p>The technique should be <span>familiar</span><a class="indexterm" id="id325979450"></a> to you by now. We simply submit jobs to the executor, and collect the results as they become available. Because this is IO bound code, the processes work quite fast and there is heavy context-switching while the processes are waiting for the API response. If you have a view over the <code class="literal">pics</code> folder, you will notice that it's not getting populated in a linear fashion any more, but rather, in batches.</p><p>Let's now look at the <code class="literal">asyncio</code> version of this example.</p><div class="section" lang="en" xml:lang="en"><div class="titlepage"><div><div><h4 class="title"><a id="ch10lvl3sec47"></a>Downloading random pictures with asyncio</h4></div></div></div><p>The code is probably the most <span>challenging</span><a class="indexterm" id="id325979474"></a> of the whole chapter, so don't feel bad if it is too much for you at this moment in time. I have added this example just as a mouthwatering device, to encourage you to dig deeper into the heart of Python asynchronous programming. Another thing worth knowing is that there are probably several other ways to write this same logic, so please bear in mind that this is just one of the possible examples.</p><p>The <code class="literal">asyncio</code> module provides infrastructure for writing single-threaded, concurrent code using coroutines, multiplexing IO access over sockets and other resources, running network clients and servers, and other related primitives. It was added to Python in version 3.4, and some claim it will become the <span class="emphasis"><em>de facto</em></span> standard for writing Python code in the future. I don't know whether that's true, but I know it is definitely worth seeing an example:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="20"># aio/randompix_corout.py
+import os
+from secrets import token_hex
+import asyncio
+import aiohttp</code></pre></div><p>First of all, we cannot use <code class="literal">requests</code> any more, as it is not <span>suitable</span><a class="indexterm" id="id325993122"></a> for <code class="literal">asyncio</code>. We have to use <code class="literal">aiohttp</code>, so please make sure you have installed it (it's in the requirements for the book):</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="21">PICS_FOLDER = 'pics'
+URL = 'http://lorempixel.com/640/480/'
+
+async def download_image(url):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as resp:
+            return await resp.read()</code></pre></div><p>The previous code does not look too friendly, but it's not so bad, once you know the concepts behind it. We define the async coroutine <code class="literal">download_image</code>, which takes a URL as parameter.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title"><a id="note75"></a>Note</h3><p><span>In case you don't know,</span> a coroutine is a computer program component that generalizes subroutines for non-preemptive multitasking, by allowing multiple entry points for suspending and resuming execution at certain locations. A subroutine is a sequence of program instructions that performs a specific task, packaged as a unit.</p></div><p>Inside <code class="literal">download_image</code>, we create a session object using the <code class="literal">ClientSession</code> context manager, and then we get the response by using another context manager, this time from <code class="literal">session.get</code>. The fact that these managers are defined as asynchronous simply means that they are able to suspend execution in their enter and exit methods. We return the content of the response by using the <code class="literal">await</code> keyword, which allows suspension. Notice that creating a session for each request is not optimal, but I felt that for the purpose of this example I would keep the code as straightforward as possible, so I leave its optimization to you, as an exercise.</p><p>Let's proceed with the next snippet:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="22">async def download(url, semaphore):
+    async with semaphore:
+        content = await download_image(url)
+    filename = save_image(content)
+    return filename
+
+def save_image(content):
+    filename = '{}.jpg'.format(token_hex(4))
+    path = os.path.join(PICS_FOLDER, filename)
+    with open(path, 'wb') as stream:
+        stream.write(content)
+    return filename</code></pre></div><p>Another coroutine, <code class="literal">download</code>, gets a <code class="literal">URL</code> and a semaphore. All it does is fetch the content of the image, by calling <code class="literal">download_image</code>, saving it, and returning the <code class="literal">filename</code>. The interesting bit here is the use of that semaphore. We use it as an asynchronous context manager, so that we can suspend this coroutine as well, and <span>allow</span><a class="indexterm" id="id326011592"></a> a switch to something else, but more than <span class="emphasis"><em>how</em></span>, it is important to understand <span class="emphasis"><em>why</em></span> we want to use a semaphore. The reason is simple, this semaphore is kind of the equivalent of a pool of threads. We use it to allow at most <span class="emphasis"><em>N</em></span> coroutines to be active at the same time. We instantiate it in the next function, and we pass 10 as the initial value. Every time a coroutine acquires the semaphore, its internal counter is decreased by <code class="literal">1</code>, therefore when 10 coroutines have acquired it, the next one will sit and wait, until the semaphore is released by a coroutine that has completed. This is a nice way to try to limit how aggressively we are fetching images from the website API.</p><p>The <code class="literal">save_image</code> function is not a coroutine, and its logic has already been discussed in the previous examples. Let's now get to the part of the code where execution takes place:</p><div class="informalexample"><pre class="programlisting language-markup"><code class=" language-markup" data-code-index="23">def batch_download(images, url):
+    loop = asyncio.get_event_loop()
+    semaphore = asyncio.Semaphore(10)
+    cors = [download(url, semaphore) for _ in range(images)]
+    res, _ = loop.run_until_complete(asyncio.wait(cors))
+    loop.close()
+    return [r.result() for r in res]
+
+if __name__ == '__main__':
+    saved = batch_download(20, URL)
+    print(saved)</code></pre></div><p>We define the <code class="literal">batch_download</code> function, which takes a number, <code class="literal">images</code>, and the URL of where to fetch them. The first thing it does is create an event loop, which is necessary to run any asynchronous code. The event loop is the central execution device provided by <code class="literal">asyncio</code>. It provides multiple facilities, including:</p><div class="itemizedlist"><ul type="bullet"><li style="list-style-type: disc">Registering, executing, and cancelling delayed calls (timeouts)</li><li style="list-style-type: disc">Creating client and server transports for various kinds of communication</li><li style="list-style-type: disc">Launching subprocesses and the associated transports for communication with an external program</li><li style="list-style-type: disc">Delegating costly function calls to a pool of threads</li></ul></div><p>After the event loop is created, we instantiate the semaphore, and then we proceed to create a list of futures, <code class="literal">cors</code>. By calling <code class="literal">loop.run_until_complete</code>, we make sure the event loop will run until the whole task has been completed. We feed it the result of a call to <code class="literal">asyncio.wait</code>, which waits for the futures to complete.</p><p>When done, we close the event loop, and <span>return</span><a class="indexterm" id="id326016101"></a> a list of the results yielded by each future object (the filenames of the saved images). Notice how we capture the results of the call to <code class="literal">loop.run_until_complete</code>. We don't really care for the errors, so we assign <code class="literal">_</code> to the second item in the tuple. This is a common Python idiom used when we want to signal that we're not interested in that object.</p><p>At the end of the module, we call <code class="literal">batch_download</code> and we get 20 images saved. They come in batches, and the whole process is limited by a semaphore with only 10 available spots.</p><p>And that's it! To learn more about <code class="literal">asyncio</code>, please refer to <span>the</span><a class="indexterm" id="id326016126"></a> documentation page (<a class="ulink" href="https://docs.python.org/3.7/library/asyncio.html" target="_blank">https://docs.python.org/3.7/library/asyncio.html</a>) for the <code class="literal">asyncio</code> module on the standard library. This example was fun to code, and hopefully it will motivate you to study hard and understand the intricacies of this wonderful side of Python.</p></div></div></div></div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.isTruncatedContent">
+<div class="fade-out" ng-show="productController.productType === 'book'">
+</div>
+</div>
+<div class="ng-hide" ng-show="!productController.entitled &amp;&amp; productController.productType === 'video'">
+
+</div>
+</div>
+<div class="video-wrapper ng-hide" ng-show="productController.productType === 'video' &amp;&amp; productController.entitled">
+
+<div class="transcript panel panel-default ng-hide" id="transcript" ng-show="productController.hasCaptions"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="row ns">
+<hr/>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/app.dfc913a7d3f9c785692c.bundle.js" type="text/javascript"></script>
+<iframe id="_hjRemoteVarsFrame" name="_hjRemoteVarsFrame" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/box-90f3a29ef7448451db5af955688970d7.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" title="_hjRemoteVarsFrame"></iframe><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="undefined";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">window.dataLayer=window.dataLayer||[];window.dataLayer.push({pageLoaded:"pageLoaded"});</script><script id="" type="text/javascript">(function(a,e,f,g,b,c,d){a.ProfitWellObject=b;a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};a[b].l=1*new Date;c=e.createElement(f);d=e.getElementsByTagName(f)[0];c.async=1;c.src=g;d.parentNode.insertBefore(c,d)})(window,document,"script","https://dna8twue3dlxq.cloudfront.net/js/profitwell.js","profitwell");profitwell("auth_token","8c79afc46264fdacbbb5c7bfc3b4800f");profitwell("user_email","");</script><div></div><iframe aria-hidden="true" id="intercom-frame" src="./9781788996662_10_ch10lvl1sec86_case-examples_files/saved_resource.html" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important;" tabindex="-1"></iframe><script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/adsct" type="text/javascript"></script><div id="intercom-css-container"><style data-emotion="intercom-global"></style><style data-emotion="intercom"></style></div><script id="" type="text/javascript">window.heap=window.heap||[];
+heap.load=function(e,d){window.heap.appid=e;window.heap.config=d=d||{};var a=d.forceSSL||"https:"===document.location.protocol,b=document.createElement("script");b.type="text/javascript";b.async=!0;b.src=(a?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a);b=function(a){return function(){heap.push([a].concat(Array.prototype.slice.call(arguments,0)))}};a="addEventProperties addUserProperties clearEventProperties identify removeEventProperty setEventProperties track unsetEventProperty".split(" ");for(var c=
+0;c<a.length;c++)heap[a[c]]=b(a[c])};window.heap.appid||heap.load("34805961");</script><script id="" type="text/javascript">var HeapUserId="72f2212e-37fa-4f9e-80a7-7aeb3cbd99b3";"string"===typeof HeapUserId&&"undefined"!==HeapUserId&&window.heap.identify(HeapUserId);</script>
+<script id="" type="text/javascript">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","445429252334850");fbq("track","PageView");</script>
+
+<script id="" type="text/javascript">(function(c,d,e,f,g,a,b){c[e]=c[e]||[];a=d.createElement(f);a.async=1;a.src=g;b=d.getElementsByTagName(f)[0];b.parentNode.insertBefore(a,b)})(window,document,"_gscq","script","//widgets.getsitecontrol.com/95715/script.js");</script><script src="./9781788996662_10_ch10lvl1sec86_case-examples_files/adsct" type="text/javascript"></script></body></html>
