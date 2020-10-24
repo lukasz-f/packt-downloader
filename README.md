@@ -48,7 +48,7 @@
 ### Improving Your Python Data Science Skills
 * Python Web Scraping Cookbook (9781787285217)
 * Python Machine Learning - Second Edition (9781787125933)
-* Python Deep Learning (9781786464453)
+* Python Deep Learning (pdf)
 * Natural Language Processing with Python Cookbook (9781787289321)
 ### Getting Started with Python Machine Learning
 * Python Machine Learning - Second Edition
