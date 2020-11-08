@@ -75,3 +75,4 @@
 ### Others
 * Hands-On Machine Learning with Microsoft Excel 2019 (9781789345377)
 * Hands-On Web Scraping with Python (9781789533392)
+* Hands-On Business Intelligence with Qlik Sense (9781789800944)
