@@ -1,4 +1,4 @@
 beautifulsoup4==4.9.1
-lxml==4.5.1
+lxml==4.6.5
 selenium==3.141.0
 PyAutoGUI==0.9.50
